@@ -25,10 +25,12 @@ Desenvolver uma solução web capaz de captar através de API (Application Progr
 
 ## Objetivos Específicos
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Centralizar em uma única página as visualizações de clipes de lives do twitch utilizando um conjunto de APIs disponibilizadas pelo site. A página vai se restringir exclusivamente a clipes disponibilizados pelos criadores de conteúdo do twitch ficando restrito o compartilhamento de qualquer outro conteúdo( como por exemplo: transmissões de lives, ou o compartilhamento do conteúdo inteiro).
+       * Criar uma aplicação que faz atualizações em tempo real dos clipes mais visualizados.
+       * Utilizar as ferramentas disponibilizadas em https://dev.twitch.tv/docs/api/reference#get-clips
+       * Utilizar ferramentas de desenvolvimento web e frameworks para a criação de um frontend responsivo.
+
+
 
 ## Justificativa
 

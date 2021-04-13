@@ -1,21 +1,30 @@
-# TÍTULO DO PROJETO
+# Conteúdo de Interesse
 
-`CURSO`
+`Sistemas de Informação`
 
-`DISCIPLINA`
+`Projeto: Aplicações Web`
 
-`SEMESTRE`
+`1º Semestre`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Segundo matéria disponibilizada no site de notícias PwC Brasil, o setor de entretenimento virtual vem demonstrado uma perspectiva de aumento que agregará uma receita de aproximadamente 43,7 bilhões de dólares ao decorrer do ano de 2021. 
+
+Todavia, com o rápido desenvolvimento da demanda, a oferta de serviços para supri-la não está sendo suficiente, tendo dessa forma, muito de seus conteúdos perdidos na “imensidão” que se propaga nos principais meios de divulgação atuais.
+
+Para auxiliar no escalonamento de forma simplista e bem feita, seria desenvolvido uma plataforma que filtrasse por interesse, o conteúdo que o usuário do sistema deseja, trazendo dessa forma, partes fracionadas, que ficaram popularmente conhecidas como “clipes” do material bruto que está disponibilizado nos provedores de conteúdo de entretenimento digital, sendo um chamativo curto que tem o objetivo de chamar a atenção da pessoa para aquele conteúdo, podendo até mesmo ser possível um tratamento desses dados para serem apresentado de forma agradável e dinâmica para aqueles que procuram por esses serviços de entretenimento e até mesmo um redirecionamento caso o usuário se sinta satisfeito com o serviço que lhe foi apresentado pelo sistema que desenvolvemos.
 
 ## Integrantes
 
-- Obi-Wan Kenobi 
-- Anakin Skywalker
+- Alonso Batista 
+- Gustavo Castro
+- Halex Maciel
+- Nicholas Jacob
+- Robson Ezequiel
+- Welbert Luiz
+
 
 ## Professor
 
-- Mestre Yoda
+-Hugo Bastos De Paula
 
 # Documentação
 

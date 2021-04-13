@@ -32,12 +32,7 @@ Apresente também alguns (pelo menos 2) objetivos específicos dependendo de ond
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Levando-se em consideração que o Twitch apresenta em sua página inicial apenas canais recomendados cujos conteúdos muitas vezes ultrapassam horas de duração, ocorre a situação na qual o usuário encontra-se obrigado a procurar pelo próprio Twich e em outros serviços trechos desses conteúdos - videoclipes. A motivação para a criação deste projeto é desenvolver uma solução web que seja capaz de prover ao usuário, de maneira simples e rápida, a capacidade de consumir uma diversa gama de videoclipes da plataforma Twitch.
 
 ## Público-Alvo
 

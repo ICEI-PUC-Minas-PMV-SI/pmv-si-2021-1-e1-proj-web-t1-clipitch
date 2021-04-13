@@ -24,7 +24,7 @@ Para auxiliar no escalonamento de forma simplista e bem feita, seria desenvolvid
 
 ## Professor
 
--Hugo Bastos De Paula
+- Hugo Bastos De Paula
 
 # Documentação
 
@@ -51,3 +51,6 @@ Para auxiliar no escalonamento de forma simplista e bem feita, seria desenvolvid
 # Apresentação
 
 <li><a href="presentation/README.md"> Apresentação da solução</a></li>
+
+# Referências
+<li><a href="https://www.pwc.com.br/pt/sala-de-imprensa/noticias/pwc-mercado-global-midia-entretenimento-movimentar-17.html"> Matéria da PwC Brasil</a></li>

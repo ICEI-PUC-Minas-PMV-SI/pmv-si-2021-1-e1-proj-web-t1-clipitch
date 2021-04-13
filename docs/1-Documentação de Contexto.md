@@ -6,16 +6,14 @@ Visando todo o potencial comercial do produto, e observando a inexistência de p
 
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+Segundo matéria disponibilizada no site de notícias PwC Brasil, o setor de entretenimento virtual vem demonstrado uma perspectiva de aumento que agregará uma receita de aproximadamente 43,7 bilhões de dólares ao decorrer do ano de 2021. Devido ao atual momento em que nos encontramos, a procura por esses serviços sofrem de forma positiva um aumento estrondoso e quem veio para ficar. Todavia, com o rápido desenvolvimento da demanda, a oferta de serviços para supri-la não está sendo suficiente, tendo dessa forma, muito de seus conteúdos perdidos na “imensidão” que se propaga nos principais meios de divulgação atuais, como o Youtube e a Twitch, que veio com uma nova proposta de consumo em tempo real: as famosas streamings que renovou o mercado de forma drástica podendo ser comprovado pela pesquisa feita no site live.tt que consatatou que a plataforma obteve um crescimento de 120% ao decorrer de 12 meses.
 
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
+Todavia, mesmo com um crescimento tão significante, plataformas como essas, possuem um déficit de escalabilidade quando se trata em gerenciar o conteúdo que produzem e distribuí-los conforme o gosto dos usuários, que muitas vezes acabam se decepcionando, sendo, dessa forma, uma problemática plausível de resolução.
 
 > **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+> - [Máteria da PwC Brasil](https://www.pwc.com.br/pt/sala-de-imprensa/noticias/pwc-mercado-global-midia-entretenimento-movimentar-17.html)
+> - [Pesquisa feita pelo site Live.tt](https://live.tt/pt/feeed/a-pandemia-os-games-e-o-crescimento-da-twitch/)
 
 ## Objetivos
 

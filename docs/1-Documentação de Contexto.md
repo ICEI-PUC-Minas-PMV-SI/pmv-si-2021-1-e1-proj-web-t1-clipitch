@@ -1,6 +1,9 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Com o desenvolvimento da tecnologia algumas soluções surgiram para trazer o entretenimento de forma mais dinâmica e informal. Nesse contexto surge a Twitch, plataforma de streaming que veio para ficar, ganhando cada vez mais popularidade entre os internautas, principalmente entre o público de gamers, a Twitch possui uma gama completa de conteúdos para todos os gostos, vendida em 2014 por 970 milhões de dólares, a plataforma demonstra um crescimento exponencial e em virtude de suas diretrizes mais flexíveis de copywriting, e, vem competindo na linha de frente com outras gigantes do ramo como Youtube.
+Assim sendo, percebe-se um crescimento da comunidade de usuários da Twitch, existe por exemplo um grande volume de “clipes”, que são pequenos trechos de uma live produzida na Twitch. Atualmente esses “clipes” são postados na própria Twitch ou no Youtube, inexistindo uma plataforma que elenque os melhores clipes da plataforma, os “clipes” chamam muita a atenção, por serem conteúdos mais dinâmicos e chamativos, motivos que fazem desse formato um dos mais acessados no Youtube. 
+Visando todo o potencial comercial do produto, e observando a inexistência de plataformas que oferecem esse tipo de proposta, o conceito do projeto é criar uma plataforma de conteúdo audiovisual focada em fornecer os melhores “clipes” feitos pelos usuários da Twitch, elencando também os mais acessados. Além disso, criar um sistema para sugerir outros clipes semelhantes ao buscado pelo usuário. Portanto, o público-alvo são as pessoas de todas as faixas etárias de idade, que consomem ou têm interesse em assistir “clipes” de seus streamers favoritos.
+
 
 ## Problema
 Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.

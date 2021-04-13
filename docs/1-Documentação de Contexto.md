@@ -16,7 +16,11 @@ Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thin
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+## Objetivo Geral
+
+Desenvolver uma solução web capaz de captar através de API (Application Programming Interface) do Twitch.tv, analisar, processar e classificar o conteúdo de clipes de lives e incorporá-los às páginas para fornecer interatividade e entretenimento personalizado aos usuários de acordo com suas preferências respeitando os termos e condições de uso da plataforma de streaming.
+
+## Objetivos Específicos
 
 Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
  

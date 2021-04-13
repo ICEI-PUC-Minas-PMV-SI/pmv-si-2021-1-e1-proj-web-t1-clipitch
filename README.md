@@ -14,13 +14,12 @@ Para auxiliar no escalonamento de forma simplista e bem feita, seria desenvolvid
 
 ## Integrantes
 
-- Alonso Batista 
+- [Alonso Batista de Oliveira Junior](https://github.com/alonso-boj)
 - Gustavo Castro
 - Halex Maciel
 - Nicholas Jacob
 - Robson Ezequiel
 - Welbert Luiz
-
 
 ## Professor
 

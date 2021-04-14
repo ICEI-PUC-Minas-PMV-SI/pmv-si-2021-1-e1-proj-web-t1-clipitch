@@ -7,9 +7,12 @@ Visando todo o potencial comercial do produto, e observando a inexistência de p
 
 ## Problema
 
-Segundo matéria disponibilizada no site de notícias PwC Brasil, o setor de entretenimento virtual vem demonstrado uma perspectiva de aumento que agregará uma receita de aproximadamente 43,7 bilhões de dólares ao decorrer do ano de 2021. Devido ao atual momento em que nos encontramos, a procura por esses serviços sofrem de forma positiva um aumento estrondoso e quem veio para ficar. Todavia, com o rápido desenvolvimento da demanda, a oferta de serviços para supri-la não está sendo suficiente, tendo dessa forma, muito de seus conteúdos perdidos na “imensidão” que se propaga nos principais meios de divulgação atuais, como o Youtube e a Twitch, que veio com uma nova proposta de consumo em tempo real: as famosas streamings que renovou o mercado de forma drástica podendo ser comprovado pela pesquisa feita no site live.tt que consatatou que a plataforma obteve um crescimento de 120% ao decorrer de 12 meses.
+Segundo matéria disponibilizada no site de notícias PwC Brasil, o setor de entretenimento virtual vem demonstrando uma perspectiva de aumento que agregará uma receita de aproximadamente 43,7 bilhões de dólares no decorrer do ano de 2021. Considerando ainda o atual cenário pandêmico, as plataformas de transmissão de dados pela internet, principalmente aúdio e vídeo, sem a necessidade de baixar o conteúdo, serviços conhecidos como "streaming", adquiriram maior protagonismo e relevância.  No caso das transmissões de jogos, a  alta demanda pelos serviços pode ser comprovada pela pesquisa feita no site live.tt, que consatatou que a plataforma "Twitch" obteve um crescimento de 120% ao decorrer de 12 meses. 
 
-Todavia, mesmo com um crescimento tão significante, plataformas como essas, possuem um déficit de escalabilidade quando se trata em gerenciar o conteúdo que produzem e distribuí-los conforme o gosto dos usuários, que muitas vezes acabam se decepcionando, sendo, dessa forma, uma problemática plausível de resolução.
+Todavia, dado ao atual cenário caracterizado pela alta demanda de serviços de streaming e considerando a enorme quantidade de conteúdo que se propaga nas principais aplicações, como o Youtube e a Twitch (focado em jogos), os serviços são esparsos e desorganizados, de forma que muitos dos conteúdos de tais plataformas digitais permaneceram ocultos do conhecimento público. Mesmo com um crescimento tão significante, plataformas como o "Twitch" possuem um déficit de escalabilidade quando se trata de gerenciar o conteúdo que produzem e distribuí-los conforme o gosto dos usuários. 
+
+Portanto, a proposta tem por objetivo sanar uma assimetria de iinformações existente entre o lado da oferta e da demanda na plataforma "Twitch", gerando maior eficiência na forma como as trasmissões de jogos são consumidas pelos usuários finais.
+
 
 > **Links Úteis**:
 > - [Máteria da PwC Brasil](https://www.pwc.com.br/pt/sala-de-imprensa/noticias/pwc-mercado-global-midia-entretenimento-movimentar-17.html)
@@ -36,4 +39,13 @@ Levando-se em consideração que o Twitch apresenta em sua página inicial apena
 
 ## Público-Alvo
 
-Homens e mulheres, de 16 a 45 anos, casados ou solteiros, com ou sem filhos, com renda familiar de R$ 1 a 20 mil, ensino fundamental a superior completo, brasileiros, moradores de cidades pequenas a grandes, atentos às novidades relativas ao mundo da tecnologia, sem muito tempo livre disponível, interessados em entretenimento sobre jogos e outros assuntos em formato de vídeoclipes de curta duração.
+Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
+hierárquicas, etc.
+
+Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+
+> **Links Úteis**:
+> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
+> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
+> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
+> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)

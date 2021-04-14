@@ -11,7 +11,7 @@ Segundo matéria disponibilizada no site de notícias PwC Brasil, o setor de ent
 
 Não obstante o atual cenário caracterizado pela alta demanda de serviços de streaming e considerando a enorme quantidade de conteúdo que se propaga nas principais aplicações, como o Youtube e a Twitch, esse focado em jogos, os serviços são esparsos e desorganizados, fenônemeno que faz com que muitos conteúdos de tais plataformas digitais permaneçam ocultos do conhecimento público. Mesmo com um crescimento tão significante, plataformas como o "Twitch" possuem um déficit de escalabilidade quando se trata de gerenciar o conteúdo que produzem e distribuí-los conforme o gosto dos usuários. 
 
-Portanto, a proposta tem por objetivo sanar a assimetria de informações existente entre o lado da oferta, referente à plataforma "Twitch", o que resultará em maior eficiência na forma como as trasmissões de jogos são consumidas pelos usuários finais.
+Portanto, a proposta tem por objetivo sanar a assimetria de informações existente entre o lado da oferta e da demanda, referente à plataforma "Twitch", o que resultará em maior eficiência na forma como as trasmissões de jogos são consumidas pelos usuários finais.
 
 
 > **Links Úteis**:

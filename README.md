@@ -15,7 +15,7 @@ Para auxiliar no escalonamento de forma simplista e bem feita, seria desenvolvid
 ## Integrantes
 
 - [Alonso Batista de Oliveira Junior](https://github.com/alonso-boj)
-- Gustavo Castro
+- [Gustavo Castro](https://github.com/gstvcastroc)
 - Halex Maciel
 - Nicholas Jacob
 - Robson Ezequiel

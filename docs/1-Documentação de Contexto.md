@@ -36,13 +36,4 @@ Levando-se em consideração que o Twitch apresenta em sua página inicial apena
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Homens e mulheres, de 16 a 45 anos, casados ou solteiros, com ou sem filhos, com renda familiar de R$ 1 a 20 mil, ensino fundamental a superior completo, brasileiros, moradores de cidades pequenas a grandes, atentos às novidades relativas ao mundo da tecnologia, sem muito tempo livre disponível, interessados em entretenimento sobre jogos e outros assuntos em formato de vídeoclipes de curta duração.

@@ -16,7 +16,7 @@ Para auxiliar no escalonamento de forma simplista e bem feita, seria desenvolvid
 
 - [Alonso Batista de Oliveira Junior](https://github.com/alonso-boj)
 - [Gustavo Castro](https://github.com/gstvcastroc)
-- Halex Maciel
+- [Halex Maciel Silva Vieira](https://github.com/halexmaciel)
 - Nicholas Jacob
 - Robson Ezequiel
 - [Welbert Luiz](https://github.com/WelbertJr)

@@ -19,7 +19,7 @@ Para auxiliar no escalonamento de forma simplista e bem feita, seria desenvolvid
 - Halex Maciel
 - Nicholas Jacob
 - Robson Ezequiel
-- Welbert Luiz
+-.[welbert Luiz](https://github.com/WelbertJr)
 
 ## Professor
 

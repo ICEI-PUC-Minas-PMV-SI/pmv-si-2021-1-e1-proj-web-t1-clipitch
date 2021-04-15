@@ -19,10 +19,9 @@ Para auxiliar no escalonamento de forma simplista e bem feita, seria desenvolvid
 - Halex Maciel
 - Nicholas Jacob
 - Robson Ezequiel
--.[welbert Luiz](https://github.com/WelbertJr)
+-[Welbert Luiz](https://github.com/WelbertJr)
 
 ## Professor
-
 - Hugo Bastos De Paula
 
 # Documentação

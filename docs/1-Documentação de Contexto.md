@@ -1,7 +1,7 @@
 # Introdução
 
 Com o desenvolvimento da tecnologia, algumas soluções surgiram para trazer o entretenimento de forma mais dinâmica e informal. Nesse contexto, surge o Twitch, plataforma de streaming que veio para ficar, ganhando cada vez mais popularidade entre os internautas, principalmente entre o público de gamers. O Twitch possui uma gama completa de conteúdos para todos os gostos, vendida em 2014 por 970 milhões de dólares, a plataforma demonstra um crescimento exponencial e, em virtude de suas diretrizes mais flexíveis de copywriting, vem competindo na linha de frente com outras gigantes do ramo como o YouTube.
-Assim sendo, percebe-se um crescimento da comunidade de usuários do Twitch. Existe, por exemplo, um grande volume de “clipes”, que são pequenos trechos de uma live produzida no Twitch. Atualmente, esses clipes são postados no próprio Twitch ou no Youtube, inexistindo uma plataforma que elenque os melhores clipes da plataforma. Esses clipes chamam muita a atenção por serem conteúdos mais dinâmicos e chamativos, motivos que fazem desse formato um dos mais acessados no YouTube. 
+Assim sendo, percebe-se um crescimento da comunidade de usuários do Twitch. Existe, por exemplo, um grande volume de “clipes”, que são pequenos trechos de uma live produzida no Twitch. Atualmente, esses clipes são postados no próprio Twitch ou no Youtube, inexistindo uma plataforma que elenque os melhores clipes da plataforma. Esses clipes chamam muita a atenção por serem conteúdos mais dinâmicos e chamativos, motivos que fazem desse formato um dos mais acessados no YouTube.
 Visando todo o potencial comercial do produto, e observando a inexistência de plataformas que oferecem esse tipo de proposta, o conceito do projeto é criar uma plataforma de conteúdo audiovisual focada em fornecer os melhores clipes feitos pelos usuários da Twitch, elencando também os mais acessados. Além disso, criar um sistema para sugerir outros clipes semelhantes aos buscados pelo usuário. Portanto, o público-alvo são as pessoas que consomem ou têm interesse em assistir os melhores clipes da plataforma.
 
 
@@ -33,8 +33,21 @@ Centralizar em uma única página as visualizações de clipes de lives do Twitc
 
 ## Justificativa
 
-Levando-se em consideração que o Twitch apresenta em sua página inicial apenas canais recomendados cujos conteúdos muitas vezes ultrapassam horas de duração, ocorre a situação na qual o usuário encontra-se obrigado a procurar pelo próprio Twich e em outros serviços trechos desses conteúdos - clipes. A motivação para a criação deste projeto é desenvolver uma solução web que seja capaz de prover ao usuário, de maneira simples e rápida, a capacidade de consumir uma diversa gama de clipes da plataforma Twitch.
+De acordo com artigo sobre estatísticas de uso e crescimento do Twitch escrito em janeiro de 2021, a plataforma apresenta 140 milhões de usuários únicos por mês<sup>[1]</sup>. Brasileiros compõem 4.08% desse público<sup>[2]</sup>, ou seja, cerca de 5 milhões de usuários únicos por mês.
+
+O Twitch apresenta em sua página inicial apenas canais recomendados cujos conteúdos muitas vezes ultrapassam horas de duração. Por conta disso, ocorre a situação na qual dois tipos de usuário são prejudicados - o que não possui tempo disponível o suficiente para assistir várias horas seguidas de conteúdo e o que não está disposto a comprometer-se a dedicar tanto tempo do seu dia para consumir aquele entretenimento. Esses usuários, então, encontram-se obrigados a procurar pelo próprio Twich e em outros serviços trechos desses conteúdos.
+
+A motivação para a criação deste projeto é desenvolver uma solução web que seja capaz de prover a esses usuários a capacidade de consumir uma diversa gama de clipes da plataforma Twitch. O usuário poderá acessar os clipes mais visualizados e filtrá-los de acordo com o seu interesse. Cria-se uma nova maneira de consumir o conteúdo provido pelo Twitch de maneira que atende a esse nicho de usuários de forma eficiente.
+
+[1]: https://backlinko.com/twitch-users#monthly-active-users
+[2]: https://backlinko.com/twitch-users#twitch-users-by-country
 
 ## Público-Alvo
 
-Homens e mulheres, de 16 a 45 anos, casados ou solteiros, com ou sem filhos, ensino fundamental a superior completo, brasileiros, moradores de cidades pequenas a grandes, atentos às novidades relativas ao mundo da tecnologia, sem muito tempo livre disponível, interessados em entretenimento sobre jogos e outros assuntos em formato de vídeoclipes de curta duração.
+Homens e mulheres, de 16 a 34 anos, casados ou solteiros, com ou sem filhos, ensino médio a superior completo, brasileiros, moradores de cidades pequenas a grandes, atentos às novidades relativas ao mundo da tecnologia, sem muito tempo livre disponível, interessados em entretenimento sobre jogos e outros assuntos em formato de clipes de curta duração.
+
+## Referências bibliográficas
+
+https://backlinko.com/twitch-users#monthly-active-users
+https://backlinko.com/twitch-users#twitch-users-by-country
+

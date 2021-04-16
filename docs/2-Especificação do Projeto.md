@@ -28,8 +28,11 @@ Com base nos critérios de desenvolvimento do projeto e do público alvo a ser a
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Usuário interessado em assistir os “clipes” de lives do Twitch|Encontrar um portal intuitivo, e, que apresenta os clipes relacionados a seu conteúdo de interesse.|Encontrar os clipes desejados, conforme especificações de interesse desejadas.|
+|Usuário interessado em divulgar os clipes de sua live na Twitch no portal|Encontrar um portal que instintivamente proporcione ferramentas que  permitam a divulgação de clipes da sua live no portal.|Divulgar os clipes de sua live através da aquisição de um plano de assinatura mensal,  dando mais visibilidade para seu conteúdo.|
+|Empresas  Anunciantes|Empresas que tem o intuito de obterem relatórios que demonstrem quais as melhores áreas de divulgação dentro da Twitch.|Divulgar seus produtos através da plataforma, na categoria que mais teve resultado de pesquisas dentro do portal a ser desenvolvido, visando um retorno monetário maior de suas publicidades.|
+|Interessado em ajudar no crescimento do portal|Encontrar informações sobre como contribuir com o crescimento do portal, através de canais de contato (redes sociais) com os administradores do portal.|Investir no crescimento do projeto e conhecer mais sobre as diretrizes.|
+|Administrador do portal|Manter a aplicação Web atualizada, alterar permissões e gerir a funcionalidade do site de maneira geral.|Permitir que possam administrar contas e conceder as devidas melhorias a aplicação.|
 
 Segundo pesquisa realizada no site da Design Culture, a plataforma da Twitch, atualmente, conta com mais de 32 milhões de usuários ativos por mês, sendo, a maioria do seu público relativamente jovem, entre 18 e 34 anos. Dessa forma, como o público alvo da aplicação a ser desenvolvida está em uma faxa etária jovial, vale lembrar que a maioria é adepta às mais recentes tecnologias no mercado, como os dispositivos mobile. Consta, assim, que será desenvolvido uma aplicação que suporte a responsividade para que possa ser acessível em qualquer lugar e a qualquer hora, economizando tempo do usuário, uma vez que o sistema tem como objetivo a distribuição dos "clipes" que visam demonstrar uma pequena parte do material bruto existente na Twitch.
 

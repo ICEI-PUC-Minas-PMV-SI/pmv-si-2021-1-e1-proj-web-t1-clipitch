@@ -33,9 +33,9 @@ Centralizar em uma única página as visualizações de clipes de lives do Twitc
 
 ## Justificativa
 
-De acordo com artigo sobre estatísticas de uso e crescimento do Twitch escrito em janeiro de 2021, a plataforma apresenta 140 milhões de usuários únicos por mês<sup>[1]</sup>. Brasileiros compõem 4.08% desse público<sup>[2]</sup>, ou seja, cerca de 5 milhões de usuários únicos por mês.
+De acordo com artigo sobre estatísticas de uso e crescimento do Twitch escrito em janeiro de 2021, a plataforma apresenta 140 milhões de usuários únicos por mês<sup>[[1]]</sup>. Brasileiros compõem 4.08% desse público<sup>[[2]]</sup>, ou seja, cerca de 5 milhões de usuários únicos por mês.
 
-Apesar do alcance gigantesco, o Twitch não atende a um certo nicho de usuários. Em sua página inicial, a plataforma evidencia apenas canais recomendados, cujos conteúdos muitas vezes ultrapassam horas de duração. Por conta disso, ocorre a situação na qual dois tipos de usuário são prejudicados - o que não possui tempo disponível o suficiente para assistir várias horas seguidas de conteúdo e o que não está disposto a comprometer-se a dedicar tanto tempo do seu dia para consumir aquele entretenimento. Esses usuários, então, encontram-se obrigados a procurar pelo próprio Twich e em outros serviços trechos desses conteúdos.
+Apesar do alcance gigantesco, o Twitch não atende a um certo nicho de usuários. Em sua página inicial, a plataforma evidencia apenas canais recomendados, cujos conteúdos muitas vezes ultrapassam horas de duração. Por conta disso, ocorre a situação na qual dois tipos de usuário são prejudicados - o que não possui tempo disponível o suficiente para assistir a várias horas seguidas de conteúdo e o que não está disposto a comprometer-se a dedicar tanto tempo do seu dia para consumir aquele entretenimento. Esses usuários, então, encontram-se obrigados a procurar pelo próprio Twich e em outros serviços trechos desses conteúdos.
 
 A motivação para a criação deste projeto é desenvolver uma solução web que seja capaz de prover a esses usuários a capacidade de consumir uma diversa gama de clipes da plataforma Twitch. O usuário poderá acessar os clipes mais visualizados e filtrá-los de acordo com o seu interesse. Cria-se uma nova maneira de consumir o conteúdo provido pelo Twitch de maneira que atende a esse nicho de usuários de forma eficiente.
 
@@ -44,7 +44,7 @@ A motivação para a criação deste projeto é desenvolver uma solução web qu
 
 ## Público-Alvo
 
-Homens e mulheres, de 16 a 34 anos, casados ou solteiros, com ou sem filhos, ensino médio a superior completo, brasileiros, moradores de cidades pequenas a grandes, atentos às novidades relativas ao mundo da tecnologia, sem muito tempo livre disponível, interessados em entretenimento sobre jogos e outros assuntos em formato de clipes de curta duração.
+Homens e mulheres, de 16 a 34 anos, casados ou solteiros, com ou sem filhos, ensino médio a superior completo, pertencentes à classe média ou acima, brasileiros, moradores de cidades pequenas a grandes, atentos às novidades relativas ao mundo da tecnologia, sem muito tempo livre disponível, interessados em entretenimento sobre jogos e outros assuntos em formato de clipes de curta duração.
 
 ## Referências bibliográficas
 

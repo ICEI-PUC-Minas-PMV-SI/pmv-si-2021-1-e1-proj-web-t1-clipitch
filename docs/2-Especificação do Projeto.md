@@ -1,26 +1,14 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
-
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+Bruno, 24 anos: é solteiro e um dos engenheiros junior recém-contratados em uma empresa de consultoria de engenharia de pequeno porte.
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+Ele possui um perfil pragmático e sempre busca aprimorar-se profissionalmente para alavancar a sua carreira. Por conta dos seus estudos, não tem muito tempo livre.
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+A fim de descontrair-se após um longo dia de trabalho e estudo, tenta aproveitar o seu pouco tempo disponível para assistir vídeos curtos sobre o mundo geek - principalmente conteúdo relacionado a jogos. Para isso, ele acessa websites como Twitch e YouTube.
+
+Entretanto, Bruno passa uma quantia considerável de tempo buscando por esse tipo de conteúdo em plataformas distintas. Dessa forma, o seu tempo não é aproveitado de maneira eficiente.
 
 ## Histórias de Usuários
 

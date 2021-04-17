@@ -2,13 +2,13 @@
 
 ## Personas
 
-Bruno, 24 anos: é solteiro e um dos engenheiros junior recém-contratados em uma empresa de consultoria de engenharia de pequeno porte.
+Alan, 24 anos: é solteiro e um criador autônomo de conteúdo de entretenimento focado em jogos.
 
 Ele possui um perfil pragmático e sempre busca aprimorar-se profissionalmente para alavancar a sua carreira. Por conta dos seus estudos, não tem muito tempo livre.
 
 A fim de descontrair-se após um longo dia de trabalho e estudo, tenta aproveitar o seu pouco tempo disponível para assistir vídeos curtos sobre o mundo geek - principalmente conteúdo relacionado a jogos. Para isso, ele acessa websites como Twitch e YouTube.
 
-Entretanto, Bruno passa uma quantia considerável de tempo buscando por esse tipo de conteúdo em plataformas distintas. Dessa forma, o seu tempo não é aproveitado de maneira eficiente.
+Entretanto, Alan passa uma quantia considerável de tempo buscando por esse tipo de conteúdo em plataformas distintas. Dessa forma, o seu tempo não é aproveitado de maneira eficiente.
 
 ## Histórias de Usuários
 

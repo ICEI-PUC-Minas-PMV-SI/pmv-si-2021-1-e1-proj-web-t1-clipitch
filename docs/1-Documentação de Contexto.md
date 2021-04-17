@@ -21,7 +21,7 @@ Portanto, a proposta tem por objetivo sanar a assimetria de informações existe
 
 ## Objetivo Geral
 
-Desenvolver uma solução web capaz de captar através de API (Application Programming Interface) do Twitch, analisar, processar e classificar o conteúdo de clipes de lives e incorporá-los às páginas para fornecer interatividade e entretenimento personalizado aos usuários de acordo com suas preferências, respeitando os termos e condições de uso da plataforma de streaming.
+O objetivo deste trabalho é desenvolver um portal que forneça clipes de lives do Twitch.TV classificados, organizados e categorizados de acordo com o perfil e interesse dos usuários.
 
 ## Objetivos Específicos
 

@@ -79,7 +79,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |02| Não pode ser desenvolvido um módulo de backend        | 
 |03| O orçamento disponível, no montante de R$2000,00 (dois mil reais) deverá cobrir todos os custos, salvo aqueles causados por eventos imprevisíveis, mediante a devida justificativa, que acarretem um aumento de até 25% do valor original do projeto|
 |03| Em caso de alteração de membros da equipe, a mesma deverá ser objeto de recomposição por profissionais de qualificação compatível com o projeto no prazo de até 7 (sete) dias corridos|
-|04| O projeto deverá se submeter ao ordenamento jurídico brasileiro, destacando-se a conformidade com a Lei Geral de Proteção de Dados (Lei n.º 13.709/18), Lei da Propriedade Industrial (Lei n.º 9.279/96), da Lei dos Direitos Autorais (Lei n.º 9.640/98) e da Lei do Software (Lei n.º 9.609/98).
+|04| O projeto deverá se submeter ao ordenamento jurídico brasileiro, destacando-se a conformidade com a Lei Geral de Proteção de Dados (Lei n.º 13.709/18), Lei da Propriedade Industrial (Lei n.º 9.279/96), Lei dos Direitos Autorais (Lei n.º 9.640/98) e Lei do Software (Lei n.º 9.609/98) |
  
 
 Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.

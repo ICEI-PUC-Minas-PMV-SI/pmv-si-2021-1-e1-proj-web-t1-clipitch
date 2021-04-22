@@ -45,14 +45,19 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
 |RNF-001| O portal deverá ter alta disponibilidade em 99% do tempo | ALTA |
-|RNF-002| Deve ser acessível a partir de qualquer browser | MÉDIA |
-|RNF-003| O frontend deve ser desenvolvido em HTML, CSS e JavaScript | ALTA |
-|RNF-004| Deve respeitar a Lei Geral de Proteção de Dados (LEI Nº 13.709, DE 14 DE AGOSTO DE 2018) | ALTA |
-|RNF-005| Deve se comunicar com backend através de API, respeitada a OpenAPI Specification | ALTA |
-|RNF-006| Deve usar design responsivo nas interfaces gráficas para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-007| Deve processar requisições do usuário em no máximo 2s |  BAIXA | 
-|RNF-008| Deve suportar alto volume de acessos à plataforma | ALTA |
-|RNF-009| Deve usar arquitetura em camadas para desacoplamento | ALTA |
+|RNF-002| O frontend deve ser desenvolvido em HTML, CSS e JavaScript | ALTA |
+|RNF-003| Deve respeitar a Lei Geral de Proteção de Dados (LEI Nº 13.709, DE 14 DE AGOSTO DE 2018) | ALTA |
+|RNF-004| Deve se comunicar com backend através de API, respeitada a OpenAPI Specification | ALTA |
+|RNF-005| Deve suportar alto volume de acessos à plataforma | ALTA |
+|RNF-006| Deve usar arquitetura em camadas para desacoplamento | ALTA |
+|RNF-007| O banco de dados deverá armazenar informações do usuário criptogradas |  ALTA | 
+|RNF-008| O portal deverá permitir acesso apenas com uso de senhas com no mínimo 8 caracteres, símbolos e números |  ALTA | 
+|RNF-009| Deve usar design responsivo nas interfaces gráficas para rodar em um dispositivos móvel | MÉDIA | 
+|RNF-010| Deve ser acessível a partir de qualquer browser | MÉDIA |
+|RNF-011| O portal deverá armazenar o nome e sobrenome em campos separados no banco de dados | MÉDIA |
+|RNF-012| Deve processar requisições do usuário em no máximo 2s |  BAIXA | 
+
+
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 

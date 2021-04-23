@@ -14,7 +14,7 @@ Entretanto, Alan passa uma quantia considerável de tempo buscando por esse tipo
 
 Com base nos critérios de desenvolvimento do projeto e do público alvo a ser alcançado, foram identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
+|`PERSONA`|`FUNCIONALIDADE` |`MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
 |Usuário.|Encontrar os clipes relacionados a seu conteúdo de interesse.|Encontrar os clipes desejados, conforme especificações de interesse desejadas.|
 |Anunciante.|Obter relatórios que demonstrem quais as melhores áreas de divulgação dentro da Twitch.|Divulgar seus produtos através da plataforma, na categoria que mais teve resultado de pesquisas dentro do portal a ser desenvolvido, visando um retorno monetário maior de suas publicidades.|

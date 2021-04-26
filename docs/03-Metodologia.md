@@ -55,18 +55,16 @@ Coloque  informações sobre detalhes da implementação do Scrum seguido pelo g
 
 As ferramentas empregadas no projeto são:
 
-- Visual Studio Code
-- Microsoft Teams e Whatsapp
-- Ferramentas de diagramação - DEFINIR A FERRAMENTA 
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Microsoft Teams e Whatsapp](https://www.microsoft.com/pt-br/microsoft-teams/group-chat-software)
+- [LucidChart](https://www.lucidchart.com/pages/pt)
+- [Figma](https://www.figma.com/)
+- [Github](https://github.com/)
 
 O editor de código Visual Studio Code, gratuito, foi escolhido porque ele oferece ampla gama de extensões que permitem que o editor ofereça funcionalidades expansíveis com diversas linguagens de programação e integração com o sistema de versionamento Git e Github, além disso é amplamente utilizado pela comunidade, permitindo encontrar suporte e informações a respeito dele.
 
 As ferramentas de comunicação Microsoft Teams e Whatsapp são utilizadas por possuírem maior aderência dos membros da equipe. O Microsoft Teams oferece plataforma segura, flexível e integrada com as soluções do Office 365, oferecendo assim todas as ferramentas necessárias para documentação e compartilhamento de informações. O Whatsapp ofecere comunicação entre os membros a partir de qualquer lugar e horário, possibilitando resolver questões relacionadas ao projeto de forma ágil.
 
-DEFINIR A FERRAMENTA - Por fim, para criar diagramas utilizamos essa ferramenta por melhor captar as necessidades da nossa solução.
+Para diagramação, Wireframe e Fluxo de Usuário serão utilizadas as versões gratuítas do LucidChart e Figma. São ferramentas que fornecem diversas funcionalidades e possuem excelente suporte pela comunidade.
 
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
- 
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [Slack](https://slack.com/)
-> - [Github](https://github.com/)
+Para gerenciamento do projeto será utilizado o Github. É uma excelente plataforma que fornece todas as funcionalidades necessárias para o gerenciamento e controle do projeto, permitindo designação de atividades para cada membro da equipe, além do acompanhamento e monitoramento da execução delas. 

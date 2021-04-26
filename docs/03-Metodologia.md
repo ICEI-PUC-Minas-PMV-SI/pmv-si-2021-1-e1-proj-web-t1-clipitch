@@ -37,8 +37,8 @@ Os issues são criados pelo Scrum Master, que utiliza tags para classificá-los 
 O projeto está sendo desenvolvido conforme divisão de alguns papeis entre os membros do grupo, mediante a metodologia Scrum.
 
  - **Product Owner:** [Hugo de Bastos Paula](https://github.com/hugodepaula) (responsável pela visão do que se vai construir ou entregar no projeto).
- -	**Scrum Master:** [Halex Maciel Silva Vieira](https://github.com/halexmaciel)(orienta o restante da equipe em relação à estrutura de processos do Scrum).
- -	**Dev Team:** [Alonso Batista de Oliveira Junior](https://github.com/alonso-boj), [Gustavo Castro](https://github.com/gstvcastroc), [Halex Maciel Silva Vieira](https://github.com/halexmaciel),  [Robson Ezequiel](https://github.com/Robsonezequiel) e [Welbert Luiz](https://github.com/WelbertJr)(constroem e desenvolvem o projeto).
+ -	**Scrum Master:** [Halex Maciel Silva Vieira](https://github.com/halexmaciel) (orienta o restante da equipe em relação à estrutura de processos do Scrum).
+ -	**Dev Team:** [Alonso Batista de Oliveira Junior](https://github.com/alonso-boj), [Gustavo Castro](https://github.com/gstvcastroc), [Halex Maciel Silva Vieira](https://github.com/halexmaciel),  [Robson Ezequiel](https://github.com/Robsonezequiel) e [Welbert Luiz](https://github.com/WelbertJr) (constroem e desenvolvem o projeto).
 
 
 > **Links Úteis**:

@@ -3,7 +3,12 @@
 
 <span style="color:red">Pré-requisitos: <a href="02-Especificação do Projeto.md"> Documentação de Especificação</a></span>
 
-Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
+Foi idealizado um portal de acesso, que apresente ao usuários conteúdos a partir do seu interesses, baseando-se na plataforma de entretenimento da Twitch e nos clipes, que são disponibilizados atráves de sua API. Dessa forma, o desenvolvimento do projeto está sendo baseada no padrão de gerenciamento de projetos Scrum, com papéis bem definidos entre os integrantes e reuniões constantes para alinhamento do projeto entre os mesmo, com intuíto de agilizar, organizar, haver o auxílio mútuo entre os participantes e aumentar a performance com o intuito de entregar o projeto dentro dos prazos exigidos.
+
+> ### Procedimentos Definidos:
+> - Sprint Backlog´s estão sendo feitos em reuniões atráves do Teams disponibilizados pela plataforma da instituição.
+> - O versionamento/hospedagem do projeto está sendo feito no GitHub, plataforma utilizada para o ensino na graduação.
+> - Definições previstas para o uso do Figma como plataforma de vetorização e prototipagem da interface.
 
 ## Controle de Versão
 

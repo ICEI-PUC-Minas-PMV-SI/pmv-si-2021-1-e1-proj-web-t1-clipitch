@@ -3,7 +3,7 @@
 
 <span style="color:red">Pré-requisitos: <a href="02-Especificação do Projeto.md"> Documentação de Especificação</a></span>
 
-Foi idealizado um portal de acesso, que apresente ao usuários conteúdos a partir do seu interesses, baseando-se na plataforma de entretenimento da Twitch e nos clipes, que são disponibilizados atráves de sua API. Dessa forma, o desenvolvimento do projeto está sendo baseada no padrão de gerenciamento de projetos Scrum, com papéis bem definidos entre os integrantes e reuniões constantes para alinhamento do projeto entre os mesmo, com intuíto de agilizar, organizar, haver o auxílio mútuo entre os participantes e aumentar a performance com o intuito de entregar o projeto dentro dos prazos exigidos.
+Foi idealizado um portal de acesso, que apresente ao usuários conteúdos a partir do seu interesses, baseando-se na plataforma de entretenimento da Twitch e nos clipes, que são disponibilizados atráves de sua API. Dessa forma, o desenvolvimento do projeto está sendo baseada no padrão de gerenciamento de projetos Scrum, com papéis bem definidos e reuniões constantes para alinhamento do projeto entre os integrantes, a fim de, agilizar, organizar, haver o auxílio mútuo entre os participantes e aumentar a performance ao entregar o projeto dentro dos prazos exigidos.
 
 > ### Procedimentos Definidos:
 > - Sprint Backlog´s estão sendo feitos em reuniões atráves do Teams disponibilizados pela plataforma da instituição.

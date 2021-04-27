@@ -60,18 +60,20 @@ para a Tela 2.
 
 ## Tecnologias Utilizadas
 
+- Twitch API (Fonte dos clipes que serão o conteúdo do projeto)
 - GitHub (Versionamento e hospedagem do projeto)
 - Heroku (Hospedagem de aplicação que visam o desenvolvimento web em nuvem)
-- Teams (Planejamento do time) com a metodologia Scrum aplicada
-- Figma (Desenvolvimento de interface)
 - Banco de Dados SQL
+- Liguagens de programação: Python, HTML, CSS, Java Script
+- Figma (Desenvolvimento de interface)
+- Teams (Planejamento do time) com a metodologia Scrum aplicada
 
 Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
 
 
 ## Hospedagem
 
-- Heroku (Hospedagem de aplicação que visam o desenvolvimento web em nuvem)
+- Heroku (Hospedagem de aplicação que visam o desenvolvimento web em nuvem) - A hospedagem será feita no Heroku a primeira instância, uma vez que é a instrução da instituição para a grade currícular da graduação.
 
 > **Links Úteis**:
 > - [Website com GitHub Pages](https://pages.github.com/)

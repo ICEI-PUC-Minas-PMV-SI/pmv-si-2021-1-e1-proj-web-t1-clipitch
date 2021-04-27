@@ -60,17 +60,20 @@ para a Tela 2.
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+- GitHub (Versionamento e hospedagem do projeto)
+- Heroku (Hospedagem de aplicação que visam o desenvolvimento web em nuvem)
+- Teams (Planejamento do time) com a metodologia Scrum aplicada
+- Figma (Desenvolvimento de interface)
+- Banco de Dados SQL
 
 Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
 
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
+- Heroku (Hospedagem de aplicação que visam o desenvolvimento web em nuvem)
 
 > **Links Úteis**:
->
 > - [Website com GitHub Pages](https://pages.github.com/)
 > - [Programação colaborativa com Repl.it](https://repl.it/)
 > - [Getting Started with Heroku](https://devcenter.heroku.com/start)

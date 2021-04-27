@@ -68,8 +68,8 @@ para a Tela 2.
 - Figma (Desenvolvimento de interface)
 - Teams (Planejamento do time) com a metodologia Scrum aplicada
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
 
+![Exemplo de Uso](img/diagrama_tec_usadas.png)
 
 ## Hospedagem
 

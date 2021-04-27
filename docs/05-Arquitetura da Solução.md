@@ -60,20 +60,22 @@ para a Tela 2.
 
 ## Tecnologias Utilizadas
 
-- Twitch API (Fonte dos clipes que serão o conteúdo do projeto)
-- GitHub (Versionamento e hospedagem do projeto)
-- Heroku (Hospedagem de aplicação que visam o desenvolvimento web em nuvem)
-- Banco de Dados SQL
-- Liguagens de programação: Python, HTML, CSS, Java Script
-- Figma (Desenvolvimento de interface)
-- Teams (Planejamento do time) com a metodologia Scrum aplicada
+- [Twitch API](https://dev.twitch.tv/docs/api/) (Fonte dos clipes que serão o conteúdo do projeto)
+- [Github](https://github.com/) (Versionamento e hospedagem do projeto)
+- [Heroku](https://www.heroku.com/) (Hospedagem de aplicação que visam o desenvolvimento web em nuvem)
+- [Banco de Dados SQL - SQL Server](https://www.microsoft.com/pt-br/sql-server)
+- Liguagens de programação: [Python](https://docs.python.org/3/), [HTML](https://devdocs.io/html/), [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS), [Java Script](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [Figma](https://www.figma.com/) (Desenvolvimento de interface)
+- [Invision](https://www.invisionapp.com/) (Desenvolvimento da diagramação)
+- [Microsoft Teams](https://www.microsoft.com/pt-br/microsoft-teams/group-chat-software) (Planejamento do time) com a metodologia Scrum aplicada
+- [Visual Studio Code](https://code.visualstudio.com/)
 
-
+### Exemplo
 ![Exemplo de Uso](img/diagrama_tec_usadas.png)
 
 ## Hospedagem
 
-- Heroku (Hospedagem de aplicação que visam o desenvolvimento web em nuvem) - A hospedagem será feita no Heroku a primeira instância, uma vez que é a instrução da instituição para a grade currícular da graduação.
+- [Heroku](https://www.heroku.com/) (Hospedagem de aplicação que visam o desenvolvimento web em nuvem) - A hospedagem será feita no Heroku a primeira instância, uma vez que é a instrução da instituição para a grade currícular da graduação.
 
 > **Links Úteis**:
 > - [Website com GitHub Pages](https://pages.github.com/)

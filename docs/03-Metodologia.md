@@ -53,13 +53,20 @@ O projeto está sendo desenvolvido conforme divisão de alguns papeis entre os m
 
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
- 
-> **Links Úteis**:
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+Após a divisão dos papéis do projeto, ficou estabelecido que seria usado como principal ferramenta para as reuniões da equipe o Microsoft Teams:
+
+As reuniões da equipe com o product owner acontecem uma vez por semana e tem duração média de 45 minutos.
+Os Sprints acontecem de segunda a sexta com duração de 15 minutos.
+
+Como ferramenta para distribuição de tarefas pela equipe, assim como seu controle de fluxo e backlogs é utilizado o quadro de tarefas do github.
+
+Para comunicações instantâneas o uso do whatsapp foi o escolhido pela equipe. 
+
+Todos os agendamentos são compartilhados entre os membros do grupo pelo google agenda. 
+
+A distribuição das tarefas é feita pelo Scrum Master de acordo com a compreensão e possibilidades de cada integrante da equipe sem sobrecarregar ou excluir nenhum dos envolvidos. Toda e qualquer tarefa é previamente discutida e analisada por todos da equipe de forma que os mesmos tenham liberdade para escolher ou declinar de determinada tarefa quando for o caso.
+
+Nos Sprints são discutidos com o Scrum Master as tarefas que cada membro está executando no momento e as tarefas que serão necessárias para atingir as metas estabelecidas pelo product owner naquela semana.
 
 ### Ferramentas
 

@@ -34,10 +34,17 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|ID    | História do Usuário | Descrição do Requisito | Prioridade |
+|------|---------------------|------------------------|------------|
+|RF-001| Alan acessa o site em busca de Clips. | O site vai estar disponível para todos os browsers sem necessidade de login. | ALTA |
+|RF-002| Alan vai até o campo de busca do site para tentar achar algum vídeo novo. | No site vai existir um campo visível na parte de cima da tela com a palavra: “Pesquisar por” | ALTA |
+|RF-003| Alan faz a busca por títulos. | O site deve ser capaz de exibir os conteúdos da plataforma twitch usando como filtro os títulos dos jogos. | ALTA |
+|RF-004| Após achar o vídeo desejado Alan aperta o play | O site vai ser capaz de rodar os vídeos de forma embutida. | ALTA |
+|RF-005| Após a escolha do vídeo, Alan vai poder escolher o volume e o tamanho da tela. | O site deverá incorporar as funcionalidades de tela do twitch como pause e tamanho de tela | ALTA |
+|RF-006| Alan na home do site escolhe qualquer vídeo de forma rápida e prática. | O site vai disponibilizar em sua Home os clipes mais acessados no momento e aqueles de maior sucesso. | ALTA |
+|RF-007| Alan está sem tempo e quer apenas dar “uma olhada” no que está no top do dia. | O site deve ser capaz de disponibilizar uma parte com os melhores clipes do dia. | ALTA |
+|RF-008| Alan está curioso para saber quais foram os clipes mais vistos da semana. | O site vai ser capaz de disponibilizar os clipes mais vistos da semana. | ALTA |
+|RF-009| Alan fecha o site e quando voltar a página inicial exibirá um conteúdo coerente com suas últimas visitas. | O site vai ser capaz de exibir o conteúdo na página inicial usando o histórico de visitas do usuário. | MEDIA |
 
 
 ### Requisitos não Funcionais

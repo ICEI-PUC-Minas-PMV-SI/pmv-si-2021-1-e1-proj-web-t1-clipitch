@@ -74,7 +74,7 @@ As ferramentas empregadas no projeto são:
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Microsoft Teams e Whatsapp](https://www.microsoft.com/pt-br/microsoft-teams/group-chat-software)
-- [LucidChart](https://www.lucidchart.com/pages/pt)
+- [Invision](https://www.invisionapp.com/)
 - [Figma](https://www.figma.com/)
 - [Github](https://github.com/)
 
@@ -82,6 +82,6 @@ O editor de código Visual Studio Code, gratuito, foi escolhido porque ele ofere
 
 As ferramentas de comunicação Microsoft Teams e Whatsapp são utilizadas por possuírem maior aderência dos membros da equipe. O Microsoft Teams oferece plataforma segura, flexível e integrada com as soluções do Office 365, oferecendo assim todas as ferramentas necessárias para documentação e compartilhamento de informações. O Whatsapp ofecere comunicação entre os membros a partir de qualquer lugar e horário, possibilitando resolver questões relacionadas ao projeto de forma ágil.
 
-Para diagramação, Wireframe e Fluxo de Usuário serão utilizadas as versões gratuítas do LucidChart e Figma. São ferramentas que fornecem diversas funcionalidades e possuem excelente suporte pela comunidade.
+Para diagramação, Wireframe e User Flow serão utilizadas as versões gratuítas do Invision e Figma. São ferramentas que fornecem diversas funcionalidades e possuem excelente suporte pela comunidade.
 
 Para gerenciamento do projeto será utilizado o Github. É uma excelente plataforma que fornece todas as funcionalidades necessárias para o gerenciamento e controle do projeto, permitindo designação de atividades para cada membro da equipe, além do acompanhamento e monitoramento da execução delas. 

@@ -1,8 +1,11 @@
 # Arquitetura da Solução
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
+Inicialmente o nosso sowtware é estruturado através do front end, responsável por desenvolver por meio de código uma interface gráfica, com as tecnologias base da Web: 
+- **HTML** (utilizado para criar toda a estrutura da página). 
+- **CSS** (responsável por separar a parte estrutural da aplicação da parte estética, promovendo assim a estilização do conteúdo). 
+- **JavaScript** (que irá fornecer à página web a possibilidade de programação, transformação e processamento de dados enviados e recebidos, interagindo com a marcação e exibição de conteúdo da linguagem HTML e com a estilização desse conteúdo proporcionada pelo CSS).
 
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
+Dentro do nosso projeto o front end faz uma requisição a determinado end point do back end, solicitando a consulta de determinada informação. Após o tratamento das informações solicitadas, o front end recebe as informações advindas do back end e executa a renderização das informações (formatação e tratativa dos dados). Por fim, o front end apresenta as informações na tela do usuário devidamente formatadas e tratadas.
 
 ## Diagrama de componentes
 

@@ -18,26 +18,20 @@ Utilizará-se um banco de dados SQL e a hospedagem da aplicação web será feit
 
 ## Diagrama de componentes
 
-Diagrama que permite a modelagem física de um sistema, através da visão dos seus componentes e relacionamentos entre os mesmos.
-
-Exemplo:
-
-Os componentes que fazem parte da solução são apresentados na Figura XX.
-
 ![Diagrama de Componentes](img/componentes.png)
 
-<center>Figura XX - Arquitetura da Solução</center>
+<center>Figura 01 - Arquitetura da Solução</center>
 
 A solução implementada conta com os seguintes módulos:
 
 - **Navegador** - Interface básica do sistema
-  - **Páginas Web** - Conjunto de arquivos HTML, CSS, JavaScript e imagens que implementam as funcionalidades do sistema.
-  - **Local Storage** - armazenamento mantido no Navegador, onde são implementados bancos de dados baseados em JSON. São eles:
-    - **Canais** - seções de notícias apresentadas
-    - **Comentários** - registro de opiniões dos usuários sobre as notícias
-    - **Preferidas** - lista de notícias mantidas para leitura e acesso posterior
-- **News API** - plataforma que permite o acesso às notícias exibidas no site.
+- **Páginas Web** - Conjunto de arquivos HTML, CSS, JavaScript e imagens que implementam as funcionalidades do sistema.
+- **Servidor Web** - responsável por aceitar pedidos em HTTP de clientes e servi-los com respostas em HTTP.
+- **Servidor de aplicação web** - fornece ambiente para a instalação e execução de aplicações web.
+- **Back-end** - É responsável por armazenar e organizar os dados e garantir que tudo no lado do cliente realmente funcione.
 - **Hospedagem** - local na Internet onde as páginas são mantidas e acessadas pelo navegador.
+- **Top Clips API** - Conjunto de pontos de acesso aos clips do Twitch através do Front-end.
+- **Banco de dados** - É uma coleção organizada de dados, de modo que pode ser facilmente acessado e gerenciado.
 
 > **Links Úteis**:
 >

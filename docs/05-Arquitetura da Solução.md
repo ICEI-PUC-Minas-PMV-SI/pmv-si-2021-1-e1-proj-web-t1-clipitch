@@ -8,13 +8,13 @@ O front-end é responsável por desenvolver por meio de código uma interface gr
 - **CSS** (responsável por separar a parte estrutural da aplicação da parte estética, promovendo assim a estilização do conteúdo).
 - **JavaScript** (que irá fornecer à página web a possibilidade de programação, transformação e processamento de dados enviados e recebidos, interagindo com a marcação e exibição de conteúdo da linguagem HTML e com a estilização desse conteúdo proporcionada pelo CSS).
 
-O front-end faz uma requisição ao back-end, solicitando a consulta de determinada informação. Após o tratamento das informações solicitadas, o front-end recebe as informações advindas do back-end e executa a renderização das informações (formatação e tratativa dos dados). Por fim, o front-end apresenta as informações na tela do usuário devidamente formatadas e tratadas.
+O front-end faz uma requisição ao back-end, solicitando a consulta de dados através de APIs disponibilizadas pelo back-end. Após o tratamento dos dados solicitados, o front-end recebe as informações advindas do back-end e executa a renderização das informações (formatação e tratativa dos dados). Por fim, o front-end apresenta as informações na tela do usuário devidamente formatadas e tratadas.
 
 Os dados que são processados pelo back-end - de acordo com as requisições do front-end - são providos pela API do Twitch e as informações resultantes são utilizadas para renderizar o conteúdo que será disposto na aplicação web. O back-end será desenvolvido em Python, utilizando-se o framework Django.
 
 A API do Twitch a ser utilizada é a [Legacy Twitch API v5](https://dev.twitch.tv/docs/v5) que, embora depreciada, é a única que oferece os endpoints necessários para a execução do projeto. Caso a versão atual da API, [Helix](https://dev.twitch.tv/docs/api/), eventualmente ofereça os endpoints adequados para o propósito do projeto, é possível que altere-se o código para utilizá-la.
 
-Utilizará-se um banco de dados SQL e a hospedagem da aplicação web será feita no Heroku.
+A solução utilizará um banco de dados relacional SQL e a hospedagem da aplicação web será feita no Heroku.
 
 ## Diagrama de componentes
 

@@ -17,6 +17,9 @@ Na página home, estão dispostos o clip mais acessado do dia, os clips que fora
 
 ![Exemplo de Wireframe](img/wireframe-example.png)
 
+
+![UX PWA - Exemplo de Wireframes](img/uxExample.png)
+
 São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
  
 > **Links Úteis**:

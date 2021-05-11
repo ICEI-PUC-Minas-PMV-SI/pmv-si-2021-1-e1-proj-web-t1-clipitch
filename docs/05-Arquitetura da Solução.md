@@ -126,10 +126,3 @@ Daqui em diante, para fazer o deploy de nosso app, basta enviar os commits do re
 ```
 
 Agora é só acessar a url do app.
-
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)

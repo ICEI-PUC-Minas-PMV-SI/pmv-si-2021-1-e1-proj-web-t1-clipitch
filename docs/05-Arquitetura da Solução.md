@@ -33,8 +33,6 @@ A solução implementada conta com os seguintes módulos:
 - **Top Clips API** - Conjunto de pontos de acesso aos clips do Twitch através do Front-end.
 - **Banco de dados** - É uma coleção organizada de dados, de modo que pode ser facilmente acessado e gerenciado.
 
-![Exemplo de UserFlow](img/userflow.png)
-
 ## Tecnologias Utilizadas
 
 - [Twitch API](https://dev.twitch.tv/docs/api/) (Fonte dos clipes que serão o conteúdo do projeto)

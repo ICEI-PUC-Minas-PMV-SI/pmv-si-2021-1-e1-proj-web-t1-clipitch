@@ -16,7 +16,7 @@ Com base nos critérios de desenvolvimento do projeto e do público alvo a ser a
 
 |`PERSONA`|`FUNCIONALIDADE` |`MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário|Encontrar os clipes relacionados a seu conteúdo de interesse.|Encontrar os clipes desejados, conforme especificações de interesse desejadas.|
+|Usuário|Encontrar os clipes relacionados a seu conteúdo de interesse.|Encontrar os clipes mais acessados, de maneira mais rápida.|
 
 Segundo pesquisa realizada no site da Design Culture, a plataforma do Twitch atualmente conta com mais de 32 milhões de usuários ativos por mês, sendo a maioria do seu público relativamente jovem, entre 18 e 34 anos<sup>[[1]]</sup>. Dessa forma, como o público alvo da aplicação a ser desenvolvida está em uma faxa etária jovial, vale lembrar que a maioria é adepta às mais recentes tecnologias no mercado, como os dispositivos mobile. Consta, assim, que será desenvolvido uma aplicação que suporte a responsividade para que possa ser acessível em qualquer lugar e a qualquer hora, economizando tempo do usuário, uma vez que o sistema tem como objetivo a distribuição dos clipes que visam demonstrar uma pequena parte do material bruto existente no Twitch.
 

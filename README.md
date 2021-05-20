@@ -20,6 +20,7 @@ Para auxiliar no escalonamento de forma simplista e bem feita, seria desenvolvid
 - [Nicholas Jacob](https://github.com/NicholasJacob1990)
 - [Robson Ezequiel](https://github.com/Robsonezequiel)
 - [Welbert Luiz](https://github.com/WelbertJr)
+- [Alexsandro Salles de Souza Filho](https://github.com/sallesalex01)
 
 ## Professor
 - Hugo Bastos De Paula

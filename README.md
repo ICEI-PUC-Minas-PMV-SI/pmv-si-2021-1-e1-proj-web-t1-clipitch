@@ -14,16 +14,15 @@ Para auxiliar no escalonamento de forma simplista e bem feita, seria desenvolvid
 
 ## Integrantes
 
+- [Alexsandro Salles de Souza Filho](https://github.com/sallesalex01)
 - [Alonso Batista de Oliveira Junior](https://github.com/alonso-boj)
 - [Gustavo Castro](https://github.com/gstvcastroc)
 - [Halex Maciel Silva Vieira](https://github.com/halexmaciel)
-- [Nicholas Jacob](https://github.com/NicholasJacob1990)
 - [Robson Ezequiel](https://github.com/Robsonezequiel)
 - [Welbert Luiz](https://github.com/WelbertJr)
-- [Alexsandro Salles de Souza Filho](https://github.com/sallesalex01)
 
 ## Professor
-- Hugo Bastos De Paula
+- [Hugo Bastos De Paula](https://github.com/hugodepaula)
 
 # Documentação
 
@@ -50,6 +49,3 @@ Para auxiliar no escalonamento de forma simplista e bem feita, seria desenvolvid
 # Apresentação
 
 <li><a href="presentation/README.md"> Apresentação da solução</a></li>
-
-# Referências
-<li><a href="https://www.pwc.com.br/pt/sala-de-imprensa/noticias/pwc-mercado-global-midia-entretenimento-movimentar-17.html"> Matéria da PwC Brasil</a></li>

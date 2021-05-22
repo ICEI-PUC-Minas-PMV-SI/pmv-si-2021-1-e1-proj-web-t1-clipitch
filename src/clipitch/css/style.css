@@ -1,0 +1,51 @@
+body{
+    font-family: 'Robot', serif;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Pattaya', serif;
+}
+
+.navbar-nav{
+    position: absolute;
+}
+
+.bg-transparent{  
+    transition: 750ms ease;  
+    background-color: transparent !important;
+}
+
+.bg-transparent.scrolled{
+    background-color: #C271EB !important;
+}
+
+.bg-custom{
+    background-color: #C271EB;
+}
+
+nav .navbar-nav li a{
+    color: white !important;
+}
+
+header.masthead {
+    background-image: url("/imgs/gdw.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+
+.textoPrincipal{
+    text-align:center; padding-top: 4%;    
+    text-shadow: 1px 1px 2px black;
+}
+
+.textoTitulo{
+    color: #C271EB !important;
+    text-shadow: -1px 1px 1px #FFE900;
+    text-align:center; padding-top: 4%; 
+}
+
+.carousel-item {
+    text-shadow: 0px 2px 4px black;
+}

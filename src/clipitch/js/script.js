@@ -15,30 +15,28 @@ const HEADERS_CLIPS = {
 };
 
 const PARAMS = {
-  "channel": null,
-  "cursor": null,
-  "game": null,
-  "language": null,
-  "limit": LIMIT,
-  "period": "day",
-  "trending": true,
+  channel: null,
+  cursor: null,
+  game: null,
+  language: null,
+  limit: LIMIT,
+  period: "day",
+  trending: true,
 };
-
 
 const conectaTwitch = () => {
   fetch(URL_AUTH, {
     method: "POST",
     headers: {
-        client_id: CLIENT_ID,
-        client_secret: CLIENT_SECRET
-        
+      client_id: CLIENT_ID,
+      client_secret: CLIENT_SECRET,
     },
   })
-    .then(res => res.json())
-    .then(pegou_o_token => {
-          let token = pegou_o_token.body.access_token;
-          getTwitchDados(token, PARAMS)
-        //console.log(token)
+    .then((res) => res.json())
+    .then((pegou_o_token) => {
+      let token = pegou_o_token.body.access_token;
+      getTwitchDados(token, PARAMS);
+      //console.log(token)
     })
     .catch((err) => {
       console.log("Erro ao autenticar!!!", err);
@@ -50,9 +48,9 @@ const getTwitchDados = (auth_token, params) => {
     method: "GET",
     headers: HEADERS_CLIPS,
   })
-    .then(res => res.json())
-    .then(clips => {
-      clips.map(clip => {
+    .then((res) => res.json())
+    .then((clips) => {
+      clips.map((clip) => {
         console.log(clip);
       });
     })
@@ -60,4 +58,3 @@ const getTwitchDados = (auth_token, params) => {
       console.log("Erro ao obter clips", err);
     });
 };
-

@@ -1,0 +1,58 @@
+body {
+  font-family: "Roboto", serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Pattaya", serif;
+}
+
+.navbar-nav {
+  position: absolute;
+}
+
+.bg-transparent {
+  transition: 750ms ease;
+  background-color: transparent !important;
+}
+
+.bg-transparent.scrolled {
+  background-color: #c271eb !important;
+}
+
+.bg-custom {
+  background-color: #c271eb;
+}
+
+nav .navbar-nav li a {
+  color: white !important;
+}
+
+header.masthead {
+  background-image: url("/src/clipitch/imgs/gdw.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+
+.textoPrincipal {
+  text-align: center;
+  padding-top: 4%;
+  text-shadow: 1px 1px 2px black;
+}
+
+.textoTitulo {
+  color: #c271eb !important;
+  text-shadow: -1px 1px 1px #ffe900;
+  text-align: center;
+  padding-top: 4%;
+}
+
+.carousel-item {
+  text-shadow: 0px 2px 4px black;
+}
+
+/* Estilo da seção de vídeos */

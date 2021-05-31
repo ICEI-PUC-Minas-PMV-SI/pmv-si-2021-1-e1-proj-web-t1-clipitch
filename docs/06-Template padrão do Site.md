@@ -4,6 +4,6 @@
 
 ## Layout de referência:
 
-![PáginaIncial](CarouselClipItch.png)
+![PáginaIncial](img/CarouselClipItch.png)
 
 ![PáginaIncial](img/GridClipItch.png)

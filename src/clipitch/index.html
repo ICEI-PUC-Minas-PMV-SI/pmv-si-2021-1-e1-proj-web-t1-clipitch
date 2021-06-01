@@ -313,14 +313,13 @@
           <iframe class="embed-responsive-item video" src="" allowfullscreen></iframe>
         </div>
         <div class="text-end">
-          <button type="button" id="btnOptions" class="btn btn-warning align-items-center">
-            Ver mais
+          <button type="button" class="btn btn-warning" id="btnOptions" data-bs-toggle="modal" data-bs-target="#modalDetails">
+            Ver Mais...
           </button>
         </div>
       </div>
     </div>
   </div>
-
   <!-- /Galeria de vídeos do dia -->
 
   <!-- Galeria de vídeos da semana -->
@@ -503,8 +502,8 @@
           <iframe class="embed-responsive-item video" src="" allowfullscreen></iframe>
         </div>
         <div class="text-end">
-          <button type="button" id="btnOptions" class="btn btn-warning align-items-center">
-            Ver mais
+          <button type="button" class="btn btn-warning" id="btnOptions" data-bs-toggle="modal" data-bs-target="#modalDetails">
+            Ver Mais...
           </button>
         </div>
       </div>
@@ -512,6 +511,29 @@
     <br />
   </div>
   <!-- /Galeria de vídeos da semana -->
+
+  <!-- Modal || //ToDO: Fazer o reaproveitamento do corpo e título do modal para diversos locais -->
+  <div class="modal fade" id="modalDetails" tabindex="-1" aria-labelledby="modalDetailsLabel" aria-hidden="true"> 
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalDetailsLabel">Título do modal</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Mussum Ipsum, cacilds vidis litro abertis. A ordem dos tratores não altera o pão duris.
+            Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!
+            Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Posuere libero varius. 
+            Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.</p>
+        </div>
+        <div class="modal-footer">          
+          <button type="button" class="btn" title="Compartilhar" data-bs-dismiss="modal"><i class="fab fa-twitter"></i></i></button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Modal -->
 
   <!-- JQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

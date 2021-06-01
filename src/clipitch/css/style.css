@@ -9,10 +9,6 @@ h4 {
   font-family: "Pattaya", serif;
 }
 
-.navbar-nav {
-  position: absolute;
-}
-
 .bg-transparent {
   transition: 750ms ease;
   background-color: transparent !important;
@@ -24,6 +20,16 @@ h4 {
 
 .bg-custom {
   background-color: #c271eb;
+}
+.navbar{
+  margin: 0;
+    border: 0;
+}
+
+.nav-image{
+  content:url("/src/clipitch/imgs/logo.png");
+  width: 20%;
+  height: 100%;
 }
 
 nav .navbar-nav li a {
@@ -53,4 +59,89 @@ header.masthead {
 
 .carousel-item {
   text-shadow: 0px 2px 4px black;
+}
+
+/* Define o css para o tamanho da resolução em Tablets */
+@media screen and (max-width: 992px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape){
+  .bg-transparent {
+    background-color: #c271eb !important;
+    position: relative;
+  }
+
+  .nav-image{
+    content:url("/src/clipitch/imgs/logo-mobile.png");
+    width: 20%;
+    height: 100%;
+  }
+}
+
+/* efine o css para o tamanho da resolução em IPad modo Portrait */
+@media only screen  and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .bg-transparent {
+    transition: 750ms ease;
+    background-color: transparent !important;
+  }
+
+  .nav-image{
+    content:url("/src/clipitch/imgs/logo-mobile.png");
+    width: 20%;
+    height: 100%;
+  }
+}
+
+/* Define o css para o tamanho da resolução em IPad modo Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1)
+ {
+  .bg-transparent {
+    transition: 750ms ease;
+    background-color: transparent !important;
+  }
+
+  .nav-image{
+    content:url("/src/clipitch/imgs/logo-mobile.png");
+    width: 20%;
+    height: 100%;
+  }
+}
+
+/* Define o css para o tamanho da resolução em IPad Pro modo Portrait */
+@media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
+  .bg-transparent {
+    transition: 750ms ease;
+    background-color: transparent !important;
+  }
+
+  .nav-image{
+    content:url("/src/clipitch/imgs/logo-mobile.png");
+    width: 20%;
+    height: 100%;
+  }
+}
+
+/* Define o css para o tamanho da resolução em Iphone X (Mobile) */
+@media only screen and (max-width: 600px)and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape) {
+  .bg-transparent {
+    background-color: #c271eb !important;
+    position: relative;
+  }
+
+  .nav-image{
+    content:url("/src/clipitch/imgs/logo-mobile.png");
+    width: 20%;
+    height: 100%;
+  }
+}
+
+/* Define o css para o tamanho da resolução Iphone X (Mobile) */
+@media only screen and (max-width: 600px)and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait) {
+  .bg-transparent {
+    background-color: #c271eb !important;
+    position: relative;
+  }
+
+  .nav-image{
+    content:url("/src/clipitch/imgs/logo-mobile.png");
+    width: 20%;
+    height: 100%;
+  }
 }

@@ -93,34 +93,6 @@ function getAllClips(db) {
   };
 }
 
-
-function searchClips(db, searchText) {
-  var tabela = document.getElementById("videos");
-  tabela.innerHTML = "";
-
-  var s = "";
-
-  var transaction = db.transaction("clips", "readonly");
-  var clips = transaction.objectStore("clips");
-  var cursor = clips.openCursor();
-
-  cursor.onsuccess = function (e) {
-    var cursor = e.target.result;
-    if (cursor) {
-      for (var field in cursor.value) {
-        s += field + "=" + cursor.value.title + "<br/>";
-      }
-      s += "</p>";
-      cursor.continue();
-    }
-  };
-
-  transaction.oncomplete = () => {
-    tabela.innerHTML = s;
-  };
-}
-
-
 function listClipsDay(db) {
   var tabela = document.getElementById("videos");
   tabela.innerHTML = "";
@@ -146,7 +118,6 @@ function listClipsDay(db) {
     tabela.innerHTML = s;
   };
 }
-
 
 function listClipsWeek(db) {
   var tabela = document.getElementById("videos");
@@ -174,6 +145,37 @@ function listClipsWeek(db) {
   };
 }
 
+//Filtra no db
+function searchClips(filterText) {
+  const db = window.indexedDB.open("topClipsDB", 1);
 
+  const transaction = db.transaction(['clips'], 'readonly');
+  const objectStore = transaction.objectStore('clips');
+  const getCursorRequest = objectStore.openCursor();
+
+  var child = document.getElementById("idCard");
+  child.innerHTML = ""; //Pega o corpo do element e seta = "nulo" caso possua algo de outras chamadas.
+
+  getCursorRequest.onsuccess = e => {
+    const cursor = e.target.result;
+    if (cursor) {
+      if(cursor.value.vendor === filterText){
+        const clips = cursor.value;
+
+        child.innerHTML += clips.game + '<br/>';
+      }            
+      cursor.continue();  
+    } 
+    else console.log('Anulou a thread, significa que chegou ao fim.');
+  }
+
+  let father = document.getElementById("idCard");
+  appendElement(father, child)
+}
+
+//Pega o elemento Pai e adiciona o Filho dentro dele no html
+function appendElement (fatherElement, childElement){
+  document.getElementById(fatherElement).appendChild(childElement);  
+}
 
 export default criaBancoDeDados;

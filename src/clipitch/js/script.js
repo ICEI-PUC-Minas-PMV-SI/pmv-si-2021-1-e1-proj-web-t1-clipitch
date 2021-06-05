@@ -79,5 +79,3 @@ const getTwitchDados = (token, url, params) => {
 document.addEventListener("DOMContentLoaded", conectaTwitch);
 
 export default { conectaTwitch, getTwitchDados };
-
-

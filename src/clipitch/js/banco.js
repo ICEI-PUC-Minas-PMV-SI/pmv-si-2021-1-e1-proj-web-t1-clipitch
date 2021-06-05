@@ -33,6 +33,7 @@ const criaBancoDeDados = (TopClips) => {
       db = e.target.result;
 
       adicionarClipsBD(db, TopClips);
+      getAllClips();
 
       console.log("Sucesso ao criar o banco de dados");
     };
@@ -67,7 +68,51 @@ const adicionarClipsBD = (db, clips) => {
   };
 };
 
-function getAllClips(db) {
+// Obtém todos os clips da base de dados
+function getAllClips() {
+
+  const divClips = document.getElementById("videos");
+  
+  const requestDB = window.indexedDB.open("topClipsDB", 1);
+  let clipsList = [];
+
+  requestDB.onsuccess = () => {
+    const db = requestDB.result;
+    const transaction = db.transaction(["clips"], "readwrite");
+    const clipObjectStore = transaction.objectStore("clips");
+    const cursorRequest = clipObjectStore.openCursor();
+    cursorRequest.onsuccess = (e) => {
+      let cursor = e.target.result;
+      
+      if (cursor) {
+        
+        clipsList.push(cursor.value);
+        cursor.continue();
+        
+        } else {
+          displayClips(clipsList)
+        }
+        
+      }
+    };
+
+    requestDB.onerror = (e) => {
+      console.log(`Erro na requisição para consultar os clips ${e.target.errorCode}`);
+    }
+
+  
+};
+
+function displayClips(clips) {
+  let listHTML = '<ul>';
+  for (let i = 0; i < clips.length; i++) {
+    let clip = clips[i];
+    listHTML += '<li>' + clip["title"] + " - " + clip["url"] + '</li>';
+  }
+  document.getElementById('videos').innerHTML = listHTML;
+}  
+
+function listClipsDay(db) {
   var tabela = document.getElementById("videos");
   tabela.innerHTML = "";
 
@@ -119,32 +164,6 @@ function listClipsDay(db) {
   };
 }
 
-function listClipsWeek(db) {
-  var tabela = document.getElementById("videos");
-  tabela.innerHTML = "";
-
-  var s = "";
-
-  var transaction = db.transaction("clips", "readonly");
-  var clips = transaction.objectStore("clips");
-  var cursor = clips.openCursor();
-
-  cursor.onsuccess = function (e) {
-    var cursor = e.target.result;
-    if (cursor) {
-      for (var field in cursor.value) {
-        s += field + "=" + cursor.value.title + "<br/>";
-      }
-      s += "</p>";
-      cursor.continue();
-    }
-  };
-
-  transaction.oncomplete = () => {
-    tabela.innerHTML = s;
-  };
-}
-
 //Filtra no db
 function searchClips(filterText) {
   const db = window.indexedDB.open("topClipsDB", 1);
@@ -171,11 +190,6 @@ function searchClips(filterText) {
 
   let father = document.getElementById("idCard");
   appendElement(father, child)
-}
-
-//Pega o elemento Pai e adiciona o Filho dentro dele no html
-function appendElement (fatherElement, childElement){
-  document.getElementById(fatherElement).appendChild(childElement);  
 }
 
 export default criaBancoDeDados;

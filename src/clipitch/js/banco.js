@@ -111,40 +111,6 @@ function displayClips(clips) {
   document.getElementById('videos').innerHTML = listHTML;
 }
 
-
-
-function searchClips(searchText) {
-  const divClips = document.getElementById("videos");
-
-  const bancoDeDados = window.indexedDB.open("topClipsDB", 1);
-
-  let clipsList = [];
-
-  bancoDeDados.onsuccess = () => {
-
-    const db = bancoDeDados.result;    
-    const cursorAberto = getCursorBancoDeDados(db);
-    
-    cursorAberto.onsuccess = (evento) => {
-      let cursor = evento.target.result;
-
-      // Verificar se o cursor possui dados ou se está no final dele
-      if (cursor) {
-        clipsList.push(cursor.value);
-        cursor.continue();
-      } else {
-        displayClips(clipsList);
-      }
-    };
-  };
-
-  bancoDeDados.onerror = (e) => {
-    console.log(
-      `Erro na requisição para consultar os clips ${e.target.errorCode}`
-    );
-  };
-}
-
 //Faz o filtro dos clips
 function searchClips() {
   const requestDB = window.indexedDB.open("topClipsDB", 1);

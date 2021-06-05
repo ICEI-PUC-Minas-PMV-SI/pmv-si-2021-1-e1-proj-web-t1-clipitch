@@ -5,7 +5,7 @@ const URL_AUTH = "https://id.twitch.tv/oauth2/token";
 const URL_CLIPS = "https://api.twitch.tv/kraken/clips/top";
 const LIMIT = 100;
 const CLIENT_ID = "j1c6sfsv12hl349hh871nneegu8frw";
-const CLIENT_SECRET = "di18gij8eeha9e51fak5ytgsnf65qw";
+const CLIENT_SECRET = "4bvj20srxq1dxrtzid7szsobm3jbcl";
 
 // Cabeçalho necessário para autenticação e obtenção do Token
 const PARAMS_AUTH = {

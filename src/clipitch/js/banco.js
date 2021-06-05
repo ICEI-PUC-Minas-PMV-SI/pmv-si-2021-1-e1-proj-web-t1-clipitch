@@ -17,7 +17,7 @@ const criaBancoDeDados = (TopClips) => {
       if (!db.objectStoreNames.contains("clips")) {
         // ObjectStorage = Tabela
         const clipsTb = db.createObjectStore("clips", {
-          autoIncrement: true,
+          keyPath: "slug"
         });
 
         clipsTb.createIndex("title", "titleIdx", {
@@ -34,7 +34,7 @@ const criaBancoDeDados = (TopClips) => {
 
       adicionarClipsBD(db, TopClips);
       getAllClips();
-
+      
       console.log("Sucesso ao criar o banco de dados");
     };
 
@@ -72,7 +72,7 @@ const adicionarClipsBD = (db, clips) => {
 function getAllClips() {
 
   const divClips = document.getElementById("videos");
-  
+
   const requestDB = window.indexedDB.open("topClipsDB", 1);
   let clipsList = [];
 
@@ -83,24 +83,24 @@ function getAllClips() {
     const cursorRequest = clipObjectStore.openCursor();
     cursorRequest.onsuccess = (e) => {
       let cursor = e.target.result;
-      
+
       if (cursor) {
-        
+
         clipsList.push(cursor.value);
         cursor.continue();
-        
-        } else {
-          displayClips(clipsList)
-        }
-        
+
+      } else {
+        displayClips(clipsList)
       }
-    };
 
-    requestDB.onerror = (e) => {
-      console.log(`Erro na requisição para consultar os clips ${e.target.errorCode}`);
     }
+  };
 
-  
+  requestDB.onerror = (e) => {
+    console.log(`Erro na requisição para consultar os clips ${e.target.errorCode}`);
+  }
+
+
 };
 
 function displayClips(clips) {
@@ -110,32 +110,6 @@ function displayClips(clips) {
     listHTML += '<li>' + clip["title"] + " - " + clip["url"] + '</li>';
   }
   document.getElementById('videos').innerHTML = listHTML;
-}  
-
-function listClipsDay(db) {
-  var tabela = document.getElementById("videos");
-  tabela.innerHTML = "";
-
-  var s = "";
-
-  var transaction = db.transaction("clips", "readonly");
-  var clips = transaction.objectStore("clips");
-  var cursor = clips.openCursor();
-
-  cursor.onsuccess = function (e) {
-    var cursor = e.target.result;
-    if (cursor) {
-      for (var field in cursor.value) {
-        s += field + "=" + cursor.value.title + "<br/>";
-      }
-      s += "</p>";
-      cursor.continue();
-    }
-  };
-
-  transaction.oncomplete = () => {
-    tabela.innerHTML = s;
-  };
 }
 
 function listClipsDay(db) {
@@ -164,32 +138,42 @@ function listClipsDay(db) {
   };
 }
 
-//Filtra no db
-function searchClips(filterText) {
-  const db = window.indexedDB.open("topClipsDB", 1);
+//Faz o filtro dos clips
+function searchClips() {
+  const requestDB = window.indexedDB.open("topClipsDB", 1);
+  let clipsList = [];
 
-  const transaction = db.transaction(['clips'], 'readonly');
-  const objectStore = transaction.objectStore('clips');
-  const getCursorRequest = objectStore.openCursor();
+  requestDB.onsuccess = () => {
+    const db = requestDB.result;
+    const transaction = db.transaction(["clips"], "readwrite");
+    const clipObjectStore = transaction.objectStore("clips");
+    const cursorRequest = clipObjectStore.openCursor();
+    cursorRequest.onsuccess = (e) => {
+      let cursor = e.target.result;
 
-  var child = document.getElementById("idCard");
-  child.innerHTML = ""; //Pega o corpo do element e seta = "nulo" caso possua algo de outras chamadas.
+      if (cursor) {
+        clipsList.push(cursor.value);
+        cursor.continue();
+      } else {
+        filterClips(clipsList)
+      }
 
-  getCursorRequest.onsuccess = e => {
-    const cursor = e.target.result;
-    if (cursor) {
-      if(cursor.value.vendor === filterText){
-        const clips = cursor.value;
-
-        child.innerHTML += clips.game + '<br/>';
-      }            
-      cursor.continue();  
-    } 
-    else console.log('Anulou a thread, significa que chegou ao fim.');
+    }
+  };
+  requestDB.onerror = (e) => {
+    console.log(`Erro na requisição para consultar os clips ${e.target.errorCode}`);
   }
+}
 
-  let father = document.getElementById("idCard");
-  appendElement(father, child)
+function filterClips(clips) {
+  var element = document.getElementById("searchVideos");
+
+  for (let i = 0; i < 9; i++) {
+    let clip = clips[i];
+    element.innerHTML += '<div class="col"><iframe src="' + clip["embed_url"] + '&parent=localhost" frameborder="0" allowfullscreen="true" scrolling="no"></iframe></div><br/>';
+
+  }
 }
 
 export default criaBancoDeDados;
+export { searchClips };

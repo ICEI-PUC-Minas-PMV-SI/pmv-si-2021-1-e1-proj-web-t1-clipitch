@@ -19,7 +19,7 @@ h4 {
 }
 
 .bg-custom {
-  background-color: #c271eb;
+  background-color: #c271eb !important;
 }
 .navbar{
   margin: 0;

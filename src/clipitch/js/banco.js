@@ -70,126 +70,158 @@ const adicionarClipsBD = (db, clips) => {
 
 // Obtém todos os clips da base de dados
 function getAllClips() {
-
   const divClips = document.getElementById("videos");
-  
-  const requestDB = window.indexedDB.open("topClipsDB", 1);
+
+  const bancoDeDados = window.indexedDB.open("topClipsDB", 1);
+
   let clipsList = [];
 
-  requestDB.onsuccess = () => {
-    const db = requestDB.result;
-    const transaction = db.transaction(["clips"], "readwrite");
-    const clipObjectStore = transaction.objectStore("clips");
-    const cursorRequest = clipObjectStore.openCursor();
-    cursorRequest.onsuccess = (e) => {
-      let cursor = e.target.result;
-      
+  bancoDeDados.onsuccess = () => {
+
+    const db = bancoDeDados.result;    
+    const cursorAberto = getCursorBancoDeDados(db);
+    
+    cursorAberto.onsuccess = (evento) => {
+      let cursor = evento.target.result;
+
+      // Verificar se o cursor possui dados ou se está no final dele
       if (cursor) {
-        
         clipsList.push(cursor.value);
         cursor.continue();
-        
-        } else {
-          displayClips(clipsList)
-        }
-        
+      } else {
+        displayClips(clipsList);
       }
     };
+  };
 
-    requestDB.onerror = (e) => {
-      console.log(`Erro na requisição para consultar os clips ${e.target.errorCode}`);
-    }
+  bancoDeDados.onerror = (e) => {
+    console.log(
+      `Erro na requisição para consultar os clips ${e.target.errorCode}`
+    );
+  };
+}
 
-  
-};
 
 function displayClips(clips) {
-  let listHTML = '<ul>';
-  for (let i = 0; i < clips.length; i++) {
-    let clip = clips[i];
-    listHTML += '<li>' + clip["title"] + " - " + clip["url"] + '</li>';
-  }
-  document.getElementById('videos').innerHTML = listHTML;
-}  
+  let listHTML = "<ul>";
 
-function listClipsDay(db) {
-  var tabela = document.getElementById("videos");
-  tabela.innerHTML = "";
+  clips.forEach((clip) => {
+    listHTML += `<li key=${clip["slug"]}><a href=${clip["url"]}> ${clip["title"]}</a></li>`;
+  })
+  document.getElementById("videos").innerHTML = listHTML;
+}
 
-  var s = "";
 
-  var transaction = db.transaction("clips", "readonly");
-  var clips = transaction.objectStore("clips");
-  var cursor = clips.openCursor();
 
-  cursor.onsuccess = function (e) {
-    var cursor = e.target.result;
-    if (cursor) {
-      for (var field in cursor.value) {
-        s += field + "=" + cursor.value.title + "<br/>";
+function searchClips(searchText) {
+  const divClips = document.getElementById("videos");
+
+  const bancoDeDados = window.indexedDB.open("topClipsDB", 1);
+
+  let clipsList = [];
+
+  bancoDeDados.onsuccess = () => {
+
+    const db = bancoDeDados.result;    
+    const cursorAberto = getCursorBancoDeDados(db);
+    
+    cursorAberto.onsuccess = (evento) => {
+      let cursor = evento.target.result;
+
+      // Verificar se o cursor possui dados ou se está no final dele
+      if (cursor) {
+        clipsList.push(cursor.value);
+        cursor.continue();
+      } else {
+        displayClips(clipsList);
       }
-      s += "</p>";
-      cursor.continue();
-    }
+    };
   };
 
-  transaction.oncomplete = () => {
-    tabela.innerHTML = s;
+  bancoDeDados.onerror = (e) => {
+    console.log(
+      `Erro na requisição para consultar os clips ${e.target.errorCode}`
+    );
   };
 }
 
-function listClipsDay(db) {
-  var tabela = document.getElementById("videos");
-  tabela.innerHTML = "";
+function listClipsDay() {
+  const divClips = document.getElementById("videos");
 
-  var s = "";
+  const bancoDeDados = window.indexedDB.open("topClipsDB", 1);
 
-  var transaction = db.transaction("clips", "readonly");
-  var clips = transaction.objectStore("clips");
-  var cursor = clips.openCursor();
+  let clipsList = [];
 
-  cursor.onsuccess = function (e) {
-    var cursor = e.target.result;
-    if (cursor) {
-      for (var field in cursor.value) {
-        s += field + "=" + cursor.value.title + "<br/>";
+  bancoDeDados.onsuccess = () => {
+
+    const db = bancoDeDados.result;    
+    const cursorAberto = getCursorBancoDeDados(db);
+    
+    cursorAberto.onsuccess = (evento) => {
+      let cursor = evento.target.result;
+
+      // Verificar se o cursor possui dados ou se está no final dele
+      if (cursor) {
+        clipsList.push(cursor.value);
+        cursor.continue();
+      } else {
+        displayClips(clipsList);
       }
-      s += "</p>";
-      cursor.continue();
-    }
+    };
   };
 
-  transaction.oncomplete = () => {
-    tabela.innerHTML = s;
+  bancoDeDados.onerror = (e) => {
+    console.log(
+      `Erro na requisição para consultar os clips ${e.target.errorCode}`
+    );
   };
 }
 
-//Filtra no db
-function searchClips(filterText) {
-  const db = window.indexedDB.open("topClipsDB", 1);
+function listClipsWeek() {
+  const divClips = document.getElementById("videos");
 
-  const transaction = db.transaction(['clips'], 'readonly');
-  const objectStore = transaction.objectStore('clips');
-  const getCursorRequest = objectStore.openCursor();
+  const bancoDeDados = window.indexedDB.open("topClipsDB", 1);
 
-  var child = document.getElementById("idCard");
-  child.innerHTML = ""; //Pega o corpo do element e seta = "nulo" caso possua algo de outras chamadas.
+  let clipsList = [];
 
-  getCursorRequest.onsuccess = e => {
-    const cursor = e.target.result;
-    if (cursor) {
-      if(cursor.value.vendor === filterText){
-        const clips = cursor.value;
+  bancoDeDados.onsuccess = () => {
 
-        child.innerHTML += clips.game + '<br/>';
-      }            
-      cursor.continue();  
-    } 
-    else console.log('Anulou a thread, significa que chegou ao fim.');
-  }
+    const db = bancoDeDados.result;    
+    const cursorAberto = getCursorBancoDeDados(db);
+    
+    cursorAberto.onsuccess = (evento) => {
+      let cursor = evento.target.result;
 
-  let father = document.getElementById("idCard");
-  appendElement(father, child)
+      // Verificar se o cursor possui dados ou se está no final dele
+      if (cursor) {
+        clipsList.push(cursor.value);
+        cursor.continue();
+      } else {
+        displayClips(clipsList);
+      }
+    };
+  };
+
+  bancoDeDados.onerror = (e) => {
+    console.log(
+      `Erro na requisição para consultar os clips ${e.target.errorCode}`
+    );
+  };
+}
+
+
+function tagClips(db) {
+
+  // Falta impplementar os clips por TAGS para que o usuário possa filtrar
+
+}
+
+// Obtém o curso para ler a tabela de Clips - Retorna o Cursor Aberto posicionado na Tabela
+function getCursorBancoDeDados(db) {
+  const transaction = db.transaction(["clips"], "readonly");
+  const tabelaClip = transaction.objectStore("clips");
+  const cursorAberto = tabelaClip.openCursor();
+  return cursorAberto;
 }
 
 export default criaBancoDeDados;

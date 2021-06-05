@@ -16,9 +16,7 @@ const criaBancoDeDados = (TopClips) => {
 
       if (!db.objectStoreNames.contains("clips")) {
         // ObjectStorage = Tabela
-        const clipsTb = db.createObjectStore("clips", {
-          autoIncrement: true,
-        });
+        const clipsTb = db.createObjectStore("clips", { keyPath: "slug" } );
 
         clipsTb.createIndex("title", "titleIdx", {
           unique: false,
@@ -110,6 +108,7 @@ function displayClips(clips) {
   })
   document.getElementById("videos").innerHTML = listHTML;
 }
+
 
 
 

@@ -1,5 +1,7 @@
 body {
   font-family: "Roboto", serif;
+  width: 100vw;
+  height: 100vh;
 }
 
 h1,
@@ -55,6 +57,11 @@ header.masthead {
   text-shadow: -1px 1px 1px #ffe900;
   text-align: center;
   padding-top: 4%;
+}
+
+footer {
+  position: inherit;
+  bottom: 0;
 }
 
 .carousel-item {

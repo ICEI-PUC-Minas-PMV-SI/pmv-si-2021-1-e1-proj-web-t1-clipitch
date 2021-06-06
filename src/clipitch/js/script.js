@@ -1,5 +1,6 @@
 import criaBancoDeDados from "./banco.js";
 
+
 // Constantes, Parâmetros e Funções Necessárias para Requisição da API do Twitch e Armazenamento dos Dados
 const URL_AUTH = "https://id.twitch.tv/oauth2/token";
 const URL_CLIPS = "https://api.twitch.tv/kraken/clips/top";
@@ -43,6 +44,7 @@ const conectaTwitch = () => {
     .then((res) => res.json())
     .then((res) => {
       const access_token = res.access_token;
+      console.log(res)
 
       //Executa a função que obtém os clips do Twitch
       getTwitchDados(access_token, URL_CLIPS, PARAMS_CLIPS);
@@ -54,28 +56,28 @@ const conectaTwitch = () => {
 
 // Realiza a chamada da API Top Clips do Twitch
 const getTwitchDados = (token, url, params) => {
-  
   const clipsData = [];
 
   url += "?" + new URLSearchParams(params).toString();
-  
-  console.log(url)
-  
+
+  console.log(url);
+
   fetch(url, {
     method: "GET",
     headers: HEADERS_CLIPS,
   })
-  .then((res) => res.json())
-  .then((topClips) => {
-    console.log(topClips)
+    .then((res) => res.json())
+    .then((topClips) => {
+      console.log(topClips);
       clipsData.push(...topClips.clips);
       criaBancoDeDados(clipsData);
-    }).catch((err) => {
+    })
+    .catch((err) => {
       console.log("Erro ao obter clips", err);
     });
-    
 };
 
-document.addEventListener("DOMContentLoaded", conectaTwitch);
+document.addEventListener("DOMContentLoaded", conectaTwitch)
 
 export default { conectaTwitch, getTwitchDados };
+

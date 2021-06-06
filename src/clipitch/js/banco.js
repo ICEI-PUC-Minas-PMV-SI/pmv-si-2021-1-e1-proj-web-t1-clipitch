@@ -69,15 +69,15 @@ const adicionarClipsBD = (db, clips) => {
 };
 
 // Obtém todos os clips da base de dados
-function getAllClips() {
+function getAllClips(dayOrWeek) {
   const requestDB = window.indexedDB.open("topClipsDB", 1);
   let clipsList = [];
 
+  const cursorRequest = getCursorBancoDeDados(requestDB);
+  const db = requestDB.result;
+
   requestDB.onsuccess = () => {
-    const db = requestDB.result;
-    const transaction = db.transaction(["clips"], "readwrite");
-    const clipObjectStore = transaction.objectStore("clips");
-    const cursorRequest = clipObjectStore.openCursor();
+
     cursorRequest.onsuccess = (e) => {
       let cursor = e.target.result;
 
@@ -187,6 +187,16 @@ function filterClips(clips) {
       '&parent=localhost" frameborder="0" allowfullscreen="true" scrolling="no"></iframe></div><br/>';
   }
 }
+
+
+// Obtém o curso para ler a tabela de Clips - Retorna o Cursor Aberto posicionado na Tabela
+function getCursorBancoDeDados(db) {
+  const transaction = db.transaction(["clips"], "readonly");
+  const tabelaClip = transaction.objectStore("clips");
+  const cursorAberto = tabelaClip.openCursor();
+  return cursorAberto;
+}
+
 
 export default criaBancoDeDados;
 export { searchClips };

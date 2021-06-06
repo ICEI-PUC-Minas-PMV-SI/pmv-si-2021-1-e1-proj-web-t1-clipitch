@@ -17,7 +17,7 @@ const criaBancoDeDados = (TopClips) => {
       if (!db.objectStoreNames.contains("clips")) {
         // ObjectStorage = Tabela
         const clipsTb = db.createObjectStore("clips", {
-          keyPath: "slug"
+          keyPath: "slug",
         });
 
         clipsTb.createIndex("title", "titleIdx", {
@@ -33,8 +33,7 @@ const criaBancoDeDados = (TopClips) => {
       db = e.target.result;
 
       adicionarClipsBD(db, TopClips);
-      getAllClips();
-      
+
       console.log("Sucesso ao criar o banco de dados");
     };
 
@@ -70,8 +69,6 @@ const adicionarClipsBD = (db, clips) => {
 
 // Obtém todos os clips da base de dados
 function getAllClips() {
-  const divClips = document.getElementById("videos");
-
   const requestDB = window.indexedDB.open("topClipsDB", 1);
   let clipsList = [];
 
@@ -84,34 +81,33 @@ function getAllClips() {
       let cursor = e.target.result;
 
       if (cursor) {
-
         clipsList.push(cursor.value);
         cursor.continue();
-
       } else {
-        displayClips(clipsList)
+        displayClips(clipsList);
       }
-
-    }
+    };
   };
 
   requestDB.onerror = (e) => {
-    console.log(`Erro na requisição para consultar os clips ${e.target.errorCode}`);
-  }
-
-
-};
-
-function displayClips(clips) {
-  let listHTML = '<ul>';
-  for (let i = 0; i < clips.length; i++) {
-    let clip = clips[i];
-    listHTML += '<li>' + clip["title"] + " - " + clip["url"] + '</li>';
-  }
-  document.getElementById('videos').innerHTML = listHTML;
+    console.log(
+      `Erro na requisição para consultar os clips ${e.target.errorCode}`
+    );
+  };
 }
 
-//Faz o filtro dos clips
+// Função para listar os vídeos na página inicial. TODO: Revisar o código, pois ainda não está funcional.
+function displayClips(clips) {
+  let quantidadeDeVideos = 8; // Quantidade de vídeos a serem dispostos na página
+
+  for (let i = 0; i < quantidadeDeVideos; i++) {
+    let url = clips[i];
+    document.getElementById(url[i]).innerHTML =
+      'src="' + url.embed_url + '&parent=localhost"';
+  }
+}
+
+//Função para filtrar os vídeos
 function searchClips() {
   const requestDB = window.indexedDB.open("topClipsDB", 1);
   let clipsList = [];
@@ -128,14 +124,15 @@ function searchClips() {
         clipsList.push(cursor.value);
         cursor.continue();
       } else {
-        filterClips(clipsList)
+        filterClips(clipsList);
       }
-
-    }
+    };
   };
   requestDB.onerror = (e) => {
-    console.log(`Erro na requisição para consultar os clips ${e.target.errorCode}`);
-  }
+    console.log(
+      `Erro na requisição para consultar os clips ${e.target.errorCode}`
+    );
+  };
 }
 
 function filterClips(clips) {
@@ -143,8 +140,10 @@ function filterClips(clips) {
 
   for (let i = 0; i < 9; i++) {
     let clip = clips[i];
-    element.innerHTML += '<div class="col"><iframe src="' + clip["embed_url"] + '&parent=localhost" frameborder="0" allowfullscreen="true" scrolling="no"></iframe></div><br/>';
-
+    element.innerHTML +=
+      '<div class="col"><iframe src="' +
+      clip["embed_url"] +
+      '&parent=localhost" frameborder="0" allowfullscreen="true" scrolling="no"></iframe></div><br/>';
   }
 }
 

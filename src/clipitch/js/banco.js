@@ -4,6 +4,7 @@ let db = "";
 const CONST_PARENT = "localhost";
 
 // Cria Banco de Dados no Browser do Usuário
+// Cria Banco de Dados no Browser do Usuário
 const criaBancoDeDados = (TopClips) => {
   // Verifica se o Browser é compatível com IndexedDb
   if (window.indexedDB) {
@@ -25,6 +26,8 @@ const criaBancoDeDados = (TopClips) => {
           unique: false,
           multiEntry: true,
         });
+
+        clipsTb.createIndex("created_at", "created_at", { unique: false });
       }
     };
 
@@ -34,7 +37,8 @@ const criaBancoDeDados = (TopClips) => {
       db = e.target.result;
 
       adicionarClipsBD(db, TopClips);
-      getAllClips();
+      getAllClips("day");
+      getAllClips("week");
 
       console.log("Sucesso ao criar o banco de dados");
     };
@@ -74,27 +78,63 @@ function getAllClips(dayOrWeek) {
   const requestDB = window.indexedDB.open("topClipsDB", 1);
   let clipsList = [];
 
-  const cursorRequest = getCursorBancoDeDados(requestDB);
-  const db = requestDB.result;
-
   requestDB.onsuccess = () => {
-    cursorRequest.onsuccess = (e) => {
-      let cursor = e.target.result;
+    const db = requestDB.result;
+    const transaction = db.transaction(["clips"], "readonly");
+    const clipObjectStore = transaction.objectStore("clips");
+    const index = clipObjectStore.index("created_at");
 
-      if (cursor) {
-        clipsList.push(cursor.value);
-        cursor.continue();
-      } else {
-        displayClipsDaily(clipsList);
-        displayClipsWeekly(clipsList);
+    var tipoDayOrWeek;
+    const dataHoje = new Date();
+    const dataInicial = new Date();
+
+    if (dayOrWeek === "day") dataInicial.setDate(dataInicial.getDate() - 1);
+    else if(dayOrWeek == "week") {
+      dataInicial.setDate(dataInicial.getDate() - 7); 
+      dataHoje.setDate(dataHoje.getDate() - 1);
+    }
+
+    if (dayOrWeek === "day") {
+      tipoDayOrWeek = IDBKeyRange.bound( 
+        dataInicial.toISOString(),
+        dataHoje.toISOString()
+      );
+    } 
+    else if(dayOrWeek === "week"){
+      tipoDayOrWeek = IDBKeyRange.bound(
+        dataInicial.toISOString(),
+        dataHoje.toISOString()
+      );
+    }
+    else {
+      let dateWeek = new Date(dateHoje - 7);
+      tipoDayOrWeek = dateWeek;
+    }
+
+    const request = index.getAll(tipoDayOrWeek);
+    console.log(tipoDayOrWeek)
+
+    request.onsuccess = (e) => {
+      let resultado = e.target.result;
+
+      if (resultado) {
+        resultado.forEach((clip) => {
+          clipsList.push(clip);
+        });
+
+        if (dayOrWeek === "day") {
+          displayClipsDaily(clipsList);
+        } else {
+          displayClipsWeekly(clipsList);
+        };
       }
     };
-  };
 
-  requestDB.onerror = (e) => {
-    console.log(
-      `Erro na requisição para consultar os clips ${e.target.errorCode}`
-    );
+    requestDB.onerror = (e) => {
+      console.log(
+        `Erro na requisição para consultar os clips ${e.target.errorCode}`
+      );
+    };
   };
 }
 

@@ -85,7 +85,8 @@ function getAllClips() {
         clipsList.push(cursor.value);
         cursor.continue();
       } else {
-        displayClips(clipsList);
+        displayClipsDaily(clipsList);
+        displayClipsWeekly(clipsList);
       }
     };
   };
@@ -97,18 +98,53 @@ function getAllClips() {
   };
 }
 
-// Função para listar os vídeos na página inicial. TODO: Revisar o código, pois ainda não está funcional.
-function displayClips(clips) {
-  const quantidadeDeVideos = 4; // Quantidade de vídeos a serem dispostos na página
-  var element = document.getElementById("teste");
+// Função para listar os clips do dia na página inicial. TODO: Revisar o código, pois ainda não está funcional.
+function displayClipsDaily(clips) {
+  const quantidadeDeVideos = 8; // Quantidade de vídeos a serem dispostos na página
+  var firstRowDaily = document.getElementById("firstRowDaily");
+  var secondRowDaily = document.getElementById("secondRowDaily");
 
   for (let i = 0; i < quantidadeDeVideos; i++) {
     let url = clips[i];
-    element.innerHTML +=
-      '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
-      url.embed_url +
-      '&parent=localhost"' +
-      ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+
+    if (i <= 3) {
+      firstRowDaily.innerHTML +=
+        '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+        url.embed_url +
+        '&parent=localhost"' +
+        ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+    } else {
+      secondRowDaily.innerHTML +=
+        '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+        url.embed_url +
+        '&parent=localhost"' +
+        ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+    }
+  }
+}
+
+// Função para listar os clips da semana na página inicial. TODO: Revisar o código, pois ainda não está funcional.
+function displayClipsWeekly(clips) {
+  const quantidadeDeVideos = 8; // Quantidade de vídeos a serem dispostos na página
+  var firstRowDaily = document.getElementById("firstRowWeekly");
+  var secondRowDaily = document.getElementById("secondRowWeekly");
+
+  for (let i = 0; i < quantidadeDeVideos; i++) {
+    let url = clips[i];
+
+    if (i <= 3) {
+      firstRowWeekly.innerHTML +=
+        '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+        url.embed_url +
+        '&parent=localhost"' +
+        ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+    } else {
+      secondRowWeekly.innerHTML +=
+        '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+        url.embed_url +
+        '&parent=localhost"' +
+        ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+    }
   }
 }
 

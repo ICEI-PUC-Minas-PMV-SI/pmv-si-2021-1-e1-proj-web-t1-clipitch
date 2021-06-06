@@ -110,7 +110,7 @@
       <!-- Nav bar -->
       <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
         <div class="container">
-          <a class="navbar-brand js-scroll-trigger" href="#"
+          <a class="navbar-brand js-scroll-trigger" href="/src/clipitch/index.html"
             ><img class="nav-image"
           /></a>
           <button
@@ -134,25 +134,23 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="/clipsdia.html"
+                <a class="nav-link js-scroll-trigger" href="/src/clipitch/clipsdia.html"
                   >Clips do dia</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="/clipssemana.html"
+                <a class="nav-link js-scroll-trigger" href="/src/clipitch/clipssemana.html"
                   >Clips da semana</a
                 >
               </li>
               <li class="nav-item">
                 <div class="input-group">
                   <div class="form-outline">
-                    <input
-                      id="search-input"
-                      type="search"
-                      id="form1"
-                      placeholder="Buscar clips..."
-                      class="form-control shadow-none border-0"
-                    />
+                    <select name="select" id="searchValue" class="form-select shadow-none border-0">  
+                      <option value="" disabled selected style="display: none;">Pesquisar...</option> 
+                      <option value="League of Legends">League of Legends</option>
+                      <option value="Just Chatting">Just Chatting</option>
+                    </select>
                   </div>
                   <button
                     id="search-button"

@@ -36,7 +36,7 @@ const PARAMS_CLIPS = {
   after: null,
   limit: LIMIT,
   period: "week",
-  trending: true,
+  trending: false,
 };
 
 // Realiza a autenticação para obter o token de acesso da API V5 (Twitch.tv)

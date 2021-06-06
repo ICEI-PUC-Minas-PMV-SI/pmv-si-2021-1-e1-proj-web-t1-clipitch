@@ -33,6 +33,7 @@ const criaBancoDeDados = (TopClips) => {
       db = e.target.result;
 
       adicionarClipsBD(db, TopClips);
+      getAllClips();
 
       console.log("Sucesso ao criar o banco de dados");
     };
@@ -98,12 +99,16 @@ function getAllClips() {
 
 // Função para listar os vídeos na página inicial. TODO: Revisar o código, pois ainda não está funcional.
 function displayClips(clips) {
-  let quantidadeDeVideos = 8; // Quantidade de vídeos a serem dispostos na página
+  const quantidadeDeVideos = 4; // Quantidade de vídeos a serem dispostos na página
+  var element = document.getElementById("teste");
 
   for (let i = 0; i < quantidadeDeVideos; i++) {
     let url = clips[i];
-    document.getElementById(url[i]).innerHTML =
-      'src="' + url.embed_url + '&parent=localhost"';
+    element.innerHTML +=
+      '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+      url.embed_url +
+      '&parent=localhost"' +
+      ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
   }
 }
 

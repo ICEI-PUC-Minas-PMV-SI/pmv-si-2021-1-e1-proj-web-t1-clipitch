@@ -77,7 +77,6 @@ function getAllClips(dayOrWeek) {
   const db = requestDB.result;
 
   requestDB.onsuccess = () => {
-
     cursorRequest.onsuccess = (e) => {
       let cursor = e.target.result;
 
@@ -100,9 +99,11 @@ function getAllClips(dayOrWeek) {
 
 // Função para listar os clips do dia na página inicial. TODO: Revisar o código, pois ainda não está funcional.
 function displayClipsDaily(clips) {
-  const quantidadeDeVideos = 8; // Quantidade de vídeos a serem dispostos na página
+  const quantidadeDeVideos = 16; // Quantidade de vídeos a serem dispostos na página
   var firstRowDaily = document.getElementById("firstRowDaily");
   var secondRowDaily = document.getElementById("secondRowDaily");
+  var thirdRowDaily = document.getElementById("thirdRowDaily");
+  var fourthRowDaily = document.getElementById("fourthRowDaily");
 
   for (let i = 0; i < quantidadeDeVideos; i++) {
     let url = clips[i];
@@ -110,13 +111,25 @@ function displayClipsDaily(clips) {
     if (i <= 3) {
       firstRowDaily.innerHTML +=
         '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
-        url.embed_url +
+        url["embed_url"] +
+        '&parent=localhost"' +
+        ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+    } else if (i > 3 && i <= 7) {
+      secondRowDaily.innerHTML +=
+        '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+        url["embed_url"] +
+        '&parent=localhost"' +
+        ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+    } else if (i > 7 && i <= 11) {
+      thirdRowDaily.innerHTML +=
+        '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+        url["embed_url"] +
         '&parent=localhost"' +
         ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
     } else {
-      secondRowDaily.innerHTML +=
+      fourthRowDaily.innerHTML +=
         '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
-        url.embed_url +
+        url["embed_url"] +
         '&parent=localhost"' +
         ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
     }
@@ -125,9 +138,11 @@ function displayClipsDaily(clips) {
 
 // Função para listar os clips da semana na página inicial. TODO: Revisar o código, pois ainda não está funcional.
 function displayClipsWeekly(clips) {
-  const quantidadeDeVideos = 8; // Quantidade de vídeos a serem dispostos na página
-  var firstRowDaily = document.getElementById("firstRowWeekly");
-  var secondRowDaily = document.getElementById("secondRowWeekly");
+  const quantidadeDeVideos = 16; // Quantidade de vídeos a serem dispostos na página
+  var firstRowWeekly = document.getElementById("firstRowWeekly");
+  var secondRowWeekly = document.getElementById("secondRowWeekly");
+  var thirdRowWeekly = document.getElementById("thirdRowWeekly");
+  var fourthRowWeekly = document.getElementById("fourthRowWeekly");
 
   for (let i = 0; i < quantidadeDeVideos; i++) {
     let url = clips[i];
@@ -135,13 +150,25 @@ function displayClipsWeekly(clips) {
     if (i <= 3) {
       firstRowWeekly.innerHTML +=
         '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
-        url.embed_url +
+        url["embed_url"] +
+        '&parent=localhost"' +
+        ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+    } else if (i > 3 && i <= 7) {
+      secondRowWeekly.innerHTML +=
+        '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+        url["embed_url"] +
+        '&parent=localhost"' +
+        ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+    } else if (i > 7 && i <= 11) {
+      thirdRowWeekly.innerHTML +=
+        '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+        url["embed_url"] +
         '&parent=localhost"' +
         ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
     } else {
-      secondRowWeekly.innerHTML +=
+      fourthRowWeekly.innerHTML +=
         '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
-        url.embed_url +
+        url["embed_url"] +
         '&parent=localhost"' +
         ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
     }
@@ -188,7 +215,6 @@ function filterClips(clips) {
   }
 }
 
-
 // Obtém o curso para ler a tabela de Clips - Retorna o Cursor Aberto posicionado na Tabela
 function getCursorBancoDeDados(db) {
   const transaction = db.transaction(["clips"], "readonly");
@@ -196,7 +222,6 @@ function getCursorBancoDeDados(db) {
   const cursorAberto = tabelaClip.openCursor();
   return cursorAberto;
 }
-
 
 export default criaBancoDeDados;
 export { searchClips };

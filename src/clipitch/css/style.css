@@ -33,7 +33,7 @@ h4 {
 }
 
 nav .navbar-nav li a {
-  color: white !important;
+  color: rgb(255, 255, 255) !important;
 }
 
 header.masthead {

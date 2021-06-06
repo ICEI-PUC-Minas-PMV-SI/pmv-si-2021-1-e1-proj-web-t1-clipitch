@@ -11,8 +11,6 @@ const criaBancoDeDados = (TopClips) => {
     const bancoRequest = window.indexedDB.open("topClipsDB", 1);
 
     bancoRequest.onupgradeneeded = (e) => {
-      console.log("Passou pelo Upgrade");
-
       // Obtém o banco de dados
       db = e.target.result;
 
@@ -32,15 +30,12 @@ const criaBancoDeDados = (TopClips) => {
     };
 
     bancoRequest.onsuccess = (e) => {
-      console.log("Passou pelo Sucesso");
 
       db = e.target.result;
 
       adicionarClipsBD(db, TopClips);
       getAllClips("day");
       getAllClips("week");
-
-      console.log("Sucesso ao criar o banco de dados");
     };
 
     bancoRequest.onerror = (e) => {
@@ -56,16 +51,12 @@ const adicionarClipsBD = (db, clips) => {
   const transactionAdd = db.transaction("clips", "readwrite");
   const objectStorageClip = transactionAdd.objectStore("clips");
 
-  console.log(`Quantidade de Registros em Clips ${clips.length}`);
-
   // Adiciona/Atualiza os vídeos obtidos da API do Twitch um por um no Banco de dados
-
   clips.forEach((clip) => {
     objectStorageClip.put(clip);
   });
 
   transactionAdd.oncomplete = (e) => {
-    console.log("Transação concluída");
   };
 
   transactionAdd.onerror = (e) => {
@@ -89,18 +80,18 @@ function getAllClips(dayOrWeek) {
     const dataInicial = new Date();
 
     if (dayOrWeek === "day") dataInicial.setDate(dataInicial.getDate() - 1);
-    else if(dayOrWeek == "week") {
-      dataInicial.setDate(dataInicial.getDate() - 7); 
+    else if (dayOrWeek == "week") {
+      dataInicial.setDate(dataInicial.getDate() - 7);
       dataHoje.setDate(dataHoje.getDate() - 1);
     }
 
     if (dayOrWeek === "day") {
-      tipoDayOrWeek = IDBKeyRange.bound( 
+      tipoDayOrWeek = IDBKeyRange.bound(
         dataInicial.toISOString(),
         dataHoje.toISOString()
       );
-    } 
-    else if(dayOrWeek === "week"){
+    }
+    else if (dayOrWeek === "week") {
       tipoDayOrWeek = IDBKeyRange.bound(
         dataInicial.toISOString(),
         dataHoje.toISOString()
@@ -112,8 +103,7 @@ function getAllClips(dayOrWeek) {
     }
 
     const request = index.getAll(tipoDayOrWeek);
-    console.log(tipoDayOrWeek)
-
+    
     request.onsuccess = (e) => {
       let resultado = e.target.result;
 
@@ -141,38 +131,46 @@ function getAllClips(dayOrWeek) {
 // Função para listar os clips do dia na página inicial. TODO: Revisar o código, pois ainda não está funcional.
 function displayClipsDaily(clips) {
   const quantidadeDeVideos = 16; // Quantidade de vídeos a serem dispostos na página
-  var firstRowDaily = document.getElementById("firstRowDaily");
-  var secondRowDaily = document.getElementById("secondRowDaily");
-  var thirdRowDaily = document.getElementById("thirdRowDaily");
-  var fourthRowDaily = document.getElementById("fourthRowDaily");
+  var firstRowDaily = document.getElementById("firstRowDaily") != null ? document.getElementById("firstRowDaily") : null;
+  var secondRowDaily = document.getElementById("secondRowDaily") != null ? document.getElementById("secondRowDaily") : null;
+  var thirdRowDaily = document.getElementById("thirdRowDaily") != null ? document.getElementById("thirdRowDaily") : null;
+  var fourthRowDaily = document.getElementById("fourthRowDaily") != null ? document.getElementById("fourthRowDaily") : null;
 
   for (let i = 0; i < quantidadeDeVideos; i++) {
     let url = clips[i];
 
     if (i <= 3) {
-      firstRowDaily.innerHTML +=
-        '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
-        url["embed_url"] +
-        '&parent=localhost"' +
-        ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+      if (firstRowDaily != null) {
+        firstRowDaily.innerHTML +=
+          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+          url["embed_url"] +
+          '&parent=localhost"' +
+          ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+      }
     } else if (i > 3 && i <= 7) {
-      secondRowDaily.innerHTML +=
-        '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
-        url["embed_url"] +
-        '&parent=localhost"' +
-        ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+      if (secondRowDaily != null) {
+        secondRowDaily.innerHTML +=
+          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+          url["embed_url"] +
+          '&parent=localhost"' +
+          ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+      }
     } else if (i > 7 && i <= 11) {
-      thirdRowDaily.innerHTML +=
-        '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
-        url["embed_url"] +
-        '&parent=localhost"' +
-        ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+      if (thirdRowDaily != null) {
+        thirdRowDaily.innerHTML +=
+          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+          url["embed_url"] +
+          '&parent=localhost"' +
+          ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+      }
     } else {
-      fourthRowDaily.innerHTML +=
-        '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
-        url["embed_url"] +
-        '&parent=localhost"' +
-        ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+      if (fourthRowDaily != null) {
+        fourthRowDaily.innerHTML +=
+          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+          url["embed_url"] +
+          '&parent=localhost"' +
+          ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+      }
     }
   }
 }
@@ -180,46 +178,54 @@ function displayClipsDaily(clips) {
 // Função para listar os clips da semana na página inicial. TODO: Revisar o código, pois ainda não está funcional.
 function displayClipsWeekly(clips) {
   const quantidadeDeVideos = 16; // Quantidade de vídeos a serem dispostos na página
-  var firstRowWeekly = document.getElementById("firstRowWeekly");
-  var secondRowWeekly = document.getElementById("secondRowWeekly");
-  var thirdRowWeekly = document.getElementById("thirdRowWeekly");
-  var fourthRowWeekly = document.getElementById("fourthRowWeekly");
+  var firstRowWeekly = document.getElementById("firstRowWeekly") != null ? document.getElementById("firstRowWeekly") : null;
+  var secondRowWeekly = document.getElementById("secondRowWeekly") != null ? document.getElementById("secondRowWeekly") : null;
+  var thirdRowWeekly = document.getElementById("thirdRowWeekly") != null ? document.getElementById("thirdRowWeekly") : null;
+  var fourthRowWeekly = document.getElementById("fourthRowWeekly") != null ? document.getElementById("fourthRowWeekly") : null;
 
   for (let i = 0; i < quantidadeDeVideos; i++) {
     let url = clips[i];
 
     if (i <= 3) {
-      firstRowWeekly.innerHTML +=
-        '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
-        url["embed_url"] +
-        '&parent=localhost"' +
-        ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+      if (firstRowWeekly != null) {
+        firstRowWeekly.innerHTML +=
+          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+          url["embed_url"] +
+          '&parent=localhost"' +
+          ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+      }
     } else if (i > 3 && i <= 7) {
-      secondRowWeekly.innerHTML +=
-        '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
-        url["embed_url"] +
-        '&parent=localhost"' +
-        ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+      if (secondRowWeekly != null) {
+        secondRowWeekly.innerHTML +=
+          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+          url["embed_url"] +
+          '&parent=localhost"' +
+          ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+      }
     } else if (i > 7 && i <= 11) {
-      thirdRowWeekly.innerHTML +=
-        '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
-        url["embed_url"] +
-        '&parent=localhost"' +
-        ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+      if (thirdRowWeekly != null) {
+        thirdRowWeekly.innerHTML +=
+          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+          url["embed_url"] +
+          '&parent=localhost"' +
+          ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+      }
     } else {
-      fourthRowWeekly.innerHTML +=
-        '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
-        url["embed_url"] +
-        '&parent=localhost"' +
-        ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+      if (fourthRowWeekly != null) {
+        fourthRowWeekly.innerHTML +=
+          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+          url["embed_url"] +
+          '&parent=localhost"' +
+          ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+      }
     }
   }
 }
 
 //Função para filtrar os vídeos
 function searchClips(filterText) {
-    
-  window.location.href = "search.html";  
+
+  window.location.href = "search.html";
   setTimeout(10000);
 
   const requestDB = window.indexedDB.open("topClipsDB", 1);
@@ -258,7 +264,7 @@ function filterClips(clips, filterText) {
 
     if (clip["game"] === filterText) {
       element.innerHTML +=
-        '<div class="col-md-4 my-2"><iframe src="' + clip["embed_url"] + '&parent='+ CONST_PARENT +'" frameborder="0" allowfullscreen="true" width="100%" height="100%" scrolling="no"></iframe></div><br/>';
+        '<div class="col-md-4 my-2"><iframe src="' + clip["embed_url"] + '&parent=' + CONST_PARENT + '" frameborder="0" allowfullscreen="true" width="100%" height="100%" scrolling="no"></iframe></div><br/>';
     }
     else count++;
   }

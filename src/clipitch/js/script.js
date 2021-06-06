@@ -45,7 +45,6 @@ const conectaTwitch = () => {
     .then((res) => res.json())
     .then((res) => {
       const access_token = res.access_token;
-      console.log(res)
 
       getTwitchDados(access_token, URL_CLIPS, PARAMS_CLIPS);
     })
@@ -60,15 +59,12 @@ const getTwitchDados = (token, url, params) => {
 
   url += "?" + new URLSearchParams(params).toString();
 
-  console.log(url);
-
   fetch(url, {
     method: "GET",
     headers: HEADERS_CLIPS,
   })
     .then((res) => res.json())
     .then((topClips) => {
-      console.log(topClips);
       clipsData.push(...topClips.clips);
       criaBancoDeDados(clipsData);
     })
@@ -83,7 +79,6 @@ function search() {
   if (valor != "") {
     window.setTimeout((window.location.href = "search.html"), 30000);
     searchClips(valor);
-    console.log(valor); 
   }
   else
   alert("Por favor, selecione uma das opções para pesquisar!");

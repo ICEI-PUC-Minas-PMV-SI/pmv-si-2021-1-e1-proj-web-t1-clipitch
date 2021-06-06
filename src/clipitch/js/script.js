@@ -1,4 +1,5 @@
 import criaBancoDeDados from "./banco.js";
+import searchClips from "./banco.js";
 
 // Constantes, Parâmetros e Funções Necessárias para Requisição da API do Twitch e Armazenamento dos Dados
 const URL_AUTH = "https://id.twitch.tv/oauth2/token";
@@ -38,43 +39,53 @@ const PARAMS_CLIPS = {
 };
 
 // Realiza a autenticação para obter o token de acesso da API V5 (Twitch.tv)
-  const conectaTwitch = () => {
-    fetch(URL_AUTH, PARAMS_AUTH)
-      .then((res) => res.json())
-      .then((res) => {
-        const access_token = res.access_token;
-  
-        
-        getTwitchDados(access_token, URL_CLIPS, PARAMS_CLIPS);
-      })
-      .catch((err) => {
-        console.log("Erro ao autenticar!!!", err);
-      });
-  };
+const conectaTwitch = () => {
+  fetch(URL_AUTH, PARAMS_AUTH)
+    .then((res) => res.json())
+    .then((res) => {
+      const access_token = res.access_token;
+
+      getTwitchDados(access_token, URL_CLIPS, PARAMS_CLIPS);
+    })
+    .catch((err) => {
+      console.log("Erro ao autenticar!!!", err);
+    });
+};
 
 // Realiza a chamada da API Top Clips do Twitch
 const getTwitchDados = (token, url, params) => {
-  
   const clipsData = [];
 
   url += "?" + new URLSearchParams(params).toString();
-  
-  console.log(url)
-  
+
+  console.log(url);
+
   fetch(url, {
     method: "GET",
     headers: HEADERS_CLIPS,
   })
-  .then((res) => res.json())
-  .then((topClips) => {
-    console.log(topClips)
+    .then((res) => res.json())
+    .then((topClips) => {
+      console.log(topClips);
       clipsData.push(...topClips.clips);
       criaBancoDeDados(clipsData);
-    }).catch((err) => {
+    })
+    .catch((err) => {
       console.log("Erro ao obter clips", err);
     });
-    
 };
+
+document.getElementById("search-button").onclick = (e) => search();
+function search() {
+  var valor = document.getElementById("searchValue").value;
+  if (valor != "") {
+    window.setTimeout((window.location.href = "search.html"), 30000);
+    searchClips(valor);
+    console.log(valor); 
+  }
+  else
+  alert("Por favor, selecione uma das opções para pesquisar!");
+}
 
 document.addEventListener("DOMContentLoaded", conectaTwitch);
 

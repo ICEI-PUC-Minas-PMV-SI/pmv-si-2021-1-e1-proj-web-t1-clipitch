@@ -110,6 +110,10 @@ function displayClips(clips) {
 
 //Função para filtrar os vídeos
 function searchClips(filterText) {
+    
+  window.location.href = "search.html";  
+  setTimeout(10000);
+
   const requestDB = window.indexedDB.open("topClipsDB", 1);
   let clipsList = [];
 
@@ -150,7 +154,6 @@ function filterClips(clips, filterText) {
     }
     else count++;
   }
-  console.log("Foram deixados de foram " + count + " registros.");
 }
 
 export default criaBancoDeDados;

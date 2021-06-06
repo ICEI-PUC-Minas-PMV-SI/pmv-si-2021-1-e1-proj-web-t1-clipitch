@@ -1,6 +1,7 @@
 // Funções Necessárias para Armazenamento em Banco de Dados Indexado no Browser
 
 let db = "";
+const CONST_PARENT = "localhost";
 
 // Cria Banco de Dados no Browser do Usuário
 const criaBancoDeDados = (TopClips) => {
@@ -176,7 +177,11 @@ function displayClipsWeekly(clips) {
 }
 
 //Função para filtrar os vídeos
-function searchClips() {
+function searchClips(filterText) {
+    
+  window.location.href = "search.html";  
+  setTimeout(10000);
+
   const requestDB = window.indexedDB.open("topClipsDB", 1);
   let clipsList = [];
 
@@ -192,7 +197,7 @@ function searchClips() {
         clipsList.push(cursor.value);
         cursor.continue();
       } else {
-        filterClips(clipsList);
+        filterClips(clipsList, filterText);
       }
     };
   };
@@ -203,15 +208,19 @@ function searchClips() {
   };
 }
 
-function filterClips(clips) {
+function filterClips(clips, filterText) {
   var element = document.getElementById("searchVideos");
 
-  for (let i = 0; i < 9; i++) {
+  var count = 0;
+
+  for (let i = 0; i < clips.length; i++) {
     let clip = clips[i];
-    element.innerHTML +=
-      '<div class="col"><iframe src="' +
-      clip["embed_url"] +
-      '&parent=localhost" frameborder="0" allowfullscreen="true" scrolling="no"></iframe></div><br/>';
+
+    if (clip["game"] === filterText) {
+      element.innerHTML +=
+        '<div class="col-md-4 my-2"><iframe src="' + clip["embed_url"] + '&parent='+ CONST_PARENT +'" frameborder="0" allowfullscreen="true" width="100%" height="100%" scrolling="no"></iframe></div><br/>';
+    }
+    else count++;
   }
 }
 

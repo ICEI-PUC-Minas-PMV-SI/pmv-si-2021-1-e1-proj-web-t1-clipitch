@@ -1,5 +1,7 @@
 body {
   font-family: "Roboto", serif;
+  width: 100vw;
+  height: 100vh;
 }
 
 h1,
@@ -33,7 +35,7 @@ h4 {
 }
 
 nav .navbar-nav li a {
-  color: white !important;
+  color: rgb(255, 255, 255) !important;
 }
 
 header.masthead {
@@ -55,6 +57,11 @@ header.masthead {
   text-shadow: -1px 1px 1px #ffe900;
   text-align: center;
   padding-top: 4%;
+}
+
+footer {
+  position: inherit;
+  bottom: 0;
 }
 
 .carousel-item {

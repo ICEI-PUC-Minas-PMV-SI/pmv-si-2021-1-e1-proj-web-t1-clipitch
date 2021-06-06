@@ -1,4 +1,5 @@
 import criaBancoDeDados from "./banco.js";
+import searchClips from "./banco.js";
 
 
 // Constantes, Parâmetros e Funções Necessárias para Requisição da API do Twitch e Armazenamento dos Dados
@@ -46,7 +47,6 @@ const conectaTwitch = () => {
       const access_token = res.access_token;
       console.log(res)
 
-      //Executa a função que obtém os clips do Twitch
       getTwitchDados(access_token, URL_CLIPS, PARAMS_CLIPS);
     })
     .catch((err) => {
@@ -77,7 +77,18 @@ const getTwitchDados = (token, url, params) => {
     });
 };
 
-document.addEventListener("DOMContentLoaded", conectaTwitch)
+document.getElementById("search-button").onclick = (e) => search();
+function search() {
+  var valor = document.getElementById("searchValue").value;
+  if (valor != "") {
+    window.setTimeout((window.location.href = "search.html"), 30000);
+    searchClips(valor);
+    console.log(valor); 
+  }
+  else
+  alert("Por favor, selecione uma das opções para pesquisar!");
+}
+
+document.addEventListener("DOMContentLoaded", conectaTwitch);
 
 export default { conectaTwitch, getTwitchDados };
-

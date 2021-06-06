@@ -1,6 +1,7 @@
 import criaBancoDeDados from "./banco.js";
 import searchClips from "./banco.js";
 
+
 // Constantes, Parâmetros e Funções Necessárias para Requisição da API do Twitch e Armazenamento dos Dados
 const URL_AUTH = "https://id.twitch.tv/oauth2/token";
 const URL_CLIPS = "https://api.twitch.tv/kraken/clips/top";
@@ -44,6 +45,7 @@ const conectaTwitch = () => {
     .then((res) => res.json())
     .then((res) => {
       const access_token = res.access_token;
+      console.log(res)
 
       getTwitchDados(access_token, URL_CLIPS, PARAMS_CLIPS);
     })

@@ -38,19 +38,19 @@ const PARAMS_CLIPS = {
 };
 
 // Realiza a autenticação para obter o token de acesso da API V5 (Twitch.tv)
-const conectaTwitch = () => {
-  fetch(URL_AUTH, PARAMS_AUTH)
-    .then((res) => res.json())
-    .then((res) => {
-      const access_token = res.access_token;
-
-      //Executa a função que obtém os clips do Twitch
-      getTwitchDados(access_token, URL_CLIPS, PARAMS_CLIPS);
-    })
-    .catch((err) => {
-      console.log("Erro ao autenticar!!!", err);
-    });
-};
+  const conectaTwitch = () => {
+    fetch(URL_AUTH, PARAMS_AUTH)
+      .then((res) => res.json())
+      .then((res) => {
+        const access_token = res.access_token;
+  
+        
+        getTwitchDados(access_token, URL_CLIPS, PARAMS_CLIPS);
+      })
+      .catch((err) => {
+        console.log("Erro ao autenticar!!!", err);
+      });
+  };
 
 // Realiza a chamada da API Top Clips do Twitch
 const getTwitchDados = (token, url, params) => {

@@ -44,23 +44,6 @@ const criaBancoDeDados = (TopClips) => {
   }
 };
 
-// Adiciona os Clips no IndexedDb
-const adicionarClipsBD = (db, clips) => {
-  const transactionAdd = db.transaction("clips", "readwrite");
-  const objectStorageClip = transactionAdd.objectStore("clips");
-
-  // Adiciona/Atualiza os vídeos obtidos da API do Twitch um por um no Banco de dados
-  clips.forEach((clip) => {
-    objectStorageClip.put(clip);
-  });
-
-  transactionAdd.oncomplete = (e) => {};
-
-  transactionAdd.onerror = (e) => {
-    console.log("Erro ao realizar a inclusão de registro no banco de dados");
-  };
-};
-
 // Obtém todos os clips da base de dados
 function getAllClips(dayOrWeek) {
   const requestDB = window.indexedDB.open("topClipsDB", 1);

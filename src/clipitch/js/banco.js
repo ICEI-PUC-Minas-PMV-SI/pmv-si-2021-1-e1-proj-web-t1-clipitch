@@ -241,7 +241,54 @@ function displayClipsWeekly(clips) {
   }
 }
 
+//Função para filtrar os vídeos
+const searchClips = (filterText) => {
+  const requestDB = window.indexedDB.open("topClipsDB", 1);
+  let clipsList = [];
 
+  requestDB.onsuccess = () => {
+    const db = requestDB.result;
+    const transaction = db.transaction(["clips"], "readwrite");
+    const clipObjectStore = transaction.objectStore("clips");
+    const cursorRequest = clipObjectStore.openCursor();
+    cursorRequest.onsuccess = (e) => {
+      let cursor = e.target.result;
+
+      if (cursor) {
+        clipsList.push(cursor.value);
+        cursor.continue();
+      } else {
+        filterClips(clipsList, filterText);
+      }
+    };
+  };
+  requestDB.onerror = (e) => {
+    console.log(
+      `Erro na requisição para consultar os clips ${e.target.errorCode}`
+    );
+  };
+};
+
+function filterClips(clips, filterText) {
+  var element = document.getElementById("searchVideos");
+  let countFilter;
+
+  if (filterText === "Just Chatting") countFilter = 25;
+  else countFilter = clips.length;
+
+  for (let i = 0; i < countFilter; i++) {
+    let clip = clips[i];
+
+    if (clip["game"] === filterText) {
+      element.innerHTML +=
+        '<div class="col-md-4 my-2"><iframe src="' +
+        clip["embed_url"] +
+        "&parent=" +
+        CONST_PARENT +
+        '" frameborder="0" allowfullscreen="true" width="100%" height="100%" scrolling="no"></iframe></div><br/>';
+    }
+  }
+}
 
 // Obtém o curso para ler a tabela de Clips - Retorna o Cursor Aberto posicionado na Tabela
 function getCursorBancoDeDados(db) {
@@ -252,3 +299,4 @@ function getCursorBancoDeDados(db) {
 }
 
 export default criaBancoDeDados;
+export { searchClips };

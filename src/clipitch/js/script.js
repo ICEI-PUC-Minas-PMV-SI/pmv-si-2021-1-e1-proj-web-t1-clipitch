@@ -53,6 +53,25 @@ const conectaTwitch = () => {
     });
 };
 
+const getTwitchDados = (token, url, params) => {
+  const clipsData = [];
+
+  url += "?" + new URLSearchParams(params).toString();
+
+  fetch(url, {
+    method: "GET",
+    headers: HEADERS_CLIPS,
+  })
+    .then((res) => res.json())
+    .then((topClips) => {
+      clipsData.push(...topClips.clips);
+      criaBancoDeDados(clipsData);
+    })
+    .catch((err) => {
+      console.log("Erro ao obter clips", err);
+    });
+};
+
 
 document.getElementById("search-button").onclick = (e) => searchClick();
 var searchValue;

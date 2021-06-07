@@ -4,7 +4,6 @@ let db = "";
 const CONST_PARENT = "localhost";
 
 // Cria Banco de Dados no Browser do Usuário
-// Cria Banco de Dados no Browser do Usuário
 const criaBancoDeDados = (TopClips) => {
   // Verifica se o Browser é compatível com IndexedDb
   if (window.indexedDB) {
@@ -30,7 +29,6 @@ const criaBancoDeDados = (TopClips) => {
     };
 
     bancoRequest.onsuccess = (e) => {
-
       db = e.target.result;
 
       adicionarClipsBD(db, TopClips);
@@ -56,8 +54,7 @@ const adicionarClipsBD = (db, clips) => {
     objectStorageClip.put(clip);
   });
 
-  transactionAdd.oncomplete = (e) => {
-  };
+  transactionAdd.oncomplete = (e) => {};
 
   transactionAdd.onerror = (e) => {
     console.log("Erro ao realizar a inclusão de registro no banco de dados");
@@ -79,7 +76,7 @@ function getAllClips(dayOrWeek) {
     const dataHoje = new Date();
     const dataInicial = new Date();
 
-    if (dayOrWeek === "day") dataInicial.setDate(dataInicial.getDate() - 1);
+    if (dayOrWeek === "day") dataInicial.setDate(dataInicial.getDate() - 3);
     else if (dayOrWeek == "week") {
       dataInicial.setDate(dataInicial.getDate() - 7);
       dataHoje.setDate(dataHoje.getDate() - 1);
@@ -90,20 +87,18 @@ function getAllClips(dayOrWeek) {
         dataInicial.toISOString(),
         dataHoje.toISOString()
       );
-    }
-    else if (dayOrWeek === "week") {
+    } else if (dayOrWeek === "week") {
       tipoDayOrWeek = IDBKeyRange.bound(
         dataInicial.toISOString(),
         dataHoje.toISOString()
       );
-    }
-    else {
+    } else {
       let dateWeek = new Date(dateHoje - 7);
       tipoDayOrWeek = dateWeek;
     }
 
     const request = index.getAll(tipoDayOrWeek);
-    
+
     request.onsuccess = (e) => {
       let resultado = e.target.result;
 
@@ -116,7 +111,7 @@ function getAllClips(dayOrWeek) {
           displayClipsDaily(clipsList);
         } else {
           displayClipsWeekly(clipsList);
-        };
+        }
       }
     };
 
@@ -131,10 +126,22 @@ function getAllClips(dayOrWeek) {
 // Função para listar os clips do dia na página inicial. TODO: Revisar o código, pois ainda não está funcional.
 function displayClipsDaily(clips) {
   const quantidadeDeVideos = 16; // Quantidade de vídeos a serem dispostos na página
-  var firstRowDaily = document.getElementById("firstRowDaily") != null ? document.getElementById("firstRowDaily") : null;
-  var secondRowDaily = document.getElementById("secondRowDaily") != null ? document.getElementById("secondRowDaily") : null;
-  var thirdRowDaily = document.getElementById("thirdRowDaily") != null ? document.getElementById("thirdRowDaily") : null;
-  var fourthRowDaily = document.getElementById("fourthRowDaily") != null ? document.getElementById("fourthRowDaily") : null;
+  var firstRowDaily =
+    document.getElementById("firstRowDaily") != null
+      ? document.getElementById("firstRowDaily")
+      : null;
+  var secondRowDaily =
+    document.getElementById("secondRowDaily") != null
+      ? document.getElementById("secondRowDaily")
+      : null;
+  var thirdRowDaily =
+    document.getElementById("thirdRowDaily") != null
+      ? document.getElementById("thirdRowDaily")
+      : null;
+  var fourthRowDaily =
+    document.getElementById("fourthRowDaily") != null
+      ? document.getElementById("fourthRowDaily")
+      : null;
 
   for (let i = 0; i < quantidadeDeVideos; i++) {
     let url = clips[i];
@@ -178,10 +185,22 @@ function displayClipsDaily(clips) {
 // Função para listar os clips da semana na página inicial. TODO: Revisar o código, pois ainda não está funcional.
 function displayClipsWeekly(clips) {
   const quantidadeDeVideos = 16; // Quantidade de vídeos a serem dispostos na página
-  var firstRowWeekly = document.getElementById("firstRowWeekly") != null ? document.getElementById("firstRowWeekly") : null;
-  var secondRowWeekly = document.getElementById("secondRowWeekly") != null ? document.getElementById("secondRowWeekly") : null;
-  var thirdRowWeekly = document.getElementById("thirdRowWeekly") != null ? document.getElementById("thirdRowWeekly") : null;
-  var fourthRowWeekly = document.getElementById("fourthRowWeekly") != null ? document.getElementById("fourthRowWeekly") : null;
+  var firstRowWeekly =
+    document.getElementById("firstRowWeekly") != null
+      ? document.getElementById("firstRowWeekly")
+      : null;
+  var secondRowWeekly =
+    document.getElementById("secondRowWeekly") != null
+      ? document.getElementById("secondRowWeekly")
+      : null;
+  var thirdRowWeekly =
+    document.getElementById("thirdRowWeekly") != null
+      ? document.getElementById("thirdRowWeekly")
+      : null;
+  var fourthRowWeekly =
+    document.getElementById("fourthRowWeekly") != null
+      ? document.getElementById("fourthRowWeekly")
+      : null;
 
   for (let i = 0; i < quantidadeDeVideos; i++) {
     let url = clips[i];
@@ -223,11 +242,7 @@ function displayClipsWeekly(clips) {
 }
 
 //Função para filtrar os vídeos
-function searchClips(filterText) {
-
-  window.location.href = "search.html";
-  setTimeout(10000);
-
+const searchClips = (filterText) => {
   const requestDB = window.indexedDB.open("topClipsDB", 1);
   let clipsList = [];
 
@@ -252,21 +267,26 @@ function searchClips(filterText) {
       `Erro na requisição para consultar os clips ${e.target.errorCode}`
     );
   };
-}
+};
 
 function filterClips(clips, filterText) {
   var element = document.getElementById("searchVideos");
+  let countFilter;
 
-  var count = 0;
+  if (filterText === "Just Chatting") countFilter = 25;
+  else countFilter = clips.length;
 
-  for (let i = 0; i < clips.length; i++) {
+  for (let i = 0; i < countFilter; i++) {
     let clip = clips[i];
 
     if (clip["game"] === filterText) {
       element.innerHTML +=
-        '<div class="col-md-4 my-2"><iframe src="' + clip["embed_url"] + '&parent=' + CONST_PARENT + '" frameborder="0" allowfullscreen="true" width="100%" height="100%" scrolling="no"></iframe></div><br/>';
+        '<div class="col-md-4 my-2"><iframe src="' +
+        clip["embed_url"] +
+        "&parent=" +
+        CONST_PARENT +
+        '" frameborder="0" allowfullscreen="true" width="100%" height="100%" scrolling="no"></iframe></div><br/>';
     }
-    else count++;
   }
 }
 

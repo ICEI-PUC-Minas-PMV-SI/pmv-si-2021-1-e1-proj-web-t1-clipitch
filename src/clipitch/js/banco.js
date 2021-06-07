@@ -3,6 +3,47 @@
 let db = "";
 const CONST_PARENT = "localhost";
 
+// Cria Banco de Dados no Browser do Usuário
+const criaBancoDeDados = (TopClips) => {
+  // Verifica se o Browser é compatível com IndexedDb
+  if (window.indexedDB) {
+    const bancoRequest = window.indexedDB.open("topClipsDB", 1);
+
+    bancoRequest.onupgradeneeded = (e) => {
+      // Obtém o banco de dados
+      db = e.target.result;
+
+      if (!db.objectStoreNames.contains("clips")) {
+        // ObjectStorage = Tabela
+        const clipsTb = db.createObjectStore("clips", {
+          keyPath: "slug",
+        });
+
+        clipsTb.createIndex("title", "titleIdx", {
+          unique: false,
+          multiEntry: true,
+        });
+
+        clipsTb.createIndex("created_at", "created_at", { unique: false });
+      }
+    };
+
+    bancoRequest.onsuccess = (e) => {
+      db = e.target.result;
+
+      adicionarClipsBD(db, TopClips);
+      getAllClips("day");
+      getAllClips("week");
+    };
+
+    bancoRequest.onerror = (e) => {
+      console.log("Erro ao criar o Banco de Dados", e);
+    };
+  } else {
+    console.log("Banco de dados IndexedDb não é suportado pelo Browser");
+  }
+};
+
 // Adiciona os Clips no IndexedDb
 const adicionarClipsBD = (db, clips) => {
   const transactionAdd = db.transaction("clips", "readwrite");

@@ -53,6 +53,7 @@ const conectaTwitch = () => {
     });
 };
 
+
 document.getElementById("search-button").onclick = (e) => searchClick();
 var searchValue;
 

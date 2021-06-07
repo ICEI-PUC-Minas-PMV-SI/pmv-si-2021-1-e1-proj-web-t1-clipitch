@@ -25,6 +25,10 @@ const PARAMS_AUTH = {
 };
 
 // Cabeçalho necessário para obtenção dos clips
+const HEADERS_CLIPS = {
+  Accept: "application/vnd.twitchtv.v5+json",
+  "Client-ID": CLIENT_ID,
+};
 
 // Parâmetros opcionais para customização na busca dos dados da API do Twitch
 const PARAMS_CLIPS = {

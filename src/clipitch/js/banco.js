@@ -44,6 +44,39 @@ const criaBancoDeDados = (TopClips) => {
   }
 };
 
+// Pesquisa Clips pelo título
+const pesquisaClips = (texto) => {
+
+  const requestDB = window.indexedDB.open("topClipsDB", 1);
+
+    requestDB.onsuccess = () => {
+    const db = requestDB.result;
+    const transaction = db.transaction(['clips'], 'readonly')
+    const clipObjectStore = transaction.objectStore("clips");
+    const index = clipObjectStore.index("title");
+
+    const request = index.getAll(IDBKeyRange.bound(texto, texto + '\uffff'));
+
+    console.log(request)
+    request.onsuccess = function (e) {
+    var cursor = e.target.result;
+    
+    if (cursor){
+      cursor.forEach((clip => console.log(clip)))
+    }
+  };
+
+  }
+
+  requestDB.onerror = (e) => {
+    console.log(
+      `Erro na requisição para consultar os clips ${e.target.errorCode}`
+    );
+  };
+
+  
+}
+
 // Adiciona os Clips no IndexedDb
 const adicionarClipsBD = (db, clips) => {
   const transactionAdd = db.transaction("clips", "readwrite");

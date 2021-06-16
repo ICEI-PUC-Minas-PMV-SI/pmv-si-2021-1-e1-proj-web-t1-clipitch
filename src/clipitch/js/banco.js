@@ -19,7 +19,7 @@ const criaBancoDeDados = (TopClips) => {
           keyPath: "slug",
         });
 
-        clipsTb.createIndex("title", "titleIdx", {
+        clipsTb.createIndex("title", "title", {
           unique: false,
           multiEntry: true,
         });
@@ -106,6 +106,8 @@ function getAllClips(dayOrWeek) {
         resultado.forEach((clip) => {
           clipsList.push(clip);
         });
+
+        createTags(clipsList);
 
         if (dayOrWeek === "day") {
           displayClipsDaily(clipsList);
@@ -287,6 +289,27 @@ function filterClips(clips, filterText) {
         CONST_PARENT +
         '" frameborder="0" allowfullscreen="true" width="100%" height="100%" scrolling="no"></iframe></div><br/>';
     }
+  }
+}
+
+// Função para criar as tags
+
+function createTags(clips) {
+  let tags = [];
+
+  clips.forEach((clips) => {
+    tags.push(...clips["title"].split(" "));
+  });
+
+  const tagsCounter = function (arr, val) {
+    return arr.reduce((acc, elem) => {
+      return val === elem ? acc + 1 : acc;
+    }, 0);
+  };
+
+  for (let i = 0; i < tags.length; i++) {
+    console.log(tags[i]);
+    console.log(tagsCounter(tags, tags[i]));
   }
 }
 

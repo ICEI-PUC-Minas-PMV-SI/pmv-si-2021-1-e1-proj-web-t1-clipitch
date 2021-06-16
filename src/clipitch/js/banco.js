@@ -19,7 +19,7 @@ const criaBancoDeDados = (TopClips) => {
           keyPath: "slug",
         });
 
-        clipsTb.createIndex("title", "titleIdx", {
+        clipsTb.createIndex("title", "title", {
           unique: false,
           multiEntry: true,
         });
@@ -43,6 +43,39 @@ const criaBancoDeDados = (TopClips) => {
     console.log("Banco de dados IndexedDb não é suportado pelo Browser");
   }
 };
+
+// Pesquisa Clips pelo título
+const pesquisaClips = (texto) => {
+
+  const requestDB = window.indexedDB.open("topClipsDB", 1);
+
+    requestDB.onsuccess = () => {
+    const db = requestDB.result;
+    const transaction = db.transaction(['clips'], 'readonly')
+    const clipObjectStore = transaction.objectStore("clips");
+    const index = clipObjectStore.index("title");
+
+    const request = index.getAll(IDBKeyRange.bound(texto, texto + '\uffff'));
+
+    console.log(request)
+    request.onsuccess = function (e) {
+    var cursor = e.target.result;
+    
+    if (cursor){
+      cursor.forEach((clip => console.log(clip)))
+    }
+  };
+
+  }
+
+  requestDB.onerror = (e) => {
+    console.log(
+      `Erro na requisição para consultar os clips ${e.target.errorCode}`
+    );
+  };
+
+  
+}
 
 // Adiciona os Clips no IndexedDb
 const adicionarClipsBD = (db, clips) => {

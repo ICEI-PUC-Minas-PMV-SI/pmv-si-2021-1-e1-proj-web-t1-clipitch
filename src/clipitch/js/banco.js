@@ -149,6 +149,8 @@ function getAllClips(dayOrWeek) {
           clipsList.push(clip);
         });
 
+        createTags(clipsList);
+
         if (dayOrWeek === "day") {
           displayClipsDaily(clipsList);
         } else {
@@ -324,6 +326,27 @@ function filterClips(clips, filterText) {
     if (clip["game"] === filterText) {
      
     }
+  }
+}
+
+// Função para criar as tags
+
+function createTags(clips) {
+  let tags = [];
+
+  clips.forEach((clips) => {
+    tags.push(...clips["title"].split(" "));
+  });
+
+  const tagsCounter = function (arr, val) {
+    return arr.reduce((acc, elem) => {
+      return val === elem ? acc + 1 : acc;
+    }, 0);
+  };
+
+  for (let i = 0; i < tags.length; i++) {
+    console.log(tags[i]);
+    console.log(tagsCounter(tags, tags[i]));
   }
 }
 

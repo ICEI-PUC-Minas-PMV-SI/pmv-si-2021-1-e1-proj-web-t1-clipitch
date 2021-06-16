@@ -1,5 +1,5 @@
 import criaBancoDeDados from "./banco.js";
-import {searchClips} from "./banco.js";
+import {pesquisaClips} from "./banco.js";
 
 
 // Constantes, Parâmetros e Funções Necessárias para Requisição da API do Twitch e Armazenamento dos Dados
@@ -80,14 +80,13 @@ function searchFilter() {
   var url_string = window.location.href
   var url = new URL(url_string);
   var parameter = url.searchParams.get("search");
-  searchClips(parameter); 
+  pesquisaClips(parameter); 
 }
 
 function searchClick() {
   searchValue = document.getElementById("searchValue").value;
 
   if (searchValue != "") {
-    window.location = '/player_detail?username=' + name;
     window.location = 'search.html?search=' + searchValue;
   } else alert("Por favor, selecione uma das opções para pesquisar!");
 }

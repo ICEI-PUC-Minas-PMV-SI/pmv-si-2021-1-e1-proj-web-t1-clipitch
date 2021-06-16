@@ -19,7 +19,7 @@ const criaBancoDeDados = (TopClips) => {
           keyPath: "slug",
         });
 
-        clipsTb.createIndex("title", "title", {
+        clipsTb.createIndex("game", "game", {
           unique: false,
           multiEntry: true,
         });
@@ -53,16 +53,25 @@ const pesquisaClips = (texto) => {
     const db = requestDB.result;
     const transaction = db.transaction(['clips'], 'readonly')
     const clipObjectStore = transaction.objectStore("clips");
-    const index = clipObjectStore.index("title");
+    const index = clipObjectStore.index("game");
 
     const request = index.getAll(IDBKeyRange.bound(texto, texto + '\uffff'));
 
     console.log(request)
     request.onsuccess = function (e) {
     var cursor = e.target.result;
+
+    var element = document.getElementById("searchVideos");  
     
     if (cursor){
-      cursor.forEach((clip => console.log(clip)))
+      cursor.forEach((clip => {
+        element.innerHTML +=
+        '<div class="col-md-4 my-2"><iframe src="' +
+        clip["embed_url"] +
+        "&parent=" +
+        CONST_PARENT +
+        '" frameborder="0" allowfullscreen="true" width="100%" height="100%" scrolling="no"></iframe></div><br/>';
+      }))
     }
   };
 
@@ -303,7 +312,7 @@ const searchClips = (filterText) => {
 };
 
 function filterClips(clips, filterText) {
-  var element = document.getElementById("searchVideos");
+  
   let countFilter;
 
   if (filterText === "Just Chatting") countFilter = 25;
@@ -313,12 +322,7 @@ function filterClips(clips, filterText) {
     let clip = clips[i];
 
     if (clip["game"] === filterText) {
-      element.innerHTML +=
-        '<div class="col-md-4 my-2"><iframe src="' +
-        clip["embed_url"] +
-        "&parent=" +
-        CONST_PARENT +
-        '" frameborder="0" allowfullscreen="true" width="100%" height="100%" scrolling="no"></iframe></div><br/>';
+     
     }
   }
 }
@@ -332,4 +336,4 @@ function getCursorBancoDeDados(db) {
 }
 
 export default criaBancoDeDados;
-export { searchClips };
+export { pesquisaClips };

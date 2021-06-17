@@ -145,10 +145,6 @@ function getAllClips(dayOrWeek) {
           clipsList.push(clip);
         });
 
-        let gameTags = createTags(clipsList);
-        let finalTags = orderTags(gameTags);
-        displayTags(finalTags);
-
         if (dayOrWeek === "day") {
           displayClipsDaily(clipsList);
         } else {
@@ -168,6 +164,11 @@ function getAllClips(dayOrWeek) {
 // Função para listar os clips do dia na página inicial. TODO: Revisar o código, pois ainda não está funcional.
 function displayClipsDaily(clips) {
   const quantidadeDeVideos = 16; // Quantidade de vídeos a serem dispostos na página
+
+  let gameTags = createTags(clips);
+  let finalTags = orderTags(gameTags);
+  displayTags(finalTags);
+
   var firstRowDaily =
     document.getElementById("firstRowDaily") != null
       ? document.getElementById("firstRowDaily")
@@ -290,7 +291,7 @@ function createTags(clips) {
   clips.forEach((clips) => {
     gameTags.push(clips["game"]);
   });
-
+  console.log(gameTags);
   return gameTags;
 }
 
@@ -320,15 +321,12 @@ function orderTags(array) {
   function compareFrequency(a, b) {
     return frequency[b] - frequency[a];
   }
-
-  finalTags = uniques.sort(compareFrequency);
-
-  return finalTags;
+  return uniques.sort(compareFrequency);
 }
 
 // Função para dispor as tags nas páginas
 function displayTags(array) {
-  const quantidadeTags = array.length;
+  const quantidadeTags = 5;
   var tagsDiv =
     document.getElementById("tagsDiv") != null
       ? document.getElementById("tagsDiv")

@@ -10,22 +10,21 @@ function writeCookie(name, value, days) {
   } else {
     expires = "";
   }
-  document.cookie = name + "=" +  value + expires + "; path=/";
+  document.cookie = name + "=" + value + expires + "; path=/";
 }
 
-const clientIP = _AnimationEffect => {
+const clientIP = (_AnimationEffect) => {
   var dadosIP;
-  $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
-    
-      data = data.trim().split('\n').reduce(function(obj, pair) {
-              pair = pair.split('=');
-              return obj[pair[0]] = pair[1], obj;
-    }, {});
-    
+  $.get("https://www.cloudflare.com/cdn-cgi/trace", function (data) {
+    data = data
+      .trim()
+      .split("\n")
+      .reduce(function (obj, pair) {
+        pair = pair.split("=");
+        return (obj[pair[0]] = pair[1]), obj;
+      }, {});
+
     dadosIP = data["ip"];
-    writeCookie("ClienteIP", dadosIP, true);    
-  });  
-}
-
-
-document.addEventListener("DOMContentLoaded", clientIP());
+    writeCookie("ClienteIP", dadosIP, true);
+  });
+};

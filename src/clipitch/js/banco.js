@@ -332,24 +332,13 @@ function orderTags(array) {
 
 // Função para dispor as tags nas páginas
 function displayTags(array) {
-  const quantidadeTags = 5;
-  var tagsDiv =
-    document.getElementById("tagsDiv") != null
-      ? document.getElementById("tagsDiv")
-      : null;
+  let element = document.getElementById("tagsDiv") != null ? document.getElementById("tagsDiv") : null;
 
-  for (let i = 0; i < quantidadeTags; i++) {
-    if (tagsDiv != null) {
-      let tag = array[i];
-      tagsDiv.innerHTML +=
-        '<div class="d-flex d-inline-flex p-4"><div class="text-end"><a href="http://clipitch.herokuapp.com/search.html?search=' +
-        tag +
-        '" class="btn btn-warning" role="button" aria-pressed="true" id="btnOptions">' +
-        "#" +
-        tag +
-        "</a></div></div>";
-    }
-  }
+  if(element != null){
+    array.forEach( clips => {
+      element.innerHTML += '<li class="list-group-item list-group-item-action p-4"><a class="btn text-dark textCenter" aria-current="true" role="button"  href="/src/clipitch/search.html?search=' + clips +'"><b>#'+ clips +'</b></a></li>';
+    });
+  }   
 }
 
 // Obtém o curso para ler a tabela de Clips - Retorna o Cursor Aberto posicionado na Tabela

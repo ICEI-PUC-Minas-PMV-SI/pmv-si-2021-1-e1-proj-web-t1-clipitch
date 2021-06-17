@@ -73,6 +73,20 @@ footer {
   height: 720px !important;
 }
 
+.list-group-item {
+  background-color: transparent;
+  border-color: transparent;
+  }
+
+ul li a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+} 
+
+.textCenter {
+  text-align: center;
+}
 /* Define o css para o tamanho da resolução em Tablets */
 @media screen and (max-width: 992px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape){
   .bg-transparent {

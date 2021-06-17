@@ -169,124 +169,44 @@ function displayClipsDaily(clips) {
   let finalTags = orderTags(gameTags);
   displayTags(finalTags);
 
-  var firstRowDaily =
-    document.getElementById("firstRowDaily") != null
-      ? document.getElementById("firstRowDaily")
-      : null;
-  var secondRowDaily =
-    document.getElementById("secondRowDaily") != null
-      ? document.getElementById("secondRowDaily")
-      : null;
-  var thirdRowDaily =
-    document.getElementById("thirdRowDaily") != null
-      ? document.getElementById("thirdRowDaily")
-      : null;
-  var fourthRowDaily =
-    document.getElementById("fourthRowDaily") != null
-      ? document.getElementById("fourthRowDaily")
-      : null;
+  var rowDaily =
+    document.getElementById("rowDaily") != null ? document.getElementById("rowDaily") : null;
 
   for (let i = 0; i < quantidadeDeVideos; i++) {
     let url = clips[i];
 
-    if (i <= 3) {
-      if (firstRowDaily != null) {
-        firstRowDaily.innerHTML +=
-          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
+    if (i <= 8) {
+      if (rowDaily != null) {
+        rowDaily.innerHTML +=
+          '<div class="col-md-4 my-2 px-2"><iframe src="' +
           url["embed_url"] +
           "&parent=" +
           CONST_PARENT +
-          '" class="embed-responsive-item video" allowfullscreen></iframe></div>';
+          '"frameborder="0" allowfullscreen="true" width="100%" height="100%" scrolling="no"></iframe></div>';
       }
-    } else if (i > 3 && i <= 7) {
-      if (secondRowDaily != null) {
-        secondRowDaily.innerHTML +=
-          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
-          url["embed_url"] +
-          "&parent=" +
-          CONST_PARENT +
-          '" class="embed-responsive-item video" allowfullscreen></iframe></div>';
-      }
-    } else if (i > 7 && i <= 11) {
-      if (thirdRowDaily != null) {
-        thirdRowDaily.innerHTML +=
-          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
-          url["embed_url"] +
-          "&parent=" +
-          CONST_PARENT +
-          '" class="embed-responsive-item video" allowfullscreen></iframe></div>';
-      }
-    } else {
-      if (fourthRowDaily != null) {
-        fourthRowDaily.innerHTML +=
-          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
-          url["embed_url"] +
-          "&parent=" +
-          CONST_PARENT +
-          '" class="embed-responsive-item video" allowfullscreen></iframe></div>';
-      }
-    }
+    } 
   }
 }
 
 // Função para listar os clips da semana na página inicial. TODO: Revisar o código, pois ainda não está funcional.
 function displayClipsWeekly(clips) {
   const quantidadeDeVideos = 16; // Quantidade de vídeos a serem dispostos na página
-  var firstRowWeekly =
-    document.getElementById("firstRowWeekly") != null
-      ? document.getElementById("firstRowWeekly")
+  var rowWeekly =
+    document.getElementById("rowWeekly") != null
+      ? document.getElementById("rowWeekly")
       : null;
-  var secondRowWeekly =
-    document.getElementById("secondRowWeekly") != null
-      ? document.getElementById("secondRowWeekly")
-      : null;
-  var thirdRowWeekly =
-    document.getElementById("thirdRowWeekly") != null
-      ? document.getElementById("thirdRowWeekly")
-      : null;
-  var fourthRowWeekly =
-    document.getElementById("fourthRowWeekly") != null
-      ? document.getElementById("fourthRowWeekly")
-      : null;
-
+  
   for (let i = 0; i < quantidadeDeVideos; i++) {
     let url = clips[i];
 
-    if (i <= 3) {
-      if (firstRowWeekly != null) {
-        firstRowWeekly.innerHTML +=
-          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
+    if (i <= 8) {
+      if (rowWeekly != null) {
+        rowWeekly.innerHTML +=
+          '<div class="col-md-4 my-2 px-2"><iframe src="' +
           url["embed_url"] +
           "&parent=" +
           CONST_PARENT +
-          '" class="embed-responsive-item video" allowfullscreen></iframe></div>';
-      }
-    } else if (i > 3 && i <= 7) {
-      if (secondRowWeekly != null) {
-        secondRowWeekly.innerHTML +=
-          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
-          url["embed_url"] +
-          "&parent=" +
-          CONST_PARENT +
-          '" class="embed-responsive-item video" allowfullscreen></iframe></div>';
-      }
-    } else if (i > 7 && i <= 11) {
-      if (thirdRowWeekly != null) {
-        thirdRowWeekly.innerHTML +=
-          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
-          url["embed_url"] +
-          "&parent=" +
-          CONST_PARENT +
-          '" class="embed-responsive-item video" allowfullscreen></iframe></div>';
-      }
-    } else {
-      if (fourthRowWeekly != null) {
-        fourthRowWeekly.innerHTML +=
-          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
-          url["embed_url"] +
-          "&parent=" +
-          CONST_PARENT +
-          '" class="embed-responsive-item video" allowfullscreen></iframe></div>';
+          '"frameborder="0" allowfullscreen="true" width="100%" height="100%" scrolling="no"></iframe></div>';
       }
     }
   }
@@ -335,9 +255,10 @@ function displayTags(array) {
   let element = document.getElementById("tagsDiv") != null ? document.getElementById("tagsDiv") : null;
 
   if(element != null){
-    array.forEach( clips => {
-      element.innerHTML += '<li class="list-group-item list-group-item-action p-4"><a class="btn text-dark textCenter" aria-current="true" role="button"  href="/src/clipitch/search.html?search=' + clips +'"><b>#'+ clips +'</b></a></li>';
-    });
+    for(let i = 0; i < 7; i++){
+      let clips = array[i]
+      element.innerHTML += '<li class="list-group-item list-group-item-action p-4"><a class="btn text-dark textCenter shadow-none border-0" aria-current="true" role="button"  href="/src/clipitch/search.html?search=' + clips +'"><b>#'+ clips +'</b></a></li>';
+    }
   }   
 }
 

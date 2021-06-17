@@ -171,11 +171,9 @@
   <div id="videos" style="display: none"></div>
 
   <!-- Sistema de tags -->
-  <div class="section">
-    <div class="container-fluid bg-warning">
-      <ul class="list-group list-group-horizontal-md" id="tagsDiv">
-      </ul>    
-    </div>
+  <div class="section bg-warning">
+    <ul class="list-group list-group-horizontal-md" id="tagsDiv">
+    </ul>
   </div>
   
   <!-- /Sistema de tags -->
@@ -187,15 +185,7 @@
         <hr class="my-4" />
       </div>
       <div class="container">
-        <div class="row d-flex justify-content-center" id="firstRowDaily"></div>
-      </div>
-    </div>
-
-      <div class="container">
-        <div
-          class="row d-flex justify-content-center"
-          id="secondRowDaily"
-        ></div>
+        <div class="row" id="rowDaily"></div>
       </div>
     </div>
   
@@ -222,19 +212,10 @@
         <hr class="my-4" />
       </div>
       <div class="container">
-        <div
-          class="row d-flex justify-content-center"
-          id="firstRowWeekly"
-        ></div>
+        <div class="row" id="rowWeekly">          
+        </div>
       </div>
     </div>
-
-      <div class="container">
-        <div
-          class="row d-flex justify-content-center"
-          id="secondRowWeekly"
-        ></div>
-      </div>
 
       <div class="container">
         <div class="text-end">
@@ -244,8 +225,7 @@
             role="button"
             aria-pressed="true"
             id="btnOptions"
-            >Ver Mais...</a
-          >
+            >Ver Mais...</a>
         </div>
       </div>      
     </div>

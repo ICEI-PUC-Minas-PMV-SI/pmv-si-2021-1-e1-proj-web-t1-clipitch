@@ -1,5 +1,4 @@
 // Funções Necessárias para Armazenamento em Banco de Dados Indexado no Browser
-
 let db = "";
 const CONST_PARENT = "localhost";
 
@@ -34,6 +33,7 @@ const criaBancoDeDados = (TopClips) => {
       adicionarClipsBD(db, TopClips);
       getAllClips("day");
       getAllClips("week");
+      populaCarousel();
     };
 
     bancoRequest.onerror = (e) => {
@@ -46,45 +46,41 @@ const criaBancoDeDados = (TopClips) => {
 
 // Pesquisa Clips pelo título
 const pesquisaClips = (texto) => {
-
   const requestDB = window.indexedDB.open("topClipsDB", 1);
 
-    requestDB.onsuccess = () => {
+  requestDB.onsuccess = () => {
     const db = requestDB.result;
-    const transaction = db.transaction(['clips'], 'readonly')
+    const transaction = db.transaction(["clips"], "readonly");
     const clipObjectStore = transaction.objectStore("clips");
     const index = clipObjectStore.index("game");
 
-    const request = index.getAll(IDBKeyRange.bound(texto, texto + '\uffff'));
+    const request = index.getAll(IDBKeyRange.bound(texto, texto + "\uffff"));
 
-    console.log(request)
+    console.log(request);
     request.onsuccess = function (e) {
-    var cursor = e.target.result;
+      var cursor = e.target.result;
 
-    var element = document.getElementById("searchVideos");  
-    
-    if (cursor){
-      cursor.forEach((clip => {
-        element.innerHTML +=
-        '<div class="col-md-4 my-2"><iframe src="' +
-        clip["embed_url"] +
-        "&parent=" +
-        CONST_PARENT +
-        '" frameborder="0" allowfullscreen="true" width="100%" height="100%" scrolling="no"></iframe></div><br/>';
-      }))
-    }
+      var element = document.getElementById("searchVideos");
+
+      if (cursor) {
+        cursor.forEach((clip) => {
+          element.innerHTML +=
+            '<div class="col-md-4 my-2"><iframe src="' +
+            clip["embed_url"] +
+            "&parent=" +
+            CONST_PARENT +
+            '" frameborder="0" allowfullscreen="true" width="100%" height="100%" scrolling="no"></iframe></div><br/>';
+        });
+      }
+    };
   };
-
-  }
 
   requestDB.onerror = (e) => {
     console.log(
       `Erro na requisição para consultar os clips ${e.target.errorCode}`
     );
   };
-
-  
-}
+};
 
 // Adiciona os Clips no IndexedDb
 const adicionarClipsBD = (db, clips) => {
@@ -149,7 +145,9 @@ function getAllClips(dayOrWeek) {
           clipsList.push(clip);
         });
 
-        createTags(clipsList);
+        let gameTags = createTags(clipsList);
+        let finalTags = orderTags(gameTags);
+        displayTags(finalTags);
 
         if (dayOrWeek === "day") {
           displayClipsDaily(clipsList);
@@ -193,7 +191,7 @@ function displayClipsDaily(clips) {
     if (i <= 3) {
       if (firstRowDaily != null) {
         firstRowDaily.innerHTML +=
-          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
           url["embed_url"] +
           '&parent=localhost"' +
           ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
@@ -201,7 +199,7 @@ function displayClipsDaily(clips) {
     } else if (i > 3 && i <= 7) {
       if (secondRowDaily != null) {
         secondRowDaily.innerHTML +=
-          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
           url["embed_url"] +
           '&parent=localhost"' +
           ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
@@ -209,7 +207,7 @@ function displayClipsDaily(clips) {
     } else if (i > 7 && i <= 11) {
       if (thirdRowDaily != null) {
         thirdRowDaily.innerHTML +=
-          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
           url["embed_url"] +
           '&parent=localhost"' +
           ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
@@ -217,7 +215,7 @@ function displayClipsDaily(clips) {
     } else {
       if (fourthRowDaily != null) {
         fourthRowDaily.innerHTML +=
-          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
           url["embed_url"] +
           '&parent=localhost"' +
           ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
@@ -252,7 +250,7 @@ function displayClipsWeekly(clips) {
     if (i <= 3) {
       if (firstRowWeekly != null) {
         firstRowWeekly.innerHTML +=
-          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
           url["embed_url"] +
           '&parent=localhost"' +
           ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
@@ -260,7 +258,7 @@ function displayClipsWeekly(clips) {
     } else if (i > 3 && i <= 7) {
       if (secondRowWeekly != null) {
         secondRowWeekly.innerHTML +=
-          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
           url["embed_url"] +
           '&parent=localhost"' +
           ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
@@ -268,7 +266,7 @@ function displayClipsWeekly(clips) {
     } else if (i > 7 && i <= 11) {
       if (thirdRowWeekly != null) {
         thirdRowWeekly.innerHTML +=
-          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
           url["embed_url"] +
           '&parent=localhost"' +
           ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
@@ -276,7 +274,7 @@ function displayClipsWeekly(clips) {
     } else {
       if (fourthRowWeekly != null) {
         fourthRowWeekly.innerHTML +=
-          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe id="teste" src="' +
+          '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
           url["embed_url"] +
           '&parent=localhost"' +
           ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
@@ -285,68 +283,62 @@ function displayClipsWeekly(clips) {
   }
 }
 
-//Função para filtrar os vídeos
-const searchClips = (filterText) => {
-  const requestDB = window.indexedDB.open("topClipsDB", 1);
-  let clipsList = [];
-
-  requestDB.onsuccess = () => {
-    const db = requestDB.result;
-    const transaction = db.transaction(["clips"], "readwrite");
-    const clipObjectStore = transaction.objectStore("clips");
-    const cursorRequest = clipObjectStore.openCursor();
-    cursorRequest.onsuccess = (e) => {
-      let cursor = e.target.result;
-
-      if (cursor) {
-        clipsList.push(cursor.value);
-        cursor.continue();
-      } else {
-        filterClips(clipsList, filterText);
-      }
-    };
-  };
-  requestDB.onerror = (e) => {
-    console.log(
-      `Erro na requisição para consultar os clips ${e.target.errorCode}`
-    );
-  };
-};
-
-function filterClips(clips, filterText) {
-  
-  let countFilter;
-
-  if (filterText === "Just Chatting") countFilter = 25;
-  else countFilter = clips.length;
-
-  for (let i = 0; i < countFilter; i++) {
-    let clip = clips[i];
-
-    if (clip["game"] === filterText) {
-     
-    }
-  }
-}
-
 // Função para criar as tags
-
 function createTags(clips) {
-  let tags = [];
+  let gameTags = [];
 
   clips.forEach((clips) => {
-    tags.push(...clips["title"].split(" "));
+    gameTags.push(clips["game"]);
   });
 
-  const tagsCounter = function (arr, val) {
-    return arr.reduce((acc, elem) => {
-      return val === elem ? acc + 1 : acc;
-    }, 0);
-  };
+  return gameTags;
+}
 
-  for (let i = 0; i < tags.length; i++) {
-    console.log(tags[i]);
-    console.log(tagsCounter(tags, tags[i]));
+// Função para selecionar as tags de acordo com os jogos
+function orderTags(array) {
+  var finalTags = [];
+  var frequency = {},
+    value;
+
+  // compute frequencies of each value
+  for (var i = 0; i < array.length; i++) {
+    value = array[i];
+    if (value in frequency) {
+      frequency[value]++;
+    } else {
+      frequency[value] = 1;
+    }
+  }
+
+  // make array from the frequency object to de-duplicate
+  var uniques = [];
+  for (value in frequency) {
+    uniques.push(value);
+  }
+
+  // sort the uniques array in descending order by frequency
+  function compareFrequency(a, b) {
+    return frequency[b] - frequency[a];
+  }
+
+  finalTags = uniques.sort(compareFrequency);
+
+  return finalTags;
+}
+
+// Função para dispor as tags nas páginas
+function displayTags(array) {
+  const quantidadeTags = array.length;
+  var tagsDiv =
+    document.getElementById("tagsDiv") != null
+      ? document.getElementById("tagsDiv")
+      : null;
+
+  for (let i = 0; i < quantidadeTags; i++) {
+    if (tagsDiv != null) {
+      let tag = array[i];
+      tagsDiv.innerHTML += "<div>" + tag + "</div";
+    }
   }
 }
 
@@ -357,6 +349,67 @@ function getCursorBancoDeDados(db) {
   const cursorAberto = tabelaClip.openCursor();
   return cursorAberto;
 }
+
+const populaCarousel = () => {
+  const requestDB = window.indexedDB.open("topClipsDB", 1);
+  let clipsList = [];
+
+  requestDB.onsuccess = () => {
+    const requestDB = window.indexedDB.open("topClipsDB", 1);
+
+    requestDB.onsuccess = () => {
+      const db = requestDB.result;
+      const transaction = db.transaction(["clips"], "readonly");
+      const clipObjectStore = transaction.objectStore("clips");
+      const index = clipObjectStore.index("game");
+
+      const request = index.getAll();
+
+      request.onsuccess = function (e) {
+        var cursor = e.target.result;
+
+        if (cursor) {
+          let count = 0;
+
+          let element =
+            document.getElementById("carouselInner") != null
+              ? document.getElementById("carouselInner")
+              : null;
+
+          if (element != null) {
+            cursor.forEach((clip) => {
+              if (count === 0) {
+                element.innerHTML +=
+                  '<div class="carousel-item active embed-responsive-item"><iframe class="d-block"  id="carouselIFrame" alt="carouselData" src="' +
+                  clip["embed_url"] +
+                  "&parent=" +
+                  CONST_PARENT +
+                  '"frameborder="0" allowfullscreen="true" scrolling="no""></iframe></div>';
+
+                count++;
+              } else if (count > 0 && count < 3) {
+                element.innerHTML +=
+                  '<div class="carousel-item embed-responsive-item"><iframe class="d-block" id="carouselIFrame" alt="carouselData" src="' +
+                  clip["embed_url"] +
+                  "&parent=" +
+                  CONST_PARENT +
+                  '"frameborder="0" allowfullscreen="true" scrolling="no""></iframe></div>';
+
+                count++;
+              }
+            });
+          }
+        }
+      };
+    };
+  };
+
+  requestDB.onerror = (e) => {
+    console.log(
+      `Erro na requisição para consultar os clips ${e.target.errorCode}`
+    );
+  };
+};
 
 export default criaBancoDeDados;
 export { pesquisaClips };

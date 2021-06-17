@@ -68,6 +68,11 @@ footer {
   text-shadow: 0px 2px 4px black;
 }
 
+#carouselIFrame{
+  width: 1280px !important;
+  height: 720px !important;
+}
+
 /* Define o css para o tamanho da resolução em Tablets */
 @media screen and (max-width: 992px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape){
   .bg-transparent {
@@ -79,6 +84,11 @@ footer {
     content:url("/src/clipitch/imgs/logo-mobile.png");
     width: 20%;
     height: 100%;
+  }
+
+  #carouselIFrame{
+    width: 100% !important;
+    height: 100% !important;
   }
 }
 
@@ -93,6 +103,11 @@ footer {
     content:url("/src/clipitch/imgs/logo-mobile.png");
     width: 20%;
     height: 100%;
+  }
+
+  #carouselIFrame{
+    width: 100% !important;
+    height: 100% !important;
   }
 }
 
@@ -109,6 +124,11 @@ footer {
     width: 20%;
     height: 100%;
   }
+
+  #carouselIFrame{
+    width: 100% !important;
+    height: 100% !important;
+  }
 }
 
 /* Define o css para o tamanho da resolução em IPad Pro modo Portrait */
@@ -122,6 +142,11 @@ footer {
     content:url("/src/clipitch/imgs/logo-mobile.png");
     width: 20%;
     height: 100%;
+  }
+
+  #carouselIFrame{
+    width: 100% !important;
+    height: 100% !important;
   }
 }
 
@@ -137,6 +162,11 @@ footer {
     width: 20%;
     height: 100%;
   }
+
+  #carouselIFrame{
+    width: 100% !important;
+    height: 100% !important;
+  }
 }
 
 /* Define o css para o tamanho da resolução Iphone X (Mobile) */
@@ -150,5 +180,10 @@ footer {
     content:url("/src/clipitch/imgs/logo-mobile.png");
     width: 20%;
     height: 100%;
+  }
+
+  #carouselIFrame{
+    width: 100% !important;
+    height: 100% !important;
   }
 }

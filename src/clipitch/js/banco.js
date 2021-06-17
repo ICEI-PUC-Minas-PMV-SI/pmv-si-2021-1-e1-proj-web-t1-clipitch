@@ -194,32 +194,36 @@ function displayClipsDaily(clips) {
         firstRowDaily.innerHTML +=
           '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
           url["embed_url"] +
-          '&parent=localhost"' +
-          ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+          "&parent=" +
+          CONST_PARENT +
+          '" class="embed-responsive-item video" allowfullscreen></iframe></div>';
       }
     } else if (i > 3 && i <= 7) {
       if (secondRowDaily != null) {
         secondRowDaily.innerHTML +=
           '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
           url["embed_url"] +
-          '&parent=localhost"' +
-          ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+          "&parent=" +
+          CONST_PARENT +
+          '" class="embed-responsive-item video" allowfullscreen></iframe></div>';
       }
     } else if (i > 7 && i <= 11) {
       if (thirdRowDaily != null) {
         thirdRowDaily.innerHTML +=
           '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
           url["embed_url"] +
-          '&parent=localhost"' +
-          ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+          "&parent=" +
+          CONST_PARENT +
+          '" class="embed-responsive-item video" allowfullscreen></iframe></div>';
       }
     } else {
       if (fourthRowDaily != null) {
         fourthRowDaily.innerHTML +=
           '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
           url["embed_url"] +
-          '&parent=localhost"' +
-          ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+          "&parent=" +
+          CONST_PARENT +
+          '" class="embed-responsive-item video" allowfullscreen></iframe></div>';
       }
     }
   }
@@ -253,32 +257,36 @@ function displayClipsWeekly(clips) {
         firstRowWeekly.innerHTML +=
           '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
           url["embed_url"] +
-          '&parent=localhost"' +
-          ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+          "&parent=" +
+          CONST_PARENT +
+          '" class="embed-responsive-item video" allowfullscreen></iframe></div>';
       }
     } else if (i > 3 && i <= 7) {
       if (secondRowWeekly != null) {
         secondRowWeekly.innerHTML +=
           '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
           url["embed_url"] +
-          '&parent=localhost"' +
-          ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+          "&parent=" +
+          CONST_PARENT +
+          '" class="embed-responsive-item video" allowfullscreen></iframe></div>';
       }
     } else if (i > 7 && i <= 11) {
       if (thirdRowWeekly != null) {
         thirdRowWeekly.innerHTML +=
           '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
           url["embed_url"] +
-          '&parent=localhost"' +
-          ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+          "&parent=" +
+          CONST_PARENT +
+          '" class="embed-responsive-item video" allowfullscreen></iframe></div>';
       }
     } else {
       if (fourthRowWeekly != null) {
         fourthRowWeekly.innerHTML +=
           '<div class=" embed-responsive embed-responsive-16by9 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3 d-flex justify-content-center mb-5"> <iframe src="' +
           url["embed_url"] +
-          '&parent=localhost"' +
-          ' class="embed-responsive-item video" allowfullscreen></iframe></div>';
+          "&parent=" +
+          CONST_PARENT +
+          '" class="embed-responsive-item video" allowfullscreen></iframe></div>';
       }
     }
   }
@@ -291,13 +299,11 @@ function createTags(clips) {
   clips.forEach((clips) => {
     gameTags.push(clips["game"]);
   });
-  console.log(gameTags);
   return gameTags;
 }
 
 // Função para selecionar as tags de acordo com os jogos
 function orderTags(array) {
-  var finalTags = [];
   var frequency = {},
     value;
 
@@ -335,7 +341,13 @@ function displayTags(array) {
   for (let i = 0; i < quantidadeTags; i++) {
     if (tagsDiv != null) {
       let tag = array[i];
-      tagsDiv.innerHTML += "<div>" + tag + "</div";
+      tagsDiv.innerHTML +=
+        '<div class="d-flex d-inline-flex p-4"><div class="text-end"><a href="http://clipitch.herokuapp.com/search.html?search=' +
+        tag +
+        '" class="btn btn-warning" role="button" aria-pressed="true" id="btnOptions">' +
+        "#" +
+        tag +
+        "</a></div></div>";
     }
   }
 }

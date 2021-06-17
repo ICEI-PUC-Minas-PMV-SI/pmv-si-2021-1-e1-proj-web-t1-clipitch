@@ -92,7 +92,7 @@ const adicionarClipsBD = (db, clips) => {
     objectStorageClip.put(clip);
   });
 
-  transactionAdd.oncomplete = (e) => {};
+  transactionAdd.oncomplete = (e) => { };
 
   transactionAdd.onerror = (e) => {
     console.log("Erro ao realizar a inclusão de registro no banco de dados");
@@ -172,36 +172,62 @@ function displayClipsDaily(clips) {
   var rowDaily =
     document.getElementById("rowDaily") != null ? document.getElementById("rowDaily") : null;
 
+  var rowDailyPage =
+    document.getElementById("rowDailyPage") != null ? document.getElementById("rowDailyPage") : null;
+
+
+  for (let i = 0; i < quantidadeDeVideos; i++) {
+    let url = clips[i];
+    if (rowDaily != null) {
+      if (i <= 8) {
+        if (rowDaily != null) {
+          rowDaily.innerHTML +=
+            '<div class="col-md-4 my-2 px-2"><iframe src="' +
+            url["embed_url"] +
+            "&parent=" +
+            CONST_PARENT +
+            '"frameborder="0" allowfullscreen="true" width="100%" height="100%" scrolling="no"></iframe></div>';
+        }
+      }
+    } else if (rowDailyPage != null) {
+      if (i <= 14) {
+        if (rowDailyPage != null) {
+          rowDailyPage.innerHTML +=
+            '<div class="col-md-4 my-2 px-2"><iframe src="' +
+            url["embed_url"] +
+            "&parent=" +
+            CONST_PARENT +
+            '"frameborder="0" allowfullscreen="true" width="100%" height="100%" scrolling="no"></iframe></div>';
+        }
+      }
+    }
+  }
+
+}
+
+// Função para listar os clips da semana na página inicial. TODO: Revisar o código, pois ainda não está funcional.
+function displayClipsWeekly(clips) {
+  const quantidadeDeVideos = 16; // Quantidade de vídeos a serem dispostos na página
+
+  var rowWeekly = document.getElementById("rowWeekly") != null ? document.getElementById("rowWeekly") : null;
+  var rowWeeklyPage = document.getElementById("rowWeeklyPage") != null ? document.getElementById("rowWeeklyPage") : null;
+
   for (let i = 0; i < quantidadeDeVideos; i++) {
     let url = clips[i];
 
-    if (i <= 8) {
-      if (rowDaily != null) {
-        rowDaily.innerHTML +=
+    if (rowWeekly != null) {
+      if (i <= 8) {
+        rowWeekly.innerHTML +=
           '<div class="col-md-4 my-2 px-2"><iframe src="' +
           url["embed_url"] +
           "&parent=" +
           CONST_PARENT +
           '"frameborder="0" allowfullscreen="true" width="100%" height="100%" scrolling="no"></iframe></div>';
       }
-    } 
-  }
-}
-
-// Função para listar os clips da semana na página inicial. TODO: Revisar o código, pois ainda não está funcional.
-function displayClipsWeekly(clips) {
-  const quantidadeDeVideos = 16; // Quantidade de vídeos a serem dispostos na página
-  var rowWeekly =
-    document.getElementById("rowWeekly") != null
-      ? document.getElementById("rowWeekly")
-      : null;
-  
-  for (let i = 0; i < quantidadeDeVideos; i++) {
-    let url = clips[i];
-
-    if (i <= 8) {
-      if (rowWeekly != null) {
-        rowWeekly.innerHTML +=
+    }
+    else if (rowWeeklyPage != null) {
+      if (i <= 14) {
+        rowWeeklyPage.innerHTML +=
           '<div class="col-md-4 my-2 px-2"><iframe src="' +
           url["embed_url"] +
           "&parent=" +
@@ -254,12 +280,12 @@ function orderTags(array) {
 function displayTags(array) {
   let element = document.getElementById("tagsDiv") != null ? document.getElementById("tagsDiv") : null;
 
-  if(element != null){
-    for(let i = 0; i < 7; i++){
+  if (element != null) {
+    for (let i = 0; i < 7; i++) {
       let clips = array[i]
-      element.innerHTML += '<li class="list-group-item list-group-item-action p-4"><a class="btn text-dark textCenter shadow-none border-0" aria-current="true" role="button"  href="/src/clipitch/search.html?search=' + clips +'"><b>#'+ clips +'</b></a></li>';
+      element.innerHTML += '<li class="list-group-item list-group-item-action p-4"><a class="btn text-dark textCenter shadow-none border-0" aria-current="true" role="button"  href="/src/clipitch/search.html?search=' + clips + '"><b>#' + clips + '</b></a></li>';
     }
-  }   
+  }
 }
 
 // Obtém o curso para ler a tabela de Clips - Retorna o Cursor Aberto posicionado na Tabela

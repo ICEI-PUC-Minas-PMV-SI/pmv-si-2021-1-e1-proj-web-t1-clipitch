@@ -1,6 +1,9 @@
 import criaBancoDeDados from "./banco.js";
 import {pesquisaClips} from "./banco.js";
 
+$(window).scroll(function () {
+  $("nav").toggleClass("scrolled", $(this).scrollTop() > 550); //Aplica a cor do nav ao fazer o scroll em um tempo determinado de 550 mls
+});
 
 // Constantes, Parâmetros e Funções Necessárias para Requisição da API do Twitch e Armazenamento dos Dados
 const URL_AUTH = "https://id.twitch.tv/oauth2/token";

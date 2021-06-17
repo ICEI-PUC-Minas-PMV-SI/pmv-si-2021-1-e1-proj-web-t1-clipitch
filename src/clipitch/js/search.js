@@ -1,7 +1,12 @@
 import {searchFilter} from "./script.js"
 
 const carregar = () => {
-    document.getElementById("searchVideos").innerHTML = '<div class="row" id="searchVideos"></div>';
+
+    let element =   document.getElementById("searchVideos") != null ? document.getElementById("searchVideos") : null
+    
+    if(element != null)
+        element.innerHTML = '<div class="row" id="searchVideos"></div>';
+    
     searchFilter();
 }
 

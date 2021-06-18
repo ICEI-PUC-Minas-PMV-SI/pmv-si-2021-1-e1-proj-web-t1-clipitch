@@ -1,6 +1,7 @@
 import criaBancoDeDados from "./banco.js";
-import {pesquisaClips} from "./banco.js";
+import { pesquisaClips } from "./banco.js";
 
+//Estilização dos html
 $(window).scroll(function () {
   $("nav").toggleClass("scrolled", $(this).scrollTop() > 550); //Aplica a cor do nav ao fazer o scroll em um tempo determinado de 550 mls
 });
@@ -83,7 +84,7 @@ function searchFilter() {
   var url_string = window.location.href
   var url = new URL(url_string);
   var parameter = url.searchParams.get("search");
-  pesquisaClips(parameter); 
+  pesquisaClips(parameter);
 }
 
 function searchClick() {
@@ -96,5 +97,5 @@ function searchClick() {
 
 document.addEventListener("DOMContentLoaded", conectaTwitch);
 
-export default { conectaTwitch, getTwitchDados};
+export default { conectaTwitch, getTwitchDados };
 export { searchFilter };

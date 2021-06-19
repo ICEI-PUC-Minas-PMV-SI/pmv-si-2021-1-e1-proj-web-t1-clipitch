@@ -46,46 +46,84 @@ Outra estrutura de dados importantíssima que foi processada pela aplicação we
   }
 }
 ```
-
 ## Funcionalidades do sistema
 
 Abaixo encontram-se todas as funcionalidades implementadas de acordo com os requisitos funcionais listados no planejamento do projeto. As tabelas completas de requisitos funcionais e não funcionais podem ser encontradas na [especificação do projeto](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2021-1-e1-proj-web-t1-conteudo-de-interesse/edit/main/docs/02-Especifica%C3%A7%C3%A3o%20do%20Projeto.md).
 
 Os métodos desenvolvidos estão devidamente documentados no código fonte do projeto.
-
 ### O site vai estar disponível para todos os browsers sem necessidade de login (RF-001)
 
 A aplicação web não requere cadastro para ser utilizada.
-
 ### No site vai existir um campo visível na parte de cima da tela com a palavra: “Pesquisar” (RF-002)
 
-A aplicação web apresenta cinco páginas distintas: inicial, clips do dia, clips da semana, resultado da pesquisa e erro. Em todas essas páginas um campo de busca foi implementado na barra de navegação que encontra-se na parte superior do site.
+A aplicação web apresenta cinco páginas distintas: home, clips do dia, clips da semana, resultado da pesquisa e erro. Em todas essas páginas um campo de busca foi implementado na barra de navegação que encontra-se na parte superior do site.
 
 Os códigos responsáveis por essa funcionalidade encontram-se nos arquivos `banco.js`, `script.js` e `search.js`.
 
-Para utilizar essa funcionalidade, basta acessar qualquer página da aplicação web, digitar o termo a ser buscado no campo *Pesquisar* e clicar na lupa.
+Para utilizar essa funcionalidade, basta acessar qualquer página da aplicação web, digitar o termo a ser buscado no campo *Pesquisar* e clicar na lupa ao lado.
 
 ![pesquisa](img/rf-002.png)
 
 **Acesso:** https://clipitch.herokuapp.com
-
-
 ### O site vai ser capaz de rodar os vídeos de forma embutida (RF-003)
 
-Todos os clips contidos na aplicação web apresentam a capacidade de serem assistidos de forma embutida.
-
-Utilizou-se os links para embeds - a propriedade `"embed_url"` do arquivo JSON provido pela API do Twitch - para desenvolver essa funcionalidade.
+Todos os clips contidos na aplicação web apresentam a capacidade de serem assistidos de forma embutida Utilizou-se os links para embeds - a propriedade `"embed_url"` do arquivo JSON provido pela API do Twitch - para desenvolver essa funcionalidade.
 
 O código responsável por essa funcionalidade encontra-se no arquivo `banco.js`.
 
 Assim como a funcionalidade de pesquisa, essa funcionalidade está disponível em todas as páginas da aplicação web.
 
-![pesquisa](img/rf-003.png)
+![embeds](img/rf-003.png)
 
 **Acesso:** https://clipitch.herokuapp.com
+### O site deverá incorporar as funcionalidades de tela do Twitch como pause e tamanho de tela (RF-004)
 
+Os embeds em todas as páginas da aplicação web contém as funcionalidades nativas do player do Twitch: play/pause, mute, share, fullscreen e settings (qualidade de imagem do vídeo, velocidade de reprodução, configurações avançadas e atalhos de teclado).
 
----
-Implementação do sistema descritas por meio dos requisitos funcionais e/ou não funcionais. Deve relacionar os requisitos atendidos os artefatos criados (código fonte) além das estruturas de dados utilizadas e as instruções para acesso e verificação da implementação que deve estar funcional no ambiente de hospedagem.
+É possível visualizar os ícones das opções mencionadas acima na imagem do tópico anterior.
 
-Para cada requisito funcional, pode ser entregue um artefato desse tipo
+**Acesso:** https://clipitch.herokuapp.com
+### O site vai disponibilizar em sua home os clipes mais acessados no momento e aqueles de maior sucesso (RF-005)
+
+O site apresenta, em destaque em sua página inicial, abaixo da barra de navegação, um carrossel contendo os três clipes mais acessados no momento. O carrossel conta com botões direcionais (setas) para passar para o próximo clip.
+
+O método responsável por popular essa funcionalidade encontra-se no arquivo `banco.js`.
+
+Para utilizar essa funcionalidade, basta acessar a página inicial da aplicação web.
+
+![carrossel](img/rf-005.png)
+
+**Acesso:** https://clipitch.herokuapp.com
+### O site deve ser capaz de disponibilizar uma parte com os melhores clipes do dia (RF-006)
+
+O site apresenta, em destaque em sua página inicial, abaixo do carrossel, uma seção que contém os nove clips mais acessados do dia. Abaixo dos clips há um botão que leva o usuário para uma página que apresenta apenas os clips mais acessados do dia (nessa página também existe um botão que leva o usuário de volta à pagina anterior).
+
+Os métodos responsáveis por popular essa funcionalidade encontram-se no arquivo `banco.js`.
+
+Para utilizar essa funcionalidade, basta acessar a página inicial da aplicação web. Para acessar mais clips é necessário clicar no botão "Ver mais", próximo à última fileira de clips do dia.
+
+![clips do dia](img/rf-006.png)
+
+**Acesso:** https://clipitch.herokuapp.com, https://clipitch.herokuapp.com/clipsdia.html
+
+### O site deve ser capaz de disponibilizar uma parte com os melhores clipes da semana (RF-007)
+
+O site apresenta, em destaque em sua página inicial, abaixo do carrossel, uma seção que contém os nove clips mais acessados da semana. Abaixo dos clips há um botão que leva o usuário para uma página que apresenta apenas os clips mais acessados da semana (nessa página também existe um botão que leva o usuário de volta à pagina anterior).
+
+Os métodos responsáveis por popular essa funcionalidade encontram-se no arquivo `banco.js`.
+
+Para utilizar essa funcionalidade, basta acessar a página inicial da aplicação web. Para acessar mais clips é necessário clicar no botão "Ver mais", próximo à última fileira de clips da semana.
+
+![clips da semana](img/rf-007.png)
+
+**Acesso:** https://clipitch.herokuapp.com, https://clipitch.herokuapp.com/clipssemana.html
+### O site deve ser capaz de exibir os conteúdos da plataforma Twitch usando como filtro os títulos dos jogos (RF-008)
+
+A partir dos dados obtidos da API desenvolveram-se métodos para inserir em um vetor a quantidade de vezes que um mesmo jogo repete-se na lista de clips. Foi possível, então, tratar esse vetor ao utilizar outros métodos e extrair informações relevantes para a criação de um sistema de tags para os jogos mais populares.
+
+Os métodos responsáveis por popular essa funcionalidade encontram-se no arquivo `banco.js`.
+
+Para utilizar essa funcionalidade, basta acessar a página inicial e clicar em uma das tags para ser redirecionado a uma página de resultado de pesquisa que contém apenas clips relativos à tag clicada.
+
+![sistema-de-tags](img/rf-008.png)
+

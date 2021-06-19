@@ -2,11 +2,11 @@
 
 ## Estruturas de dados
 
-Foram desenvolvidos três arquivos no formato `.js`: `banco.js` contém os métodos para a manipulação do banco de dados, disposição dos clips nas páginas da aplicação e pesquisa; `script.js` é responsável por autenticar o acesso da aplicação web à API do Twitch, criação do banco de dados, filtros de pesquisa e interatividade das páginas HTML; `search.js` trata a chamada ao método de filtragem de pesquisa.
+Foram desenvolvidos três arquivos no formato `.js`: `banco.js` contém os métodos para a manipulação do banco de dados, disposição dos clips nas páginas e pesquisa; `script.js` é responsável por autenticar o acesso da aplicação web à API do Twitch, criação do banco de dados, filtros de pesquisa e interatividade das páginas HTML; `search.js` trata a chamada ao método de filtragem de pesquisa.
 
-Em todos esses arquivos utilizou-se as estruturas de dados básicas da programação: estruturas sequenciais, condicionais e de repetição. O uso de vetores também foi bastante presente. Como essas estruturas de dados foram usadas em basicamente todos os arquivos JavaScript do projeto, decidiu-se abordar esse assunto neste tópico ao invés de citá-lo de forma redundante no tópico relacionado às funcionalidades do sistema.
+Em todos esses arquivos utilizou-se as estruturas de dados básicas da programação: **estruturas sequenciais**, **condicionais** e de **repetição**. O uso de **vetores** também foi bastante presente. Como essas estruturas de dados foram usadas em basicamente todos os arquivos JavaScript do projeto, decidiu-se abordar esse assunto neste tópico ao invés de citá-lo de forma redundante no tópico relacionado às funcionalidades do sistema.
 
-Outra estrutura de dados importantíssima que foi processada pela aplicação web é um arquivo no formato JSON provido pela API do Twich com diversas informações sobre um clip. Abaixo, encontra-se um exemplo dessa estrutura de dados:
+Outra estrutura de dados importantíssima que foi processada pela aplicação web é um arquivo no formato **JSON** provido pela API do Twich com diversas informações sobre um clip. A seguir, um exemplo dessa estrutura de dados:
 
 ```json
 {
@@ -49,20 +49,40 @@ Outra estrutura de dados importantíssima que foi processada pela aplicação we
 
 ## Funcionalidades do sistema
 
-Todas as funcionalidades implementadas estão diretamente relacionadas aos requisitos funcionais listados no planejamento do projeto. A tabela completa de requisitos funcionais e não funcionais pode ser encontrada na [especificação do projeto](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2021-1-e1-proj-web-t1-conteudo-de-interesse/edit/main/docs/02-Especifica%C3%A7%C3%A3o%20do%20Projeto.md).
+Abaixo encontram-se todas as funcionalidades implementadas de acordo com os requisitos funcionais listados no planejamento do projeto. As tabelas completas de requisitos funcionais e não funcionais podem ser encontradas na [especificação do projeto](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2021-1-e1-proj-web-t1-conteudo-de-interesse/edit/main/docs/02-Especifica%C3%A7%C3%A3o%20do%20Projeto.md).
+
+Os métodos desenvolvidos estão devidamente documentados no código fonte do projeto.
 
 ### O site vai estar disponível para todos os browsers sem necessidade de login (RF-001)
 
 A aplicação web não requere cadastro para ser utilizada.
 
-### No site vai existir um campo visível na parte de cima da tela com a palavra: “Pesquisar por” (RF-002)
+### No site vai existir um campo visível na parte de cima da tela com a palavra: “Pesquisar” (RF-002)
 
-A aplicação web apresenta cinco páginas distintas: index (home), clips do dia, clips da semana, resultado da pesquisa e erro. Em todas essas páginas um campo de busca foi implementado na barra de navegação que encontra-se na parte superior do site.
+A aplicação web apresenta cinco páginas distintas: inicial, clips do dia, clips da semana, resultado da pesquisa e erro. Em todas essas páginas um campo de busca foi implementado na barra de navegação que encontra-se na parte superior do site.
 
 Os códigos responsáveis por essa funcionalidade encontram-se nos arquivos `banco.js`, `script.js` e `search.js`.
 
+Para utilizar essa funcionalidade, basta acessar qualquer página da aplicação web, digitar o termo a ser buscado no campo *Pesquisar* e clicar na lupa.
+
+![pesquisa](img/rf-002.png)
+
+**Acesso:** https://clipitch.herokuapp.com
 
 
+### O site vai ser capaz de rodar os vídeos de forma embutida (RF-003)
+
+Todos os clips contidos na aplicação web apresentam a capacidade de serem assistidos de forma embutida.
+
+Utilizou-se os links para embeds - a propriedade `"embed_url"` do arquivo JSON provido pela API do Twitch - para desenvolver essa funcionalidade.
+
+O código responsável por essa funcionalidade encontra-se no arquivo `banco.js`.
+
+Assim como a funcionalidade de pesquisa, essa funcionalidade está disponível em todas as páginas da aplicação web.
+
+![pesquisa](img/rf-003.png)
+
+**Acesso:** https://clipitch.herokuapp.com
 
 
 ---

@@ -19,13 +19,11 @@ A hospedagem da aplicação web será feita no Heroku.
 
 ![Diagrama de Componentes](img/componentes.png)
 
-Figura 01 - Arquitetura da Solução
-
 A solução implementada conta com os seguintes módulos:
 
 - **Páginas web** - Conjunto de arquivos HTML, CSS, JavaScript e imagens que implementam as funcionalidades do sistema;
 
-- **Banco de dados** - É uma coleção organizada de dados, de modo que pode ser facilmente acessada e gerenciada;
+- **Banco de dados (IndexedDB)** - É uma coleção organizada de dados, de modo que pode ser facilmente acessada e gerenciada;
 
 - **Twitch API** - Conjunto de pontos de acesso aos clips do Twitch através do front-end;
 

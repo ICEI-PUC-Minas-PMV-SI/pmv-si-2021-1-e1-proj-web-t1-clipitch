@@ -53,7 +53,7 @@ As ferramentas empregadas no projeto são:
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Microsoft Teams e WhatsApp](https://www.microsoft.com/pt-br/microsoft-teams/group-chat-software)
-- [Invision](https://www.invisionapp.com/)
+- [Whimsical](https://whimsical.com/)
 - [GitHub](https://github.com/)
 
 O editor de código Visual Studio Code, gratuito, foi escolhido porque ele oferece ampla gama de extensões que permitem que o editor ofereça funcionalidades expansíveis com diversas linguagens de programação e integração com o sistema de versionamento Git e GitHub, além disso é amplamente utilizado pela comunidade, permitindo encontrar suporte e informações a respeito dele.

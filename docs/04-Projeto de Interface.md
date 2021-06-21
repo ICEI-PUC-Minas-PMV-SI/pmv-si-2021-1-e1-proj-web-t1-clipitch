@@ -16,12 +16,8 @@ Em todas as páginas há botões que redirecionam o usuário para a Home, além 
 
 ## Wireframes
 
-![Exemplo de Wireframe](img/w1.png)
+![Home](img/w1.png)
 
-![Exemplo de Wireframe](img/w2.png)
+![Clips do dia/semana/resultado da pesquisa](img/w2.png)
 
-![Exemplo de Wireframe](img/w3.png)
-
-![Exemplo de Wireframe](img/w4.png)
-
-![UX PWA - Exemplo de Wireframes](img/uxExample.png)
+![Responsivo](img/w3.png)

@@ -7,8 +7,38 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   font-family: "Pattaya", serif;
+}
+
+b.bFont{
+  font-family: "Roboto", serif;
+  font-size: 1.5rem;
+}
+
+b.clipedFont{
+  font-family: "Roboto", serif;
+}
+
+.top-right-img {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.top-left-img {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.bg-views{
+  background: rgba(0,0,0,0.5);
+}
+
+.bg-cliped{
+  background: rgba(255, 0, 0, 1);
 }
 
 .bg-transparent {
@@ -87,6 +117,13 @@ ul li a{
 .textCenter {
   text-align: center;
 }
+
+.testeImg:hover{
+  border-left: 7px solid #c271eb !important;
+  border-bottom: 7px solid #c271eb !important;
+  transform: scale(1.01);
+}
+
 /* Define o css para o tamanho da resolução em Tablets */
 @media screen and (max-width: 992px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape){
   .bg-transparent {

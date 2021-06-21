@@ -63,10 +63,11 @@ const pesquisaClips = (texto) => {
 
       if (cursor) {
         cursor.forEach((clip) => {
+          console.log(clip) 
           element.innerHTML +=
-            '<div class="col-md-4 my-2 px-2"><div class="card"><img class="card-img-top testeImg" src="' +
+            '<div class="col-md-4 my-2 px-2"><div class="card"><a type="button" onClick="carregaModal('+ clip +')"><img class="card-img-top testeImg" src="' +
             clip.thumbnails["medium"] +
-            '" width="100%" alt="Clips""><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' +
+            '" width="100%" alt="Clips""/></a><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' +
             new Intl.NumberFormat("pt-BR", {
               maximumSignificantDigits: 10,
             }).format(clip["views"]) +
@@ -77,9 +78,8 @@ const pesquisaClips = (texto) => {
             clip.broadcaster["name"] +
             '</b>&nbsp;<p class="card-text">&nbsp;<i>' +
             clip["title"] +
-            '</i><br/><b class="py-3">' +
-            clip["game"] +
-            "</b></p></div></div></div>";
+            '</i><br/><b class="py-1 px-2 rounded gameFont">' +
+            clip["game"] + "</b></p></div></div></div>";
         });
       }
     };
@@ -208,7 +208,7 @@ function displayClipsDaily(clips) {
           url.broadcaster["name"] +
           '</b>&nbsp;<p class="card-text">&nbsp;<i>' +
           url["title"] +
-          '</i><br/><b class="py-3">' +
+          '</i><br/><b class="py-1 px-2 rounded gameFont">' +
           url["game"] +
           "</b></p></div></div></div>";
       }
@@ -227,7 +227,7 @@ function displayClipsDaily(clips) {
         url.broadcaster["name"] +
         '</b>&nbsp;<p class="card-text">&nbsp;<i>' +
         url["title"] +
-        '</i><br/><b class="py-3">' +
+        '</i><br/><b class="py-1 px-2 rounded gameFont">' +
         url["game"] +
         "</b></p></div></div></div>";
     }
@@ -266,7 +266,7 @@ function displayClipsWeekly(clips) {
           url.broadcaster["name"] +
           '</b>&nbsp;<p class="card-text">&nbsp;<i>' +
           url["title"] +
-          '</i><br/><b class="py-3">' +
+          '</i><br/><b class="py-1 px-2 rounded gameFont">' +
           url["game"] +
           "</b></p></div></div></div>";
       }
@@ -285,7 +285,7 @@ function displayClipsWeekly(clips) {
         url.broadcaster["name"] +
         '</b>&nbsp;<p class="card-text">&nbsp;<i>' +
         url["title"] +
-        '</i><br/><b class="py-3">' +
+        '</i><br/><b class="py-1 px-2 rounded gameFont">' +
         url["game"] +
         "</b></p></div></div></div>";
     }

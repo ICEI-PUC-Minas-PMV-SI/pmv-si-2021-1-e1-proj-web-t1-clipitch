@@ -21,6 +21,10 @@ b.clipedFont{
   font-family: "Roboto", serif;
 }
 
+.gameFont{
+  background: #ffc107;
+}
+
 .top-right-img {
   position: absolute;
   top: 8px;
@@ -34,7 +38,7 @@ b.clipedFont{
 }
 
 .bg-views{
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.7);
 }
 
 .bg-cliped{
@@ -237,4 +241,53 @@ ul li a{
     width: 100% !important;
     height: 100% !important;
   }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {  
+  background-image: url("/src/clipitch/imgs/cph_snip.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  margin: 15% auto;
+  width: 45%; 
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #ffe900;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  background-color: transparent;
+  border : none !important;
+}
+
+.modal-footer {
+  background-color: transparent;
+  border: none !important;
 }

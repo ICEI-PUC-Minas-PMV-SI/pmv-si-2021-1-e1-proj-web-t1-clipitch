@@ -56,7 +56,6 @@ const pesquisaClips = (texto) => {
 
     const request = index.getAll(IDBKeyRange.bound(texto, texto + "\uffff"));
 
-    console.log(request);
     request.onsuccess = function (e) {
       var cursor = e.target.result;
 
@@ -65,7 +64,11 @@ const pesquisaClips = (texto) => {
       if (cursor) {
         cursor.forEach((clip) => {
           element.innerHTML +=
-          '<div class="col-md-4 my-2 px-2"><div class="card"><img class="card-img-top testeImg" src="' + clip.thumbnails["medium"] + '" width="100%" alt="DailyClips""><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' + new Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 10 }).format(clip["views"]) + "&nbsp;views" + '</div><div class="card-body"><img class="rounded-circle py-1 px-2 card-title" width="15%" src="' + clip.broadcaster["logo"] + '" alt="streamerIcon"><b class="bFont">' + clip.broadcaster["name"] + '</b>&nbsp;<p class="card-text">&nbsp;<i>' + clip["title"] + '</i><br/><b class="py-3">' + clip["game"] + '</b></p></div></div></div>';
+          '<div class="col-md-4 my-2 px-2"><div class="card"><a type="button" onclick="carregaModal('+ clip +')"><img class="card-img-top testeImg" src="'
+           + clip.thumbnails["medium"] + '" width="100%" alt="DailyClips""></a><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">'
+           + new Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 10 }).format(clip["views"]) + "&nbsp;views" + '</div><div class="card-body"><img class="rounded-circle py-1 px-2 card-title" width="15%" src="'
+           + clip.broadcaster["logo"] + '" alt="streamerIcon"><b class="bFont">' + clip.broadcaster["name"] + '</b>&nbsp;<p class="card-text">&nbsp;<i>' + 
+           clip["title"] + '</i><br/><b class="py-1 px-2 rounded gameFont">' + clip["game"] + '</b></p></div></div></div>';
         });
       }
     };
@@ -178,12 +181,12 @@ function displayClipsDaily(clips) {
       if (i <= 8) {
         if (rowDaily != null) {
           rowDaily.innerHTML +=
-            '<div class="col-md-4 my-2 px-2"><div class="card"><img class="card-img-top testeImg" src="' + url.thumbnails["medium"] + '" width="100%" alt="DailyClips""><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' + new Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 10 }).format(url["views"]) + "&nbsp;views" + '</div><div class="card-body"><img class="rounded-circle py-1 px-2 card-title" width="15%" src="' + url.broadcaster["logo"] + '" alt="streamerIcon"><b class="bFont">' + url.broadcaster["name"] + '</b>&nbsp;<p class="card-text">&nbsp;<i>' + url["title"] + '</i><br/><b class="py-3">' + url["game"] + '</b></p></div></div></div>';
+            '<div class="col-md-4 my-2 px-2"><div class="card"><img class="card-img-top testeImg" src="' + url.thumbnails["medium"] + '" width="100%" alt="DailyClips""><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' + new Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 10 }).format(url["views"]) + "&nbsp;views" + '</div><div class="card-body"><img class="rounded-circle py-1 px-2 card-title" width="15%" src="' + url.broadcaster["logo"] + '" alt="streamerIcon"><b class="bFont">' + url.broadcaster["name"] + '</b>&nbsp;<p class="card-text">&nbsp;<i>' + url["title"] + '</i><br/><b class="py-1 px-2 rounded gameFont">' + url["game"] + '</b></p></div></div></div>';
         }
       }
     } else if (rowDailyPage != null) {
       if (rowDailyPage != null) {
-        '<div class="col-md-4 my-2 px-2"><div class="card"><img class="card-img-top testeImg" src="' + url.thumbnails["medium"] + '" width="100%" alt="DailyClips""><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' + new Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 10 }).format(url["views"]) + "&nbsp;views" + '</div><div class="card-body"><img class="rounded-circle py-1 px-2 card-title" width="15%" src="' + url.broadcaster["logo"] + '" alt="streamerIcon"><b class="bFont">' + url.broadcaster["name"] + '</b>&nbsp;<p class="card-text">&nbsp;<i>' + url["title"] + '</i><br/><b class="py-3">' + url["game"] + '</b></p></div></div></div>';
+        '<div class="col-md-4 my-2 px-2"><div class="card"><img class="card-img-top testeImg" src="' + url.thumbnails["medium"] + '" width="100%" alt="DailyClips""><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' + new Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 10 }).format(url["views"]) + "&nbsp;views" + '</div><div class="card-body"><img class="rounded-circle py-1 px-2 card-title" width="15%" src="' + url.broadcaster["logo"] + '" alt="streamerIcon"><b class="bFont">' + url.broadcaster["name"] + '</b>&nbsp;<p class="card-text">&nbsp;<i>' + url["title"] + '</i><br/><b class="py-1 px-2 rounded gameFont">' + url["game"] + '</b></p></div></div></div>';
       }
     }
   }
@@ -203,12 +206,12 @@ function displayClipsWeekly(clips) {
     if (rowWeekly != null) {
       if (i <= 8) {
         rowWeekly.innerHTML +=
-        '<div class="col-md-4 my-2 px-2"><div class="card"><img class="card-img-top testeImg" src="' + url.thumbnails["medium"] + '" width="100%" alt="DailyClips""><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' + new Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 10 }).format(url["views"]) + "&nbsp;views" + '</div><div class="card-body"><img class="rounded-circle py-1 px-2 card-title" width="15%" src="' + url.broadcaster["logo"] + '" alt="streamerIcon"><b class="bFont">' + url.broadcaster["name"] + '</b>&nbsp;<p class="card-text">&nbsp;<i>' + url["title"] + '</i><br/><b class="py-3">' + url["game"] + '</b></p></div></div></div>';
+        '<div class="col-md-4 my-2 px-2"><div class="card"><img class="card-img-top testeImg" src="' + url.thumbnails["medium"] + '" width="100%" alt="DailyClips""><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' + new Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 10 }).format(url["views"]) + "&nbsp;views" + '</div><div class="card-body"><img class="rounded-circle py-1 px-2 card-title" width="15%" src="' + url.broadcaster["logo"] + '" alt="streamerIcon"><b class="bFont">' + url.broadcaster["name"] + '</b>&nbsp;<p class="card-text">&nbsp;<i>' + url["title"] + '</i><br/><b class="py-1 px-2 rounded gameFont">' + url["game"] + '</b></p></div></div></div>';
       }
     }
     else if (rowWeeklyPage != null) {
       rowWeeklyPage.innerHTML +=
-      '<div class="col-md-4 my-2 px-2"><div class="card"><img class="card-img-top testeImg" src="' + url.thumbnails["medium"] + '" width="100%" alt="DailyClips""><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' + new Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 10 }).format(url["views"]) + "&nbsp;views" + '</div><div class="card-body"><img class="rounded-circle py-1 px-2 card-title" width="15%" src="' + url.broadcaster["logo"] + '" alt="streamerIcon"><b class="bFont">' + url.broadcaster["name"] + '</b>&nbsp;<p class="card-text">&nbsp;<i>' + url["title"] + '</i><br/><b class="py-3">' + url["game"] + '</b></p></div></div></div>';
+      '<div class="col-md-4 my-2 px-2"><div class="card"><img class="card-img-top testeImg" src="' + url.thumbnails["medium"] + '" width="100%" alt="DailyClips""><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' + new Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 10 }).format(url["views"]) + "&nbsp;views" + '</div><div class="card-body"><img class="rounded-circle py-1 px-2 card-title" width="15%" src="' + url.broadcaster["logo"] + '" alt="streamerIcon"><b class="bFont">' + url.broadcaster["name"] + '</b>&nbsp;<p class="card-text">&nbsp;<i>' + url["title"] + '</i><br/><b class="py-1 px-2 rounded gameFont">' + url["game"] + '</b></p></div></div></div>';
       }
   }
 }

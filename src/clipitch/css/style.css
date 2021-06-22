@@ -284,3 +284,12 @@ ul li a {
   max-width: 100vw !important;
   max-height: 100vh !important;
 }
+
+.imgsModal{
+  width: 15%;
+}
+
+.iframeModal{
+  width: 640px;
+  height: 360px;
+}

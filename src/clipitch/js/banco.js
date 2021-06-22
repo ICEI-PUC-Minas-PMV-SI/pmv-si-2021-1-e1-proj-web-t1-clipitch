@@ -63,7 +63,7 @@ const pesquisaClips = (texto) => {
 
       if (cursor) {
         cursor.forEach((clip) => {
-
+          console.log(clip)
           element.innerHTML +=
             '<div class="col-md-4 my-2 px-2"><div class="card"><a type="button" id="'+ clip["slug"] + '"><img class="card-img-top testeImg" src="' +
             clip.thumbnails["medium"] +
@@ -81,11 +81,8 @@ const pesquisaClips = (texto) => {
             '</i><br/><b class="py-1 px-2 rounded gameFont">' +
             clip["game"] + "</b></p></div></div></div>";
 
-            //'carregaModal("' + clip["embed_url"] + '", "' + clip.broadcaster["logo"] + '","' + clip.broadcaster["display_name"] + '","' + clip["title"] + '","' + clip["game"] + '", "' + clip.curator["logo"] + '","' + clip.curator["display_name"] + '")'
             var botao = document.getElementById(clip["slug"])
-            botao.setAttribute("onclick", `carregaModal("${clip["embed_url"]}","${clip.broadcaster["logo"]}","${clip.broadcaster["display_name"]}","${clip["title"]}","${clip["game"]}","${clip.curator["logo"]}","${clip.curator["display_name"]}")`)
-
-            //document.getElementById(clip["slug"]).addEventListener("click", carregaModal(clip["embed_url"], clip.broadcaster["logo"], clip.broadcaster["display_name"], clip["title"], clip["game"], clip.curator["logo"], clip.curator["display_name"])
+            botao.setAttribute("onclick", `carregaModal("${clip["embed_url"]}","${clip.broadcaster["logo"]}","${clip.broadcaster["display_name"]}","${clip["title"]}","${clip["game"]}","${clip.curator["logo"]}","${clip.curator["display_name"]}","${CONST_PARENT}")`);
 
         });
       }
@@ -98,29 +95,6 @@ const pesquisaClips = (texto) => {
     );
   };
 };
-
-
-function carregaModal(embed_url, broadcaster_logo, broadcaster_display_name, title, game, curator_logo, curator_display_name) {
-  var body = document.getElementById("modal-body");
-
-  //Reseta o contéudo do modal body a cada chamada
-  body.innerHTML = '<div id="modal-body"></div>';
-
-  //Verificar se é diferente de nulo e monta o modal-body
-  if(embed_url != null){
-    body.innerHTML += '<div class="col">'
-    body.innerHTML += '<div class="rounded-circle py-1 px-2 card-title" width="15%> <iframe class="d-block"  id="carouselIFrame" alt="Clips em destaque" src="' + embed_url + "&parent=" + CONST_PARENT + '"frameborder="0" allowfullscreen="true" scrolling="no""></iframe></div>' 
-    body.innerHTML += '<div class="col"><div class="bg-views rounded p-3"> <img class="rounded-circle py-1 px-2 card-title" width="15%" src="' + broadcaster_logo + '" alt="Ícone do streamer">';
-    body.innerHTML += '<b class="bFont text-white">\''+ broadcaster_display_name + '\'</b><br/><i class="text-white">\''+ title + '\'</i><br/>';
-    body.innerHTML += '<b class="py-1 px-2 rounded gameFont">\''+ game + '\'</b><hr class="text-white"/><b class="py-1 px-2 rounded bg-custom">Clipado Por:</b>';
-    body.innerHTML += '<img class="rounded-circle py-1 px-2 card-title" width="15%" src="' + curator_logo + '" alt="Ícone do cliper"><b class="bFont text-white">\''+ curator_display_name + '\'</b>';
-    body.innerHTML += '<br/></div></div>';
-  }
-
-  console.log(body)
-  //Chama o modal
-  $('#modalClips').modal('show');
-}
 
 // Adiciona os Clips no IndexedDb
 const adicionarClipsBD = (db, clips) => {
@@ -225,9 +199,9 @@ function displayClipsDaily(clips) {
     if (rowDaily != null) {
       if (i <= 8) {
         rowDaily.innerHTML +=
-          '<div class="col-md-4 my-2 px-2"><div class="card"><img class="card-img-top testeImg" src="' +
+          '<div class="col-md-4 my-2 px-2"><div class="card"><a type="button" id="'+ url["slug"] + '"><img class="card-img-top testeImg" src="' +
           url.thumbnails["medium"] +
-          '" width="100%" alt="Clips mais visualizados do dia""><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' +
+          '" width="100%" alt="Clips do dia""/></a><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' +
           new Intl.NumberFormat("pt-BR", {
             maximumSignificantDigits: 10,
           }).format(url["views"]) +
@@ -241,12 +215,15 @@ function displayClipsDaily(clips) {
           '</i><br/><b class="py-1 px-2 rounded gameFont">' +
           url["game"] +
           "</b></p></div></div></div>";
+
+          var botao = document.getElementById(url["slug"])
+          botao.setAttribute("onclick", `carregaModal("${url["embed_url"]}","${url.broadcaster["logo"]}","${url.broadcaster["display_name"]}","${url["title"]}","${url["game"]}","${url.curator["logo"]}","${url.curator["display_name"]}","${CONST_PARENT}")`);
       }
     } else if (rowDailyPage != null) {
       rowDailyPage.innerHTML +=
-        '<div class="col-md-4 my-2 px-2"><div class="card"><img class="card-img-top testeImg" src="' +
+        '<div class="col-md-4 my-2 px-2"><div class="card"><a type="button" id="'+ url["slug"] + '"><img class="card-img-top testeImg" src="' +
         url.thumbnails["medium"] +
-        '" width="100%" alt="Clips mais visualizados do dia""><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' +
+        '" width="100%" alt="Clips do dia""/></a><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' +
         new Intl.NumberFormat("pt-BR", { maximumSignificantDigits: 10 }).format(
           url["views"]
         ) +
@@ -260,6 +237,9 @@ function displayClipsDaily(clips) {
         '</i><br/><b class="py-1 px-2 rounded gameFont">' +
         url["game"] +
         "</b></p></div></div></div>";
+
+        var botao = document.getElementById(url["slug"])
+          botao.setAttribute("onclick", `carregaModal("${url["embed_url"]}","${url.broadcaster["logo"]}","${url.broadcaster["display_name"]}","${url["title"]}","${url["game"]}","${url.curator["logo"]}","${url.curator["display_name"]}","${CONST_PARENT}")`);
     }
   }
 }
@@ -283,9 +263,9 @@ function displayClipsWeekly(clips) {
     if (rowWeekly != null) {
       if (i <= 8) {
         rowWeekly.innerHTML +=
-          '<div class="col-md-4 my-2 px-2"><div class="card"><img class="card-img-top testeImg" src="' +
+          '<div class="col-md-4 my-2 px-2"><div class="card"><a type="button" id="'+ url["slug"] + '"><img class="card-img-top testeImg" src="' +
           url.thumbnails["medium"] +
-          '" width="100%" alt="Clips mais visualizados da semana""><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' +
+          '" width="100%" alt="Clips da Semana""/></a><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' +
           new Intl.NumberFormat("pt-BR", {
             maximumSignificantDigits: 10,
           }).format(url["views"]) +
@@ -299,12 +279,15 @@ function displayClipsWeekly(clips) {
           '</i><br/><b class="py-1 px-2 rounded gameFont">' +
           url["game"] +
           "</b></p></div></div></div>";
+
+          var botao = document.getElementById(url["slug"])
+          botao.setAttribute("onclick", `carregaModal("${url["embed_url"]}","${url.broadcaster["logo"]}","${url.broadcaster["display_name"]}","${url["title"]}","${url["game"]}","${url.curator["logo"]}","${url.curator["display_name"]}","${CONST_PARENT}")`);
       }
     } else if (rowWeeklyPage != null) {
       rowWeeklyPage.innerHTML +=
-        '<div class="col-md-4 my-2 px-2"><div class="card"><img class="card-img-top testeImg" src="' +
+        '<div class="col-md-4 my-2 px-2"><div class="card"><a type="button" id="'+ url["slug"] + '"><img class="card-img-top testeImg" src="' +
         url.thumbnails["medium"] +
-        '" width="100%" alt="Clips mais visualizados da semana""><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' +
+        '" width="100%" alt="Clips da semana""/></a><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' +
         new Intl.NumberFormat("pt-BR", { maximumSignificantDigits: 10 }).format(
           url["views"]
         ) +
@@ -318,6 +301,9 @@ function displayClipsWeekly(clips) {
         '</i><br/><b class="py-1 px-2 rounded gameFont">' +
         url["game"] +
         "</b></p></div></div></div>";
+
+        var botao = document.getElementById(url["slug"])
+          botao.setAttribute("onclick", `carregaModal("${url["embed_url"]}","${url.broadcaster["logo"]}","${url.broadcaster["display_name"]}","${url["title"]}","${url["game"]}","${url.curator["logo"]}","${url.curator["display_name"]}","${CONST_PARENT}")`);
     }
   }
 }
@@ -450,4 +436,4 @@ const populaCarousel = () => {
 };
 
 export default criaBancoDeDados;
-export { pesquisaClips, carregaModal };
+export { pesquisaClips };

@@ -200,7 +200,8 @@
   <!-- /Rodapé -->
 
   <!-- Modal -->
-  <div class="modal fade" id="modalClips" tabindex="-1" aria-labelledby="modalClipsLabel" aria-hidden="true">
+  <div class="modal fade" id="modalClips" tabindex="-1" role="dialog" aria-labelledby="modalClipsLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content">
         <div class="modal-header">
@@ -208,16 +209,43 @@
         </div>
         <div class="modal-body">
           <div class="row">
-            <div id="modal-body">
+            <div id="colModal1" class="col">
+            </div>
+            <div id="colModal2" class="col">
+              <div id="colItensModal2" class="bg-views rounded p-3">
+              </div>
             </div>
           </div>
         </div>
-        <div class="modal-footer">
-          <div id="modal-footer">
-          </div>
+      </div>
+      <div class="modal-footer">
+        <div id="modal-footer">
         </div>
       </div>
     </div>
   </div>
 </body>
+<script type="text/javascript">
+  function carregaModal(embed_url, broadcaster_logo, broadcaster_display_name, title, game, curator_logo, curator_display_name, parent) {
+    var col1 = document.getElementById("colModal1");
+    var colItensModal2 = document.getElementById("colItensModal2");
+
+    //Reseta as divs -- FAVOR NÃO REMOVER, PODE BUGAR O PROJETO
+    col1.innerHTML = '';
+    colItensModal2.innerHTML = '';
+
+    if (embed_url != null)
+      col1.innerHTML += '<iframe class="iframeModal" src="' + embed_url + '&parent=' + parent + '" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>';
+
+    if (broadcaster_display_name != null) {
+      colItensModal2.innerHTML += '<img class="rounded-circle py-1 px-2 card-title imgsModal" src="' + broadcaster_logo + '" alt="Ícone do streamer">';
+      colItensModal2.innerHTML += '<b class="bFont text-white">' + broadcaster_display_name + '</b><br/><i class="text-white">' + title + '</i><br/>';
+      colItensModal2.innerHTML += '<b class="py-1 px-2 rounded gameFont">' + game + '</b><hr class="text-white"/><b class="py-1 px-2 rounded bg-custom">Clipado Por:</b>';
+      colItensModal2.innerHTML += '<img class="rounded-circle py-1 px-2 card-title imgsModal" src="' + curator_logo + '" alt="Ícone do cliper"><b class="bFont text-white">' + curator_display_name + '</b><br/>';
+    }
+
+    //Chama o modal
+    $('#modalClips').modal('show');
+  }
+</script>
 </html>

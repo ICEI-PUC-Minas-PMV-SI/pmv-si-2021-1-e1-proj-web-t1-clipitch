@@ -76,12 +76,11 @@ const getTwitchDados = (token, url, params) => {
     });
 };
 
-
 document.getElementById("search-button").onclick = (e) => searchClick();
 var searchValue;
 
 function searchFilter() {
-  var url_string = window.location.href
+  var url_string = window.location.href;
   var url = new URL(url_string);
   var parameter = url.searchParams.get("search");
   pesquisaClips(parameter);
@@ -91,31 +90,12 @@ function searchClick() {
   searchValue = document.getElementById("searchValue").value;
 
   if (searchValue != "") {
-    window.location = 'search.html?search=' + searchValue;
+    window.location = "search.html?search=" + searchValue;
   } else alert("Por favor, selecione uma das opções para pesquisar!");
 }
 
 document.addEventListener("DOMContentLoaded", conectaTwitch);
 
-function carregaModal(clip){
-  var body = document.getElementById("modal-body");
-
-  //Reseta o contéudo do modal body a cada chamada
-  body.innerHTML = '<div id="modal-body"></div>';
-
-  //Verificar se é diferente de nulo e monta o modal-body
-  if(clip != null){
-    body.innerHTML += '<div class="col">'+ clip["embed_html"] +'</div>';
-    body.innerHTML += '<div class="col"><div class="bg-views rounded p-3"> <img class="rounded-circle py-1 px-2 card-title" width="15%" src="\''+ clip.broadcaster["logo"]+ '\'" alt="Ícone do streamer">';
-    body.innerHTML += '<b class="bFont text-white">\''+ clip.broadcaster["display_name"]+ '\'</b><br/><i class="text-white">\''+ clip["title"]+ '\'</i><br/>';
-    body.innerHTML += '<b class="py-1 px-2 rounded gameFont">\''+ clip["game"]+ '\'</b><hr class="text-white"/><b class="py-1 px-2 rounded bg-custom">Clipado Por:</b>';
-    body.innerHTML += '<img class="rounded-circle py-1 px-2 card-title" width="15%" src="\''+ clip.curator["logo"]+ '\'" alt="Ícone do cliper"><b class="bFont text-white">\''+ clip.curator["display_name"]+ '\'</b>';
-    body.innerHTML += '<br/></div></div>';
-  }
-
-  //Chama o modal
-  $('#modalClips').modal('show');
-}
 
 export default { conectaTwitch, getTwitchDados };
 export { searchFilter };

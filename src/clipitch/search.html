@@ -62,6 +62,8 @@
   <!-- FontAwesome JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 
+  <script src="js/banco.js" type="module"></script>
+
   <!--Script JS-->
   <script src="js/script.js" type="module"></script>
 
@@ -145,7 +147,7 @@
   <!-- /Rodapé -->
 
   <!-- Modal -->
-  <div class="modal fade" id="modalClips" tabindex="-1" aria-labelledby="modalClipsLabel" aria-hidden="true">
+  <div class="modal fade" id="modalClips" tabindex="-1" role="dialog" aria-labelledby="modalClipsLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content">
         <div class="modal-header">
@@ -165,4 +167,32 @@
     </div>
   </div>  
 </body>
+
+<script> 
+
+
+function carregaModal(embed_url, broadcaster_logo, broadcaster_display_name, title, game, curator_logo, curator_display_name) {
+  var body = document.getElementById("modal-body");
+
+  //Reseta o contéudo do modal body a cada chamada
+  body.innerHTML = '<div id="modal-body"></div>';
+
+  //Verificar se é diferente de nulo e monta o modal-body
+  if(embed_url != null){
+    body.innerHTML += '<div class="col">'
+    body.innerHTML += '<div class="rounded-circle py-1 px-2 card-title" width="15%> <iframe class="d-block"  id="carouselIFrame" alt="Clips em destaque" src="' + embed_url + "&parent=" + 'localhost' + '"frameborder="0" allowfullscreen="true" scrolling="no""></iframe></div>' 
+    body.innerHTML += '<div class="col"><div class="bg-views rounded p-3"> <img class="rounded-circle py-1 px-2 card-title" width="15%" src="' + broadcaster_logo + '" alt="Ícone do streamer">';
+    body.innerHTML += '<b class="bFont text-white">\''+ broadcaster_display_name + '\'</b><br/><i class="text-white">\''+ title + '\'</i><br/>';
+    body.innerHTML += '<b class="py-1 px-2 rounded gameFont">\''+ game + '\'</b><hr class="text-white"/><b class="py-1 px-2 rounded bg-custom">Clipado Por:</b>';
+    body.innerHTML += '<img class="rounded-circle py-1 px-2 card-title" width="15%" src="' + curator_logo + '" alt="Ícone do cliper"><b class="bFont text-white">\''+ curator_display_name + '\'</b>';
+    body.innerHTML += '<br/></div></div>';
+  }
+
+  console.log(body)
+  //Chama o modal
+  $('#modalClips').modal('show');
+}
+
+</script>
+
 </html>

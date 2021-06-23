@@ -1,199 +1,306 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
 
-<head>
-  <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="author"
+      content="Alonso, Halex, Robson, Welbert, Gustavo e Alexsandro"
+    />
+    <meta
+      name="keywords"
+      content="clips, videos, images, lives, games, trending, diversão, entreterimento, social, media"
+    />
+    <meta
+      name="description"
+      content="Clips do dia e da semana do Twitch.TV para os aficionados por Games"
+    />
+    <meta name="robots" content="index, follow" />
 
-  <meta name="author" content="Alonso, Halex, Robson, Welbert, Gustavo e Alexsandro" />
-  <meta name="keywords"
-    content="clips, videos, images, lives, games, trending, diversão, entreterimento, social, media" />
-  <meta name="description" content="Clips do dia e da semana do Twitch.TV para os aficionados por Games" />
-  <meta name="robots" content="index, follow" />
+    <title>Clips do dia</title>
 
-  <title>Clips do dia</title>
+    <!-- Favicon -->
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="imgs/apple-touch-icon."
+    />
 
-  <!-- Favicon -->
-  <link rel="icon" href="imgs/favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon." />
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Clipitch" />
+    <meta
+      property="og:description"
+      content="Clips do dia e semana do Twitch.tv"
+    />
+    <meta property="og:url" content="https://clipitch.herokuapp.com/" />
+    <meta
+      property="og:image"
+      content="https://clipitch.herokuapp.com/imgs/logo.png"
+    />
+    <meta property="og:image:witdth" content="600" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Clipitch" />
+    <meta property="og:locale" content="pt-br" />
+    <!-- /Open Graph Tags -->
 
-  <!-- Open Graph Tags -->
-  <meta property="og:title" content="Clipitch" />
-  <meta property="og:description" content="Clips do dia e semana do Twitch.tv" />
-  <meta property="og:url" content="https://clipitch.herokuapp.com/" />
-  <meta property="og:image" content="https://clipitch.herokuapp.com/imgs/logo.png" />
-  <meta property="og:image:witdth" content="600" />
-  <meta property="og:image:height" content="800" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Clipitch" />
-  <meta property="og:locale" content="pt-br" />
-  <!-- /Open Graph Tags -->
+    <!-- Twitter Tags -->
+    <meta property="twitter:card" content="Imagem Larga" />
+    <meta
+      property="twitter:url"
+      content="https://clipitch.herokuapp.com/imgs/logo.png"
+    />
+    <meta
+      property="twitter:title"
+      content="Clips do dia e semana do Twitch.tv"
+    />
+    <meta
+      property="twitter:description"
+      content="Clips do dia e da semana do Twitch.TV para os aficionados por Games"
+    />
+    <meta
+      property="twitter:image"
+      content="https://clipitch.herokuapp.com/imgs/logo.png"
+    />
+    <!-- /Twitter Tags -->
 
-  <!-- Twitter Tags -->
-  <meta property="twitter:card" content="Imagem Larga" />
-  <meta property="twitter:url" content="https://clipitch.herokuapp.com/imgs/logo.png" />
-  <meta property="twitter:title" content="Clips do dia e semana do Twitch.tv" />
-  <meta property="twitter:description" content="Clips do dia e da semana do Twitch.TV para os aficionados por Games" />
-  <meta property="twitter:image" content="https://clipitch.herokuapp.com/imgs/logo.png" />
-  <!-- /Twitter Tags -->
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- FontAwesome CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- FontAwesome CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pattaya&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Roboto&display=swap" rel="stylesheet" />
+    <!-- Estilo CSS -->
+    <link href="css/style.css" rel="stylesheet" />
 
-  <!-- Estilo CSS -->
-  <link href="css/style.css" rel="stylesheet" />
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-  <!-- JQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Pooper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
 
-  <!-- Pooper JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <!-- FontAwesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 
-  <!-- FontAwesome JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <!-- Script JS -->
+    <script src="js/script.js" type="module"></script>
 
-  <!--Script JS-->
-  <script src="js/script.js" type="module"></script>
+    <!-- Script JS -->
+    <script src="js/search.js" type="module"></script>
 
-  <!--Script JS-->
-  <script src="js/search.js" type="module"></script>
+    <!-- Script JS -->
+    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+  </head>
 
-  <!--Script JS-->
-  <script src="https://player.twitch.tv/js/embed/v1.js"></script>
-</head>
-
-<body>
-  <header class="section">
-    <!-- Nav bar -->
-    <nav class="navbar navbar-expand-lg bg-custom">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="/src/clipitch/index.html"><img class="nav-image" /></a>
-        <button class="
+  <body>
+    <header class="section">
+      <!-- Nav bar -->
+      <nav class="navbar navbar-expand-lg bg-custom">
+        <div class="container">
+          <a
+            class="navbar-brand js-scroll-trigger"
+            href="/src/clipitch/index.html"
+            ><img class="nav-image"
+          /></a>
+          <button
+            class="
               navbar-toggler navbar-toggler-right
               shadow-none
               border-0
               text-white
-            " type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"><i class="fas fa-bars ml-1"></i></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/src/clipitch/clipsdia.html">Clips do dia</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/src/clipitch/clipssemana.html">Clips da semana</a>
-            </li>
-            <li class="nav-item">
-              <div class="input-group">
-                <div class="form-outline">
-                  <input type="text" id="searchValue" placeholder="Pesquisar... "
-                    class="form-control shadow-none border-0" />
+            "
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"
+              ><i class="fas fa-bars ml-1"></i
+            ></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link js-scroll-trigger"
+                  href="/src/clipitch/clipsdia.html"
+                  >Clips do dia</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link js-scroll-trigger"
+                  href="/src/clipitch/clipssemana.html"
+                  >Clips da semana</a
+                >
+              </li>
+              <li class="nav-item">
+                <div class="input-group">
+                  <div class="form-outline">
+                    <input
+                      type="text"
+                      id="searchValue"
+                      placeholder="Pesquisar... "
+                      class="form-control shadow-none border-0"
+                    />
+                  </div>
+                  <button
+                    id="search-button"
+                    type="button"
+                    class="btn btn-close-white shadow-none"
+                  >
+                    <i class="fas fa-search"></i>
+                  </button>
                 </div>
-                <button id="search-button" type="button" class="btn btn-close-white shadow-none">
-                  <i class="fas fa-search"></i>
-                </button>
-              </div>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-    <br />
-    <!-- /Nav bar -->
-  </header>
+      </nav>
+      <br />
+      <!-- /Nav bar -->
+    </header>
 
-  <!-- Galeria de vídeos do dia -->
-  <div class="section">
-    <div class="section" id="clipsDia">
-      <div class="container">
-        <h2 class="nav-link textoTitulo" href="#">Clips do dia</h2>
-        <hr class="my-4" />
-      </div>
-      <div class="container">
-        <div class="row" id="rowDailyPage"></div>
-        <br />
-        <a class="btn btn-warning" type="button" role="button" onclick="window.history.back();"><i
-            class="fas fa-backward"></i>&nbsp;Voltar</a>
-        <br /><br />
+    <!-- Galeria de vídeos do dia -->
+    <div class="section">
+      <div class="section" id="clipsDia">
+        <div class="container">
+          <h2 class="nav-link textoTitulo" href="#">Clips do dia</h2>
+          <hr class="my-4" />
+        </div>
+        <div class="container">
+          <div class="row" id="rowDailyPage"></div>
+          <br />
+          <a
+            class="btn btn-warning"
+            type="button"
+            role="button"
+            onclick="window.history.back();"
+            ><i class="fas fa-backward"></i>&nbsp;Voltar</a
+          >
+          <br /><br />
+        </div>
       </div>
     </div>
-  </div>
+    <!-- /Galeria de vídeos do dia -->
 
-  <!-- Modal -->
-  <div class="modal fade" id="modalClips" tabindex="-1" role="dialog" aria-labelledby="modalClipsLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span class="close" data-bs-dismiss="modal" aria-label="Close">&times;</span>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div id="colModal1" class="col">
-            </div>
-            <div id="colModal2" class="col">
-              <div id="colItensModal2" class="bg-views rounded p-3">
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modalClips"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalClipsLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close" data-bs-dismiss="modal" aria-label="Close"
+              >&times;</span
+            >
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div id="colModal1" class="col"></div>
+              <div id="colModal2" class="col">
+                <div id="colItensModal2" class="bg-views rounded p-3"></div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        <div id="modal-footer">
+        <div class="modal-footer">
+          <div id="modal-footer"></div>
         </div>
       </div>
     </div>
-  </div>
-  </div>
-
-  <!-- Rodapé -->
-  <footer class="bg-custom py-4">
-    <div class="container">
-      <div class="row align-items-center text-white">
-        <div class="col-lg-4 text-lg-left">
-          Copyright © - Clipitch
-          <br />
-          <small>&copy; Todos os direitos reservados.</small>
+    <!-- Rodapé -->
+    <footer class="bg-custom py-4">
+      <div class="container">
+        <div class="row align-items-center text-white">
+          <div class="col-lg-4 text-lg-left">
+            Copyright © - Clipitch
+            <br />
+            <small>&copy; Todos os direitos reservados.</small>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-  <!-- /Rodapé -->
-</body>
+    </footer>
+    <!-- /Rodapé -->
+  </body>
 
-<script type="text/javascript">
-  function carregaModal(embed_url, broadcaster_logo, broadcaster_display_name, title, game, curator_logo, curator_display_name, parent) {
-    var col1 = document.getElementById("colModal1");
-    var colItensModal2 = document.getElementById("colItensModal2");
+  <script type="text/javascript">
+    function carregaModal(
+      embed_url,
+      broadcaster_logo,
+      broadcaster_display_name,
+      title,
+      game,
+      curator_logo,
+      curator_display_name,
+      parent
+    ) {
+      var col1 = document.getElementById("colModal1");
+      var colItensModal2 = document.getElementById("colItensModal2");
 
-    //Reseta as divs -- FAVOR NÃO REMOVER, PODE BUGAR O PROJETO
-    col1.innerHTML = '';
-    colItensModal2.innerHTML = '';
+      //Reseta as divs -- FAVOR NÃO REMOVER, PODE BUGAR O PROJETO
+      col1.innerHTML = "";
+      colItensModal2.innerHTML = "";
 
-    if (embed_url != null)
-      col1.innerHTML += '<iframe class="iframeModal" src="' + embed_url + '&parent=' + parent + '" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>';
+      if (embed_url != null)
+        col1.innerHTML +=
+          '<iframe class="iframeModal" src="' +
+          embed_url +
+          "&parent=" +
+          parent +
+          '" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>';
 
-    if (broadcaster_display_name != null) {
-      colItensModal2.innerHTML += '<img class="rounded-circle py-1 px-2 card-title imgsModal" src="' + broadcaster_logo + '" alt="Ícone do streamer">';
-      colItensModal2.innerHTML += '<b class="bFont text-white">' + broadcaster_display_name + '</b><br/><i class="text-white">' + title + '</i><br/>';
-      colItensModal2.innerHTML += '<b class="py-1 px-2 rounded gameFont">' + game + '</b><hr class="text-white"/><b class="py-1 px-2 rounded bg-custom">Clipado Por:<br/></b>';
-      colItensModal2.innerHTML += '<img class="rounded-circle py-1 px-2 card-title imgsModal" src="' + curator_logo + '" alt="Ícone do cliper"><b class="bFont text-white">' + curator_display_name + '</b><br/>';
+      if (broadcaster_display_name != null) {
+        colItensModal2.innerHTML +=
+          '<img class="rounded-circle py-1 px-2 card-title imgsModal" src="' +
+          broadcaster_logo +
+          '" alt="Ícone do streamer">';
+        colItensModal2.innerHTML +=
+          '<b class="bFont text-white">' +
+          broadcaster_display_name +
+          '</b><br/><i class="text-white">' +
+          title +
+          "</i><br/><br/>";
+        colItensModal2.innerHTML +=
+          '<b class="py-1 px-2 rounded gameFont">' +
+          game +
+          '</b><hr class="text-white"/><b class="py-1 px-2 rounded bg-custom">Clipado por:<br/></b><br/>';
+        colItensModal2.innerHTML +=
+          '<img class="rounded-circle py-1 px-2 card-title imgsModal" src="' +
+          curator_logo +
+          '" alt="Ícone do cliper"><b class="bFont text-white">' +
+          curator_display_name +
+          "</b><br/>";
+      }
+
+      //Chama o modal
+      $("#modalClips").modal("show");
     }
-
-    //Chama o modal
-    $('#modalClips').modal('show');
-  }
-</script>
+  </script>
+  <!-- /Modal -->
 </html>

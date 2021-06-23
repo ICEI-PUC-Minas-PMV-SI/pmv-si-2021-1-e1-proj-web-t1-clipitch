@@ -379,54 +379,50 @@ const populaCarousel = () => {
   let clipsList = [];
 
   requestDB.onsuccess = () => {
-    const requestDB = window.indexedDB.open("topClipsDB", 1);
+    const db = requestDB.result;
+    const transaction = db.transaction(["clips"], "readonly");
+    const clipObjectStore = transaction.objectStore("clips");
+    const index = clipObjectStore.index("game");
 
-    requestDB.onsuccess = () => {
-      const db = requestDB.result;
-      const transaction = db.transaction(["clips"], "readonly");
-      const clipObjectStore = transaction.objectStore("clips");
-      const index = clipObjectStore.index("game");
+    const request = index.getAll();
 
-      const request = index.getAll();
+    request.onsuccess = function (e) {
+      var cursor = e.target.result;
 
-      request.onsuccess = function (e) {
-        var cursor = e.target.result;
+      if (cursor) {
+        let count = 0;
 
-        if (cursor) {
-          let count = 0;
+        let element =
+          document.getElementById("carouselInner") != null
+            ? document.getElementById("carouselInner")
+            : null;
 
-          let element =
-            document.getElementById("carouselInner") != null
-              ? document.getElementById("carouselInner")
-              : null;
+        if (element != null) {
+          cursor.forEach((clip) => {
+            if (count === 0) {
+              element.innerHTML +=
+                '<div class="carousel-item active embed-responsive-item"><iframe class="d-block"  id="carouselIFrame" alt="Clips em destaque" src="' +
+                clip["embed_url"] +
+                "&parent=" +
+                CONST_PARENT +
+                '"frameborder="0" allowfullscreen="true" scrolling="no""></iframe></div>';
 
-          if (element != null) {
-            cursor.forEach((clip) => {
-              if (count === 0) {
-                element.innerHTML +=
-                  '<div class="carousel-item active embed-responsive-item"><iframe class="d-block"  id="carouselIFrame" alt="Clips em destaque" src="' +
-                  clip["embed_url"] +
-                  "&parent=" +
-                  CONST_PARENT +
-                  '"frameborder="0" allowfullscreen="true" scrolling="no""></iframe></div>';
+              count++;
+            } else if (count > 0 && count < 3) {
+              element.innerHTML +=
+                '<div class="carousel-item embed-responsive-item"><iframe class="d-block" id="carouselIFrame" alt="Clips em destaque" src="' +
+                clip["embed_url"] +
+                "&parent=" +
+                CONST_PARENT +
+                '"frameborder="0" allowfullscreen="true" scrolling="no""></iframe></div>';
 
-                count++;
-              } else if (count > 0 && count < 3) {
-                element.innerHTML +=
-                  '<div class="carousel-item embed-responsive-item"><iframe class="d-block" id="carouselIFrame" alt="Clips em destaque" src="' +
-                  clip["embed_url"] +
-                  "&parent=" +
-                  CONST_PARENT +
-                  '"frameborder="0" allowfullscreen="true" scrolling="no""></iframe></div>';
-
-                count++;
-              }
-            });
-          }
+              count++;
+            }
+          });
         }
-      };
-    };
-  };
+      }
+    }
+  }
 
   requestDB.onerror = (e) => {
     console.log(

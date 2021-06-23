@@ -41,6 +41,7 @@ const PARAMS_CLIPS = {
   limit: LIMIT,
   period: "week",
   trending: false,
+  language: "pt-br"
 };
 
 // Realiza a autenticação para obter o token de acesso da API V5 (Twitch.tv)

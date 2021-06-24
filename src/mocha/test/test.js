@@ -1,47 +1,74 @@
-import criaBancoDeDados from "/src/clipitch/js/banco.js";
-import { message } from "../messages.js";
+import { pesquisaClips, dynamicClips, populaCarousel, displayTags, orderTags, displayClipsDaily, displayClipsWeekly, createTags, getAllClips, adicionarClipsBD, criaBancoDeDados } from "/src/clipitch/js/banco.js";
+import { conectaTwitch, getTwitchDados, searchFilter, searchClick } from "/src/clipitch/js/script.js";
 
 const assert = chai.assert;
 const expect = chai.expect;
 const should = chai.should();
+const spy = sinon.spy();
 
-describe("Testes de unidade para o ClipItch", () => {
-  describe("#conectaTwitch()", () => {
+describe("Testes de unidade para o Clipitch", () => {
+  describe("Descreve todas as funções do projeto", () => {    
+    
+    // Script.js funções
+    it("Realiza conexão com a API do Twitch para autenticação e obtenção do Token", () => {
+      spy.calledAfter(conectaTwitch);      
+    });
+      
+    it("Obtém dados da API do Twitch após estar autenticado", () => {
+      spy.calledAfter(getTwitchDados);      
+    });    
+
+    it("Método para filtro de pesquisa no banco de dados", () => {
+      spy.calledAfter(searchFilter);      
+    });    
+
+    it("Método captura o input do search para filtro no banco de dados", () => {
+      spy.calledAfter(searchClick);      
+    });
+    
+    // Métodos banco.js
     it("Cria o banco de dados e exerce as funções atribuídas dentro da mesma chamada", () => {
-      //expect(criaBancoDeDados()).to.be.any;
-      //const retorno = chai.spy.returns(criaBancoDeDados());
-      //var spy = criaBancoDeDados.spy.returns(true);
-      //on(criaBancoDeDados(), spy)
-      //expect(criaBancoDeDados()).to.have.been.called();
-      expect(criaBancoDeDados()).to.have.been.all;
-      //spy.On(criaBancoDeDados());
+      spy.calledAfter(criaBancoDeDados);
     });
-  });
-  describe("#Teste()", function () {
-    context("when not present", function () {
-      it("should not throw an error", function () {
-        (function () {
-          [1, 2, 3].indexOf(4);
-        }.should.not.throw());
-      });
-      it("should return -1", function () {
-        [1, 2, 3].indexOf(4).should.equal(-1);
-      });
+
+    it("Pesquisa os clips recebidos da API do Twitch", () => {
+      spy.calledAfter(pesquisaClips);      
     });
-    context("when present", function () {
-      it("should return the index where the element first appears in the array", function () {
-        [1, 2, 3].indexOf(3).should.equal(2);
-      });
+
+    it("Adiciona os clips no IndexedDB", () => {
+      spy.calledAfter(adicionarClipsBD);     
     });
-  });
-  describe("Message Teste", () => {
-    it("Espera que a string seja a mesma retornada da function", () => {
-        assert.equal('hello', message)
+
+    it("Obtem todos os clips da base de dados", () => {
+      spy.calledAfter(getAllClips);      
     });
-  });
-  describe("Erro Teste", () => {
-    it("Espera que a string seja a mesma retornada da function", () => {
-        assert.equal('erro', message)
+
+    it("Lista os clips do dia na página inicial", () => {
+      spy.calledAfter(displayClipsDaily);      
+    });
+
+    it("Lista os clips da semana na página inicial", () => {
+      spy.calledAfter(displayClipsWeekly);      
+    });
+
+    it("Cria as tags", () => {
+      spy.calledAfter(createTags);      
+    });
+
+    it("Ordena as tags de acordo com os títulos dos jogos", () => {
+      spy.calledAfter(orderTags);      
+    });
+    
+    it("Dispõe as tags na página inicial", () => {
+      spy.calledAfter(displayTags);      
+    });
+
+    it("Popula o carrossel", () => {
+      spy.calledAfter(populaCarousel);      
+    });
+
+    it("Seleciona os três primeiros clips para dispor no carrossel", () => {
+      spy.calledAfter(dynamicClips);      
     });
   });
 });

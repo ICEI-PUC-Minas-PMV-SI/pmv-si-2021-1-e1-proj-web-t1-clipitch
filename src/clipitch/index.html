@@ -215,6 +215,7 @@
         </button>
         <button
           class="carousel-control-next"
+          id="carousel-control-next"
           type="button"
           data-bs-target="#carouselExampleIndicators"
           data-bs-slide="next"
@@ -298,24 +299,11 @@
     <!-- /Rodapé -->
 
     <!-- Modal -->
-    <div
-      class="modal fade"
-      id="modalClips"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="modalClipsLabel"
-      aria-hidden="true"
-    >
+    <div class="modal fade"  id="modalClips" tabindex="-1"  role="dialog"  aria-labelledby="modalClipsLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content">
           <div class="modal-header">
-            <span
-              class="close"
-              id="close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-              >&times;</span
-            >
+            <span  class="close" id="close" data-bs-dismiss="modal"  aria-label="Close" >&times;</span>
           </div>
           <div class="modal-body">
             <div class="row">
@@ -330,7 +318,8 @@
           <div id="modal-footer"></div>
         </div>
       </div>
-    </div>
+    </div>    
+    <!-- /Modal -->
   </body>
   <script type="text/javascript">
     function carregaModal(
@@ -352,10 +341,10 @@
 
       if (embed_url != null)
         col1.innerHTML +=
-          '<iframe id="teste1" class="iframeModal" src="' +
+          '<iframe id="video" class="iframeModal" src="' +
           embed_url +
           "&parent=" +
-          parent +
+          parent + "&autoplay=true" + 
           '" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>';
 
       if (broadcaster_display_name != null) {
@@ -380,20 +369,24 @@
           curator_display_name +
           "</b><br/>";
       }
-      //var video = document.getElementById("teste1");
-      //function stopVideo() {
-      //video.pause();
-      //video.currentTime = 0;
-      //}
 
       //Chama o modal
       $("#modalClips").modal("show");
-
-      //Para o vídeo ao fechar o modal?
-      //$("#close").on("click", function () {
-      //stopVideo();
-      //});
     }
   </script>
-  <!-- /Modal -->
+
+<script type="text/javascript"> 
+
+$(document).ready(function () {
+    $('video').on('play', function (e) {
+        setTimeout(function() {
+          $('.carousel').carousel('pause'); 
+        }, 500);
+    });
+    $('video').on('stop pause ended', function (e) {
+      $(".carousel").carousel();
+    });
+}); 
+
+</script>
 </html>

@@ -77,7 +77,12 @@ const getTwitchDados = (token, url, params) => {
     });
 };
 
-document.getElementById("search-button").onclick = (e) => searchClick();
+var btnTeste = document.getElementById("search-button");
+
+if(btnTeste != null){
+  btnTeste.onclick = (e) => searchClick();
+}
+
 var searchValue;
 
 function searchFilter() {
@@ -97,6 +102,11 @@ function searchClick() {
 
 document.addEventListener("DOMContentLoaded", conectaTwitch);
 
+$(document).ready(function () {  
+  $("#modalClips").on("hide.bs.modal", function (e) {
+    $("#video").attr("src", "");
+  });  
+});
 
 export default { conectaTwitch, getTwitchDados };
-export { searchFilter };
+export { searchFilter, searchClick, conectaTwitch, getTwitchDados };

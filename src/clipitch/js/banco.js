@@ -37,10 +37,13 @@ const criaBancoDeDados = (TopClips) => {
     };
 
     bancoRequest.onerror = (e) => {
-      console.log("Erro ao criar o Banco de Dados", e);
+      window.location = "erro.html";
+      console.log(
+        `Erro na requisição para consultar os clips ${e.target.errorCode}`
+      );
     };
   } else {
-    console.log("Banco de dados IndexedDb não é suportado pelo Browser");
+    console.log("Banco de dados IndexedDB não é suportado pelo Browser");
   }
 };
 
@@ -93,6 +96,8 @@ const pesquisaClips = (texto) => {
     console.log(
       `Erro na requisição para consultar os clips ${e.target.errorCode}`
     );
+
+    window.location = "erro.html";
   };
 };
 
@@ -110,6 +115,7 @@ const adicionarClipsBD = (db, clips) => {
 
   transactionAdd.onerror = (e) => {
     console.log("Erro ao realizar a inclusão de registro no banco de dados");
+    window.location = "erro.html";    
   };
 };
 
@@ -171,6 +177,7 @@ function getAllClips(dayOrWeek) {
       console.log(
         `Erro na requisição para consultar os clips ${e.target.errorCode}`
       );
+      window.location = "erro.html";
     };
   };
 }
@@ -199,7 +206,7 @@ function displayClipsDaily(clips) {
     if (rowDaily != null) {
       if (i <= 8) {
         rowDaily.innerHTML +=
-          '<div class="col-md-4 my-2 px-2"><div class="card"><a type="button" id="'+ url["slug"] + '"><img class="card-img-top testeImg" src="' +
+          '<div class="col-md-4 my-2 px-2"><div class="card"><a type="button" class="video-btn" id="'+ url["slug"] + '"><img class="card-img-top testeImg" src="' +
           url.thumbnails["medium"] +
           '" width="100%" alt="Clips do dia""/></a><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' +
           new Intl.NumberFormat("pt-BR", {
@@ -221,7 +228,7 @@ function displayClipsDaily(clips) {
       }
     } else if (rowDailyPage != null) {
       rowDailyPage.innerHTML +=
-        '<div class="col-md-4 my-2 px-2"><div class="card"><a type="button" id="'+ url["slug"] + '"><img class="card-img-top testeImg" src="' +
+        '<div class="col-md-4 my-2 px-2"><div class="card"><a type="button" class="video-btn" id="'+ url["slug"] + '"><img class="card-img-top testeImg" src="' +
         url.thumbnails["medium"] +
         '" width="100%" alt="Clips do dia""/></a><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' +
         new Intl.NumberFormat("pt-BR", { maximumSignificantDigits: 10 }).format(
@@ -263,7 +270,7 @@ function displayClipsWeekly(clips) {
     if (rowWeekly != null) {
       if (i <= 8) {
         rowWeekly.innerHTML +=
-          '<div class="col-md-4 my-2 px-2"><div class="card"><a type="button" id="'+ url["slug"] + '"><img class="card-img-top testeImg" src="' +
+          '<div class="col-md-4 my-2 px-2"><div class="card"><a type="button" class="video-btn" id="'+ url["slug"] + '"><img class="card-img-top testeImg" src="' +
           url.thumbnails["medium"] +
           '" width="100%" alt="Clips da Semana""/></a><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' +
           new Intl.NumberFormat("pt-BR", {
@@ -285,7 +292,7 @@ function displayClipsWeekly(clips) {
       }
     } else if (rowWeeklyPage != null) {
       rowWeeklyPage.innerHTML +=
-        '<div class="col-md-4 my-2 px-2"><div class="card"><a type="button" id="'+ url["slug"] + '"><img class="card-img-top testeImg" src="' +
+        '<div class="col-md-4 my-2 px-2"><div class="card"><a type="button" class="video-btn" id="'+ url["slug"] + '"><img class="card-img-top testeImg" src="' +
         url.thumbnails["medium"] +
         '" width="100%" alt="Clips da semana""/></a><div class="top-left-img text-white bg-cliped p-2 rounded"><b class="clipedFont">Clipado</b></div><div class="top-right-img text-white bg-views p-2 rounded">' +
         new Intl.NumberFormat("pt-BR", { maximumSignificantDigits: 10 }).format(
@@ -366,14 +373,6 @@ function displayTags(array) {
   }
 }
 
-// Obtém o curso para ler a tabela de Clips - Retorna o Cursor Aberto posicionado na Tabela
-function getCursorBancoDeDados(db) {
-  const transaction = db.transaction(["clips"], "readonly");
-  const tabelaClip = transaction.objectStore("clips");
-  const cursorAberto = tabelaClip.openCursor();
-  return cursorAberto;
-}
-
 const populaCarousel = () => {
   const requestDB = window.indexedDB.open("topClipsDB", 1);
   let clipsList = [];
@@ -392,19 +391,19 @@ const populaCarousel = () => {
       if (cursor) {
         let count = 0;
 
-        let element =
-          document.getElementById("carouselInner") != null
-            ? document.getElementById("carouselInner")
-            : null;
-
+        let element = document.getElementById("carouselInner") != null ? document.getElementById("carouselInner") : null;
+        
         if (element != null) {
-          cursor.forEach((clip) => {
+
+          var clips = dynamicClips(cursor);
+
+          clips.forEach((clip) => {
             if (count === 0) {
               element.innerHTML +=
                 '<div class="carousel-item active embed-responsive-item"><iframe class="d-block"  id="carouselIFrame" alt="Clips em destaque" src="' +
                 clip["embed_url"] +
                 "&parent=" +
-                CONST_PARENT +
+                CONST_PARENT + 
                 '"frameborder="0" allowfullscreen="true" scrolling="no""></iframe></div>';
 
               count++;
@@ -424,12 +423,27 @@ const populaCarousel = () => {
     }
   }
 
-  requestDB.onerror = (e) => {
+  requestDB.onerror = (e) => {   
     console.log(
       `Erro na requisição para consultar os clips ${e.target.errorCode}`
     );
+    window.location = "erro.html";
   };
 };
 
+const dynamicClips = (clip) => {
+  var clips  = [];
+  clips.push(...clip);
+
+  var array = [];
+
+  if (clips != null){
+    const randomClip = clips.splice(Math.floor(Math.random() * clips.length), 3);
+    array.push(...randomClip);
+  }
+
+  return array;
+}
+
 export default criaBancoDeDados;
-export { pesquisaClips };
+export { pesquisaClips, dynamicClips, populaCarousel, displayTags, orderTags, displayClipsDaily, displayClipsWeekly, createTags, getAllClips, adicionarClipsBD, criaBancoDeDados };

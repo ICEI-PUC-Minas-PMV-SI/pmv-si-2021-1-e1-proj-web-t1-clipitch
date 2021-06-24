@@ -249,7 +249,7 @@
       </div>
     </div>
   </body>
-
+  
   <script type="text/javascript">
     function carregaModal(
       embed_url,
@@ -270,10 +270,10 @@
 
       if (embed_url != null)
         col1.innerHTML +=
-          '<iframe class="iframeModal" src="' +
+          '<iframe id="video" class="iframeModal" src="' +
           embed_url +
           "&parent=" +
-          parent +
+          parent + "&autoplay=true" +
           '" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>';
 
       if (broadcaster_display_name != null) {

@@ -1,6 +1,6 @@
 # Plano de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>
+<span style="color:red">Pré-requisitos: <a href="02-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="04-Projeto de Interface.md"> Projeto de Interface</a>
 
 Com o intuito de melhorar a distribuição, garantir a qualidade e obter certeza da implementação correta do desenvolvimento feito no software do projeto, foi utilizado frameworks e bibliotecas que permitem simular todo o processo de usabilidade do ClipItch, percorrendo as chamadas que serão feitas nesse processo e retornando os valores esperados, de forma discreta e certeira.
 

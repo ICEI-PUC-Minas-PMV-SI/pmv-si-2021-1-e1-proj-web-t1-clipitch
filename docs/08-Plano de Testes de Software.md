@@ -30,14 +30,14 @@ Essas chamadas são feitas dentro do arquivo Test.js, aonde é feito todo o proc
 #### Explicação dos métodos
 
 ```mocha.js|chai.js|sinon.js - Describe
- > describe("Descreve todas as funções do projeto", () => { // Métodos de Testes a serem implementados };
+  describe("Descreve todas as funções do projeto", () => { Métodos de Testes a serem implementados };
 ```
 
 > A função describe, serve para iniciar uma lista detalhada do que será executado dentro da arrow function chamada pela mesma.
 
 ```mocha.js|chai.js|sinon.js - It
   it("Realiza a chamada da função retornada de algum outro arquivo js ou do próprio arquivo", () => {
-      spy.calledAfter( //Função a ser testada );      
+      spy.calledAfter( Função a ser testada );      
     });
 ```
 

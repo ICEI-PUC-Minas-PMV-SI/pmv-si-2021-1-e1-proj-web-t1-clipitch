@@ -6,7 +6,8 @@ Teste feito das funções disponibilizadas durante o desenvolvimento do ClipItch
 
 ![exemploTestes](img/executeTestes.png)
 
-Os testes do ClipItch estão disponíveis em produção, basta acessar o seguinte link para ter acesso a eles, contendo, também, todas as funções que foram implementadas ao clicar em cada um, ou, caso prefira no documento: <a href="08-Plano de Testes de Software.md"> Plano de Testes de Software</a>, está disponibilizado a explicação detalhada da implementação dos testes de softwares realizados durante o desenvolvimento do projeto.
+Os testes do ClipItch estão disponíveis em produção, basta acessar o seguinte link: 
+[Testes de Software | ClipItch](https://clipitch.herokuapp.com/mocha/test/test.html) para ter acesso a eles, contendo, também, todas as funções que foram implementadas ao clicar em cada um, ou, caso prefira no documento: <a href="08-Plano de Testes de Software.md"> Plano de Testes de Software</a>, está disponibilizado a explicação detalhada da implementação dos testes de softwares realizados durante o desenvolvimento do projeto.
 
 ## Avaliação
 

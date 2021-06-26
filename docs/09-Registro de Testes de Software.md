@@ -11,4 +11,4 @@ Os testes do ClipItch estão disponíveis em produção, basta acessar o seguint
 
 ## Avaliação
 
-Todos os testes foram realizados com sucesso, como pode ser observado na imagem acima, todavia, existem algumas limitações para se testar funções sem retorno de dados, dessa forma, optamos pela utilização do Sinon JS em conjunto com o Mocha JS, para podermos simular uma chamada sem retorno e conferir se ela foi de fato executada, se o mesmo ocorre, é retornado o valor true como resposta, sendo exibido no HTML do teste como teste realizado com sucesso.
+Todos os testes foram realizados com sucesso, como pode ser observado na imagem acima, todavia, existem algumas limitações para se testar funções sem retorno de dados, dessa forma, optamos pela utilização do Sinon JS em conjunto com o Mocha JS, para podermos simular uma chamada sem retorno e conferir se ela foi de fato executada, se o mesmo ocorre, é retornado o valor true como resposta, sendo exibido no HTML como "teste realizado com sucesso".

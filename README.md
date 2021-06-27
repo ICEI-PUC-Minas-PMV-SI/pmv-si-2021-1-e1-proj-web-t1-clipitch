@@ -1,17 +1,43 @@
-# Conteúdo de Interesse
+ <div align="center">
+ <h1>Conteúdo de Interesse</h1>
 
-`Sistemas de Informação`
-
-`Projeto: Aplicações Web`
-
+`Sistemas de Informação` . 
+`Projeto: Aplicações Web` . 
 `1º Semestre`
+ </div>
+
+<p align="center">
+  <img width="200" src="src/clipitch/imgs/logo.png" alt="Logo ClipItch">  
+  <br>
+</p>
+
+<p align="center">
+   Indexador de clipes providos da Twitch API
+  <br>
+  <a href="docs/01-Documentação de Contexto.md" rel="docs"><strong>Explore os documentos do ClipItch »</strong></a>
+  <br>
+  <br>
+  <a href="docs/05-Arquitetura da Solução.md">Arquitetura</a>
+  ·
+  <a href="docs/06-Template padrão do Site.md">Interface</a>
+  ·
+  <a href="docs/08-Plano de Testes de Software.md">Testes de Software</a>
+  ·
+  <a href="docs/10-Plano de Testes de Usabilidade.md">Testes de Software</a>
+</p>
+
+
+## Enredo:
+
+<div align="justify">
 
 Segundo matéria disponibilizada no site de notícias PwC Brasil, o setor de entretenimento virtual vem demonstrado uma perspectiva de aumento que agregará uma receita de aproximadamente 43,7 bilhões de dólares ao decorrer do ano de 2021. 
 
 Todavia, com o rápido desenvolvimento da demanda, a oferta de serviços para supri-la não está sendo suficiente, tendo dessa forma, muito de seus conteúdos perdidos na “imensidão” que se propaga nos principais meios de divulgação atuais.
 
-Para auxiliar no escalonamento de forma simplista e bem feita, seria desenvolvido uma plataforma que filtrasse por interesse, o conteúdo que o usuário do sistema deseja, trazendo dessa forma, partes fracionadas, que ficaram popularmente conhecidas como “clipes” do material bruto que está disponibilizado nos provedores de conteúdo de entretenimento digital, sendo um chamativo curto que tem o objetivo de chamar a atenção da pessoa para aquele conteúdo, podendo até mesmo ser possível um tratamento desses dados para serem apresentado de forma agradável e dinâmica para aqueles que procuram por esses serviços de entretenimento e até mesmo um redirecionamento caso o usuário se sinta satisfeito com o serviço que lhe foi apresentado pelo sistema que desenvolvemos.
-
+Para auxiliar no escalonamento de forma simplista e bem feita, seria desenvolvido uma plataforma que filtrasse por interesse, o conteúdo que o usuário do sistema deseja, trazendo dessa forma, partes fracionadas, que ficaram popularmente conhecidas como “clipes” do material bruto que está disponibilizado nos provedores de conteúdo de entretenimento digital, sendo um chamativo curto que tem o objetivo de chamar a atenção da pessoa para aquele conteúdo, podendo até mesmo ser possível um tratamento desses dados para serem apresentado de forma agradável e dinâmica para aqueles que procuram por esses serviços de entretenimento e até mesmo um redirecionamento caso o usuário se sinta satisfeito com o serviço que lhe foi apresentado pelo sistema que desenvolvemos.  
+</div>
+  
 ## Integrantes
 
 - [Alexsandro Salles de Souza Filho](https://github.com/sallesalex01)

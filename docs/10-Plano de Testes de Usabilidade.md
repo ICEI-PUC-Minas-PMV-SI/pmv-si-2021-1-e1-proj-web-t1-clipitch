@@ -22,7 +22,7 @@ Dispositivo:	Computador |	Laptop |	Smartphone
 
 Avaliação de Tarefas/Cenários
 
-#	Tarefa/Cenário	Melhor tempo	Pior tempo	Tempo alvo	Tempo atual
+#	Tarefa/Cenário	Melhor tempo |	Pior tempo |	Tempo alvo |	Tempo atual
 1	Encontrar um clipe relacionado ao jogo Valorant.	0.63 seg |	0.8 seg |	3 seg |	0.71 seg
 2	Encontrar os clipes mais acessados do dia e da semana.	2.77 seg |	3.01 seg |	5 seg |	2.93 seg
 3	Encontrar o nome do usuário que clipou o clipe.	1.35 seg |	2.16 seg |	5 seg |	1.75 seg

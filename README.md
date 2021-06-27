@@ -38,18 +38,24 @@ Todavia, com o rápido desenvolvimento da demanda, a oferta de serviços para su
 Para auxiliar no escalonamento de forma simplista e bem feita, seria desenvolvido uma plataforma que filtrasse por interesse, o conteúdo que o usuário do sistema deseja, trazendo dessa forma, partes fracionadas, que ficaram popularmente conhecidas como “clipes” do material bruto que está disponibilizado nos provedores de conteúdo de entretenimento digital, sendo um chamativo curto que tem o objetivo de chamar a atenção da pessoa para aquele conteúdo, podendo até mesmo ser possível um tratamento desses dados para serem apresentado de forma agradável e dinâmica para aqueles que procuram por esses serviços de entretenimento e até mesmo um redirecionamento caso o usuário se sinta satisfeito com o serviço que lhe foi apresentado pelo sistema que desenvolvemos.  
 </div>
   
+ <div align="center">
+ 
 ## Integrantes
 
-- [Alexsandro Salles de Souza Filho](https://github.com/sallesalex01)
-- [Alonso Batista de Oliveira Junior](https://github.com/alonso-boj)
-- [Gustavo Castro](https://github.com/gstvcastroc)
-- [Halex Maciel Silva Vieira](https://github.com/halexmaciel)
-- [Robson Ezequiel](https://github.com/Robsonezequiel)
-- [Welbert Luiz](https://github.com/WelbertJr)
+<a href="https://github.com/sallesalex01" title="Alexsandro Salles" rel="nofollow"><img src="docs/img/Alex.png" alt="logo" data-canonical-src="https://github.com/sallesalex01" width="10%"/></a>
+<a href="https://github.com/alonso-boj" title="Alonso Batista" rel="nofollow"><img src="docs/img/alonso.png" alt="logo" data-canonical-src="https://github.com/alonso-boj" width="10%"/></a>
+<a href="https://github.com/gstvcastroc" title="Gustavo Castro" rel="nofollow"><img src="docs/img/gustavo.png" alt="logo" data-canonical-src="https://github.com/gstvcastroc" width="10%"/></a>
+<a href="https://github.com/halexmaciel" title="Halex Maciel" rel="nofollow"><img src="docs/img/halex.png" alt="logo" data-canonical-src="https://github.com/halexmaciel" width="10%"/></a>
+<a href="https://github.com/WelbertJr" title="Welbert Júnior" rel="nofollow"><img src="docs/img/Welbert.png" alt="logo" data-canonical-src="https://github.com/WelbertJr" width="10%"/></a>
+
+
 
 ## Professor
-- [Hugo Bastos De Paula](https://github.com/hugodepaula)
 
+<a href="https://github.com/hugodepaula" title="Hugo de Paula" rel="nofollow"><img src="docs/img/hugo.png" alt="logo" data-canonical-src="https://github.com/hugodepaula" width="10%"/></a>
+ 
+</div> 
+ 
 # Documentação
 
 <ol>

@@ -16,10 +16,18 @@ Em todas as páginas há botões que redirecionam o usuário para a Home, além 
 
 ## Wireframes
 
+### Home
+
 ![Home](img/w1.png)
+
+### Clips do dia/semana/resultado da pesquisa
 
 ![Clips do dia/semana/resultado da pesquisa](img/w2.png)
 
+### Modal
+
 ![Modal](img/w4.png)
+
+### Mobile
 
 ![Responsivo](img/w3.png)

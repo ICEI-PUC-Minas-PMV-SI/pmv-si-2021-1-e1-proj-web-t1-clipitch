@@ -20,15 +20,14 @@ Horas internet/semana:	84 horas |	42 horas |	21 horas
 Navegador:	Google |	Firefox |	Google
 Dispositivo:	Computador |	Laptop |	Smartphone
 
-Avaliação de Tarefas/Cenários
-
-#	Tarefa/Cenário	Melhor tempo |	Pior tempo |	Tempo alvo |	Tempo atual
+#Avaliação de Tarefas/Cenários
+Tarefa/Cenário |	Melhor tempo |	Pior tempo |	Tempo alvo |	Tempo atual
 1	Encontrar um clipe relacionado ao jogo Valorant.	0.63 seg |	0.8 seg |	3 seg |	0.71 seg
 2	Encontrar os clipes mais acessados do dia e da semana.	2.77 seg |	3.01 seg |	5 seg |	2.93 seg
 3	Encontrar o nome do usuário que clipou o clipe.	1.35 seg |	2.16 seg |	5 seg |	1.75 seg
 4	Retornar ao menu principal.	1.03 seg |	1.40 seg |	3 seg |	1.35 seg
 
-Ambiente computacional de teste
+#Ambiente computacional de teste
 
 Perfil 1
 Característica	Configuração 

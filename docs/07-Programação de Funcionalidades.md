@@ -67,7 +67,7 @@ Para utilizar essa funcionalidade, basta acessar qualquer página da aplicação
 **Acesso:** https://clipitch.herokuapp.com
 ### O site vai ser capaz de rodar os vídeos de forma embutida (RF-003)
 
-Todos os clips contidos na aplicação web apresentam a capacidade de serem assistidos de forma embutida Utilizou-se os links para embeds - a propriedade `"embed_url"` do arquivo JSON provido pela API do Twitch - para desenvolver essa funcionalidade.
+Todos os clips contidos na aplicação web apresentam a capacidade de serem assistidos de forma embutida. Utilizou-se os links para embeds - a propriedade `"embed_url"` do arquivo JSON provido pela API do Twitch - para desenvolver essa funcionalidade.
 
 O código responsável por essa funcionalidade encontra-se no arquivo `banco.js`.
 
@@ -80,12 +80,12 @@ Assim como a funcionalidade de pesquisa, essa funcionalidade está disponível e
 
 Os embeds em todas as páginas da aplicação web contém as funcionalidades nativas do player do Twitch: play/pause, mute, share, fullscreen e settings (qualidade de imagem do vídeo, velocidade de reprodução, configurações avançadas e atalhos de teclado).
 
-É possível visualizar os ícones das opções mencionadas acima na imagem do tópico anterior.
+É possível visualizar alguns dos ícones das opções mencionadas acima na imagem do tópico anterior.
 
 **Acesso:** https://clipitch.herokuapp.com
 ### O site vai disponibilizar em sua home os clipes mais acessados no momento e aqueles de maior sucesso (RF-005)
 
-O site apresenta, em destaque em sua página inicial, abaixo da barra de navegação, um carrossel contendo os três clipes mais acessados no momento. O carrossel conta com botões direcionais (setas) para passar para o próximo clip.
+O site apresenta, em destaque em sua página inicial, abaixo da barra de navegação, um carrossel contendo os três clipes mais acessados no momento. O carrossel conta com botões direcionais (setas) para navegar entre esses clips.
 
 O método responsável por popular essa funcionalidade encontra-se no arquivo `banco.js`.
 
@@ -119,7 +119,7 @@ Para utilizar essa funcionalidade, basta acessar a página inicial da aplicaçã
 **Acesso:** https://clipitch.herokuapp.com, https://clipitch.herokuapp.com/clipssemana.html
 ### O site deve ser capaz de exibir os conteúdos da plataforma Twitch usando como filtro os títulos dos jogos (RF-008)
 
-A partir dos dados obtidos da API desenvolveram-se métodos para inserir em um vetor a quantidade de vezes que um mesmo jogo repete-se na lista de clips. Foi possível, então, tratar esse vetor ao utilizar outros métodos e extrair informações relevantes para a criação de um sistema de tags para os jogos mais populares.
+A partir dos dados obtidos da API desenvolveram-se métodos para inserir em um vetor a quantidade de vezes que um mesmo jogo repete-se na lista de clips. Foi possível, então, tratar esse vetor ao utilizar outros métodos e extrair informações relevantes para a criação de um sistema dinâmico de tags para os jogos mais populares.
 
 Os métodos responsáveis por popular essa funcionalidade encontram-se no arquivo `banco.js`.
 

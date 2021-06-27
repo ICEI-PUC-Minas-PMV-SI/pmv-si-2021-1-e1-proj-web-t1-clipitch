@@ -1,8 +1,8 @@
 # Template padrão do site
 ## Layout de referência:
 
-![PáginaInicial](img/CarouselClipItch.png)
+![Home](img/CarouselClipItch.png)
 
-![PáginaInicial](img/GridClipItch.png)
+![Grid](img/GridClipItch.png)
 
-![PáginaInicial](img/modalClipItch.png)
+![Modal](img/modalClipItch.png)

@@ -1,3 +1,5 @@
+<div align="justify">
+
 # Programação de Funcionalidades
 
 ## Estruturas de dados
@@ -6,7 +8,7 @@ Foram desenvolvidos três arquivos no formato `.js`: `banco.js` contém os méto
 
 Em todos esses arquivos utilizou-se as estruturas de dados básicas da programação: **estruturas sequenciais**, **condicionais** e de **repetição**. O uso de **vetores** também foi bastante presente. Como essas estruturas de dados foram usadas em basicamente todos os arquivos JavaScript do projeto, decidiu-se abordar esse assunto neste tópico ao invés de citá-lo de forma redundante no tópico relacionado às funcionalidades do sistema.
 
-Outra estrutura de dados importantíssima que foi processada pela aplicação web é um arquivo no formato **JSON** provido pela API do Twich com diversas informações sobre um clip. A seguir, um exemplo dessa estrutura de dados:
+Outra estrutura de dados importantíssima que foi processada pela aplicação web é um arquivo no formato **JSON** provido pela API do Twich com diversas informações sobre um clip. A seguir, um exemplo dessa estrutura de dados:</div>
 
 ```json
 {
@@ -46,6 +48,8 @@ Outra estrutura de dados importantíssima que foi processada pela aplicação we
   }
 }
 ```
+<div align="justify">
+
 ## Funcionalidades do sistema
 
 Abaixo encontram-se todas as funcionalidades implementadas de acordo com os requisitos funcionais listados no planejamento do projeto. As tabelas completas de requisitos funcionais e não funcionais podem ser encontradas na [especificação do projeto](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2021-1-e1-proj-web-t1-conteudo-de-interesse/edit/main/docs/02-Especifica%C3%A7%C3%A3o%20do%20Projeto.md).
@@ -126,4 +130,7 @@ Os métodos responsáveis por popular essa funcionalidade encontram-se no arquiv
 Para utilizar essa funcionalidade, basta acessar a página inicial e clicar em uma das tags para ser redirecionado a uma página de resultado de pesquisa que contém apenas clips relativos à tag clicada.
 
 ![sistema-de-tags](img/rf-008.png)
+
+**Acesso:** https://clipitch.herokuapp.com
+</div>
 

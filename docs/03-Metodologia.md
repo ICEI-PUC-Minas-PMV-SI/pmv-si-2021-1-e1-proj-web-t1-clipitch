@@ -1,8 +1,9 @@
+<div align="justify">
 
 # Metodologia
 
 O desenvolvimento do projeto é baseado no padrão de gerenciamento de projetos Scrum, com papéis bem definidos e reuniões constantes para alinhamento do projeto entre os integrantes a fim de agilizar, organizar, disponibilizar auxílio mútuo entre os participantes e aumentar a performance ao entregar o projeto dentro dos prazos exigidos.
-### Procedimentos Definidos:
+## Procedimentos Definidos:
 
 - Reuniões diárias (Scrum) estão sendo conduzidas atráves do Teams, disponibilizado pela instituição;
 
@@ -47,7 +48,7 @@ As reuniões da equipe com o Product Owner geralmente acontecem uma vez por sema
 A distribuição das tarefas é sugerida pelo Scrum Master, de acordo com a compreensão e possibilidades de cada integrante da equipe, a fim de não sobrecarregar ou excluir nenhum dos envolvidos, porém cada membro tem a liberdade para escolher com quais issues deseja trabalhar. Assim, toda e qualquer tarefa é previamente discutida e analisada por todos da equipe de forma que os mesmos tenham liberdade para escolher ou declinar determinada tarefa quando for o caso.
 
 Nas reuniões diárias são discutidas com o Scrum Master as tarefas que cada membro está executando no momento e as tarefas que serão necessárias para atingir as metas estabelecidas pelo Product Owner naquela semana.
-### Ferramentas
+## Ferramentas
 
 As ferramentas empregadas no projeto são:
 
@@ -60,6 +61,6 @@ O editor de código Visual Studio Code, gratuito, foi escolhido porque ele ofere
 
 As ferramentas de comunicação Microsoft Teams e WhatsApp são utilizadas por possuírem maior aderência dos membros da equipe. O Microsoft Teams oferece plataforma segura, flexível e integrada com as soluções do Office 365, oferecendo assim todas as ferramentas necessárias para documentação e compartilhamento de informações. O WhatsApp ofecere comunicação entre os membros a partir de qualquer lugar e horário, possibilitando resolver questões relacionadas ao projeto de forma ágil.
 
-Para diagramação, Wireframe e User Flow será utilizada a versão gratuíta do Invision.
+Para diagramação, Wireframe e User Flow será utilizada a versão gratuíta do Whimsical.
 
-Para gerenciamento do projeto será utilizado o GitHub. É uma excelente plataforma que fornece todas as funcionalidades necessárias para o gerenciamento e controle do projeto, permitindo designação de atividades para cada membro da equipe, além do acompanhamento e monitoramento da execução delas através do [quadro de tarefas](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2021-1-e1-proj-web-t1-conteudo-de-interesse/projects/1).
+Para gerenciamento do projeto será utilizado o GitHub. É uma excelente plataforma que fornece todas as funcionalidades necessárias para o gerenciamento e controle do projeto, permitindo designação de atividades para cada membro da equipe, além do acompanhamento e monitoramento da execução delas através do [quadro de tarefas](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2021-1-e1-proj-web-t1-conteudo-de-interesse/projects/1).</div>

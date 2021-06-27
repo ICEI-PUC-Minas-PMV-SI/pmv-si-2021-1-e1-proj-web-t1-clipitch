@@ -1,3 +1,5 @@
+<div align="justify">
+
 # Especificações do Projeto
 
 ## Personas
@@ -18,13 +20,10 @@ Com base nos critérios de desenvolvimento do projeto e do público alvo a ser a
 |--------------------|------------------------------------|----------------------------------------|
 |Usuário|Encontrar os clipes relacionados a seu conteúdo de interesse.|Encontrar os clipes mais acessados, de maneira mais rápida.|
 
-Segundo pesquisa realizada no site da Design Culture, a plataforma do Twitch atualmente conta com mais de 32 milhões de usuários ativos por mês, sendo a maioria do seu público relativamente jovem, entre 18 e 34 anos<sup>[[1]]</sup>. Dessa forma, como o público alvo da aplicação a ser desenvolvida está em uma faxa etária jovial, vale lembrar que a maioria é adepta às mais recentes tecnologias no mercado, como os dispositivos mobile. Consta, assim, que será desenvolvido uma aplicação que suporte a responsividade para que possa ser acessível em qualquer lugar e a qualquer hora, economizando tempo do usuário, uma vez que o sistema tem como objetivo a distribuição dos clipes que visam demonstrar uma pequena parte do material bruto existente no Twitch.
+Segundo pesquisa realizada no site da Design Culture, a plataforma do Twitch atualmente conta com mais de 32 milhões de usuários ativos por mês, sendo a maioria do seu público relativamente jovem, entre 18 e 34 anos<sup>[[5]]</sup>. Dessa forma, como o público alvo da aplicação a ser desenvolvida está em uma faxa etária jovial, vale lembrar que a maioria é adepta às mais recentes tecnologias no mercado, como os dispositivos mobile. Consta, assim, que será desenvolvido uma aplicação que suporte a responsividade para que possa ser acessível em qualquer lugar e a qualquer hora, economizando tempo do usuário, uma vez que o sistema tem como objetivo a distribuição dos clipes que visam demonstrar uma pequena parte do material bruto existente no Twitch.
 
-#### **Exemplos de usuários:**
-> Alan é um criador de conteúdos que produz entretenimentos no meio digital, como vídeos e lives de jogos. Além de ser um criador de conteúdo, ele também é um consumidor assíduo de outros produtores do seu ramo de trabalho. Todavia, Alan passa mais de 8 horas por dia trabalhando e as outras horas cuidando dos seus afazeres diários, sobrando muito pouco tempo para se atualizar sobre o mercado em que está inserido. Enquanto Alan, eu gostaria de ter um local que pudesse me atualizar mais rápido ao que o mercado exige no momento. Dessa forma, o Alan, então, procura por uma plataforma na qual possa se atualizar e que seja de maneira rápida, sem tomar muito tempo do seu dia. É quando ele encontrará nosso portal, que vai ter os principais clipes dos contéudos mais relevantes no momento e que será sempre atualizado pelo nosso time de desenvolvimento, que servirá de referência para o mesmo se atualizar em seu mercado de trabalho, auxiliando no seu sucesso profissional.
-
-[1]: (https://designculture.com.br/como-as-marcas-estao-usando-o-twitch-no-seu-marketing#:~:text=Hoje%2C%20a%20maior%20parte%20do,mulheres%20est%C3%A3o%20aderindo%20%C3%A0%20plataforma.)
-
+### **Exemplo de usuário**
+Alan é um criador de conteúdos que produz entretenimentos no meio digital, como vídeos e lives de jogos. Além de ser um criador de conteúdo, ele também é um consumidor assíduo de outros produtores do seu ramo de trabalho. Todavia, Alan passa mais de 8 horas por dia trabalhando e as outras horas cuidando dos seus afazeres diários, sobrando muito pouco tempo para se atualizar sobre o mercado em que está inserido. Enquanto Alan, eu gostaria de ter um local que pudesse me atualizar mais rápido ao que o mercado exige no momento. Dessa forma, o Alan, então, procura por uma plataforma na qual possa se atualizar e que seja de maneira rápida, sem tomar muito tempo do seu dia. É quando ele encontrará nosso portal, que vai ter os principais clipes dos contéudos mais relevantes no momento e que será sempre atualizado pelo nosso time de desenvolvimento, que servirá de referência para o mesmo se atualizar em seu mercado de trabalho, auxiliando no seu sucesso profissional.
 
 ## Requisitos
 
@@ -65,4 +64,4 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |--|-------------------------------------------------------| 
 |01| O orçamento disponível, no montante de R$2000,00 (dois mil reais) deverá cobrir todos os custos, salvo aqueles causados por eventos imprevisíveis, mediante a devida justificativa, que acarretem um aumento de até 25% do valor original do projeto|
 |02| Em caso de alteração de membros da equipe, a mesma deverá ser objeto de recomposição por profissionais de qualificação compatível com o projeto no prazo de até 7 (sete) dias corridos|
-|03| O projeto deverá se submeter ao ordenamento jurídico brasileiro, destacando-se a conformidade com a Lei Geral de Proteção de Dados (Lei n.º 13.709/18), Lei da Propriedade Industrial (Lei n.º 9.279/96), Lei dos Direitos Autorais (Lei n.º 9.640/98) e Lei do Software (Lei n.º 9.609/98) |
+|03| O projeto deverá se submeter ao ordenamento jurídico brasileiro, destacando-se a conformidade com a Lei Geral de Proteção de Dados (Lei n.º 13.709/18), Lei da Propriedade Industrial (Lei n.º 9.279/96), Lei dos Direitos Autorais (Lei n.º 9.640/98) e Lei do Software (Lei n.º 9.609/98) |</div>

@@ -1,3 +1,5 @@
+<div align="justify">
+
 # Arquitetura da Solução
 
 A aplicação web é estruturada através do front-end, banco de dados nativo ao browser e API do Twitch.
@@ -50,6 +52,6 @@ O Heroku não é capaz de nativamente referenciar a página principal da aplica�
 <?php include_once("index.html");?>
 ```
 
-Após a adição desse arquivo, basta fazer o upload da pasta raíz do projeto e fazer o deploy do site.
+Após a adição desse arquivo, basta fazer o upload da pasta raíz do projeto e fazer o deploy do site.</div>
 
 

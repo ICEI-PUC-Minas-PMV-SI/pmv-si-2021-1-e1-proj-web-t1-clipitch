@@ -1,3 +1,4 @@
+<div align="justify">
 
 # Projeto de Interface
 
@@ -30,4 +31,4 @@ Em todas as páginas há botões que redirecionam o usuário para a Home, além 
 
 ### Mobile
 
-![Responsivo](img/w3.png)
+![Responsivo](img/w3.png)</div>

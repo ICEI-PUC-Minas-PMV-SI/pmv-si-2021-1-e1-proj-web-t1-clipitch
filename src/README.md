@@ -14,7 +14,7 @@ Para acessar o projeto em produção, basta acessar [Clipitch](https://clipitch.
 
 O Clipitch dispõe de uma interface amigável e de fácil acesso, sendo bem tranquila a navegação e compreensão de sua utilização. A ideia original da aplicação web é indexar os melhores clips providos pela [API](https://dev.twitch.tv/docs/v5) do Twich para uma melhor visualização e pesquisa dos mesmos, uma vez que o próprio Twitch não possui uma forma simples e direta de encontrar e/ou pesquisar os melhores clips.
 
-Abaixo, temos a exemplificação de como está a interface do projeto ao acessá-la, seguindo todo o padrão estipulado durante a etapa de desenvolvimento - <a href="/docs/04-Projeto de Interface.md">Projeto de Interface</a> e <a href="/docs/06-Template padrão do Site.md"> Template padrão do Site</a>).
+Abaixo, temos a exemplificação de como está a interface do projeto ao acessá-la, seguindo todo o padrão estipulado durante a etapa de desenvolvimento - <a href="/docs/04-Projeto de Interface.md">Projeto de Interface</a> e <a href="/docs/06-Template padrão do Site.md"> Template padrão do Site</a>.
 
 ![páginaInicialCarrossel](/docs/img/CarouselClipItch.png)
 
@@ -24,10 +24,6 @@ As funcionalidades, ferramentas e métodos de implementação usados durante o d
 
 ## Histórico de versões
 
-```históricoVersões
 [1.0.0] - 27/06/2021:
 
-Feito o upload de todo o projeto finalizado, disponibilizando o mesmo em produção para acesso em qualquer lugar/dispositivo que possua conexão com a internet.
-```
-
-</div>
+Feito o upload de todo o projeto finalizado, disponibilizando o mesmo em produção para acesso em qualquer lugar/dispositivo que possua conexão com a internet.</div>

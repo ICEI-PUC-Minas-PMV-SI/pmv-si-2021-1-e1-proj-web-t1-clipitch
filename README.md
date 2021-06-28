@@ -1,11 +1,10 @@
- <div align="center">
- <h1>Clipitch</h1>
- <h2>Conteúdo de Interesse</h2>
+<div align="center">
+<h1>Clipitch</h1>
+<h2>Conteúdo de Interesse</h2>
 <p>Projeto: Aplicações Web - 1º semestre</p>
 <br>
 <p>Sistemas de Informação</p>
 <p>Pontifícia Universidade Católica de Minas Gerais</p>
-<br>
 
  </div>
 

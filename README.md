@@ -46,15 +46,16 @@ Portanto, a proposta tem por objetivo sanar a assimetria de informações existe
  
 ## Integrantes
 
-<a href="https://github.com/sallesalex01" title="Alexsandro Salles" rel="nofollow"><img src="docs/img/Alex.png" alt="logo" data-canonical-src="https://github.com/sallesalex01" width="10%"/></a>
-<a href="https://github.com/alonso-boj" title="Alonso Batista" rel="nofollow"><img src="docs/img/alonso.png" alt="logo" data-canonical-src="https://github.com/alonso-boj" width="10%"/></a>
-<a href="https://github.com/gstvcastroc" title="Gustavo Castro" rel="nofollow"><img src="docs/img/gustavo.png" alt="logo" data-canonical-src="https://github.com/gstvcastroc" width="10%"/></a>
-<a href="https://github.com/halexmaciel" title="Halex Maciel" rel="nofollow"><img src="docs/img/halex.png" alt="logo" data-canonical-src="https://github.com/halexmaciel" width="10%"/></a>
-<a href="https://github.com/WelbertJr" title="Welbert Júnior" rel="nofollow"><img src="docs/img/Welbert.png" alt="logo" data-canonical-src="https://github.com/WelbertJr" width="10%"/></a>
+<a href="https://github.com/sallesalex01" title="Alexsandro Salles" rel="nofollow"><img src="docs/img/Alex.png" alt="logo" data-canonical-src="https://github.com/sallesalex01" width="100vw"/></a>
+<a href="https://github.com/alonso-boj" title="Alonso Batista" rel="nofollow"><img src="docs/img/alonso.png" alt="logo" data-canonical-src="https://github.com/alonso-boj" width="100vw"/></a>
+<a href="https://github.com/gstvcastroc" title="Gustavo Castro" rel="nofollow"><img src="docs/img/gustavo.png" alt="logo" data-canonical-src="https://github.com/gstvcastroc" width="100vw"/></a>
+<a href="https://github.com/halexmaciel" title="Halex Maciel" rel="nofollow"><img src="docs/img/halex.png" alt="logo" data-canonical-src="https://github.com/halexmaciel" width="100vw"/></a>
+<a href="https://github.com/WelbertJr" title="Welbert Júnior" rel="nofollow"><img src="docs/img/Welbert.png" alt="logo" data-canonical-src="https://github.com/WelbertJr" width="100vw"/></a>
+ <a href="https://github.com/Robsonezequiel" title="Robson Ezequiel" rel="nofollow"><img src="docs/img/robson.png" alt="logo" data-canonical-src="https://github.com/Robsonezequiel" width="100vw"/></a>
 
 ## Professor
 
-<a href="https://github.com/hugodepaula" title="Hugo de Paula" rel="nofollow"><img src="docs/img/hugo.png" alt="logo" data-canonical-src="https://github.com/hugodepaula" width="10%"/></a>
+<a href="https://github.com/hugodepaula" title="Hugo de Paula" rel="nofollow"><img src="docs/img/hugo.png" alt="logo" data-canonical-src="https://github.com/hugodepaula" width="100vw"/></a>
 
 </div> 
  

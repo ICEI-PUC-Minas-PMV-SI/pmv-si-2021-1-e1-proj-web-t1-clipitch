@@ -28,4 +28,4 @@ O grupo deve distribuir de forma coerente o conteúdo a ser apresentado, dentro 
 
 <hr>
 
-<p align="right"><a href="docs/11-Registro de Testes de Usabilidade.md" rel="docs">Registro de Testes de Usabilidade</a> | <a href="docs/13-Referências.md" rel="docs">Referências</a></p>
+<p align="right"><a href="./11-Registro de Testes de Usabilidade.md">Registro de Testes de Usabilidade</a> | <a href="./13-Referências.md">Referências</a></p>

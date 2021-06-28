@@ -67,4 +67,4 @@ Para gerenciamento do projeto será utilizado o GitHub. É uma excelente platafo
 
 <hr>
 
-<p align="right"><a href="docs/02-Especificação do Projeto.md" rel="docs">Especificação do Projeto</a> | <a href="docs/04-Projeto de Interface.md" rel="docs">Projeto de Interface</a></p>
+<p align="right"><a href="./02-Especificação do Projeto.md">Especificação do Projeto</a> | <a href="./04-Projeto de Interface.md">Projeto de Interface</a></p>

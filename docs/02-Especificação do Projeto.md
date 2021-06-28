@@ -68,4 +68,4 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 <hr>
 
-<p align="right"><a href="/01-Documentação de Contexto.md">Documentação de Contexto</a> | <a href="/03-Metodologia.md">Metodologia</a></p>
+<p align="right"><a href="./01-Documentação de Contexto.md">Documentação de Contexto</a> | <a href="./03-Metodologia.md">Metodologia</a></p>

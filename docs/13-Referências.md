@@ -12,4 +12,4 @@ PONTES, Iran. **Como as marcas estão usando o Twitch no seu marketing?** Dispon
 
 <hr>
 
-<p align="right"><a href="docs/12-Apresentação do Projeto.md" rel="docs">Apresentação do Projeto</a></p>
+<p align="right"><a href="./12-Apresentação do Projeto.md">Apresentação do Projeto</a></p>

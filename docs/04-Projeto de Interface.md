@@ -35,4 +35,4 @@ Em todas as páginas há botões que redirecionam o usuário para a Home, além 
 
 <hr>
 
-<p align="right"><a href="docs/03-Metodologia.md" rel="docs">Metodologia</a> | <a href="docs/05-Arquitetura da Solução.md" rel="docs">Arquitetura da Solução</a></p>
+<p align="right"><a href="./03-Metodologia.md">Metodologia</a> | <a href="./05-Arquitetura da Solução.md">Arquitetura da Solução</a></p>

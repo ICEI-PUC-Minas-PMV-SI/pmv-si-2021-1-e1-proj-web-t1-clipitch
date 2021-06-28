@@ -215,7 +215,7 @@ O balanço final foi positivo - com apenas um erro apresentado durante a execuç
 
 <hr>
 
-<p align="right"><a href="docs/10-Plano de Testes de Usabilidade.md" rel="docs">Plano de Testes de Usabilidade</a> | <a href="docs/12-Apresentação do Projeto.md" rel="docs">Apresentação do Projeto</a></p>
+<p align="right"><a href="./10-Plano de Testes de Usabilidade.md">Plano de Testes de Usabilidade</a> | <a href="./12-Apresentação do Projeto.md">Apresentação do Projeto</a></p>
     
     
 

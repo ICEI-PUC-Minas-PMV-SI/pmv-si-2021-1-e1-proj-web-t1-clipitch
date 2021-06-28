@@ -1,4 +1,4 @@
-# Registro de Testes de Software
+# Registro de Testes de Usabilidade
 
 <div align="justify">
 O formulário utilizado para esse teste de usabilidade está disponível <a href= "https://docs.google.com/forms/d/e/1FAIpQLSeaV344wfS_tY0UC96DTJqgBkSxWlv0WSZLXmKoXOk_JQEpTw/viewform">aqui</a>. No <a href= "10-Plano de Testes de Usabilidade.md">Plano de Testes de Usabilidade</a> encontra-se a explicação detalhada da implementação do teste.</div>

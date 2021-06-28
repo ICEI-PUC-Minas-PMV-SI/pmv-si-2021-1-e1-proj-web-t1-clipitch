@@ -32,3 +32,7 @@ Em todas as páginas há botões que redirecionam o usuário para a Home, além 
 ### Mobile
 
 ![Responsivo](img/w3.png)</div>
+
+<hr>
+
+<p align="right"><a href="docs/03-Metodologia" rel="docs">Metodologia</a> | <a href="docs/05-Arquitetura da Solução" rel="docs">Arquitetura da Solução</a></p>

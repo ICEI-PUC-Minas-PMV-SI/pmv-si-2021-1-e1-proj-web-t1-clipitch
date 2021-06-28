@@ -9,3 +9,7 @@ DEAN, Brian. Twitch Usage and Growth Statistics: **How Many People Use Twitch in
 DEAN, Brian. Twitch Usage and Growth Statistics: **How Many People Use Twitch in 2021?** Disponível em: https://backlinko.com/twitch-users#twitch-users-by-country. Acesso em: 26 abr. 2021.
 
 PONTES, Iran. **Como as marcas estão usando o Twitch no seu marketing?** Disponível em: https://designculture.com.br/como-as-marcas-estao-usando-o-twitch-no-seu-marketing. Acesso em: 29 abr. 2021.
+
+<hr>
+
+<p align="right"><a href="docs/12-Apresentação do Projeto" rel="docs">Apresentação do Projeto</a></p>

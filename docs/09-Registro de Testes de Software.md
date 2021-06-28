@@ -10,3 +10,7 @@ Os testes podem ser acessados em [produção](https://clipitch.herokuapp.com/moc
 ## Avaliação
 
 Todos os métodos desenvolvidos no projeto passaram nos testes, como pode ser observado acima. Todavia, existem algumas limitações para testar-se métodos sem retorno de dados. Dessa forma, optou-se pela utilização do Sinon JS em conjunto com o Mocha JS, para simular uma chamada sem retorno e conferir se ela foi de fato executada - se o mesmo ocorre, é retornado o valor true como resposta, sendo exibido no HTML como "teste realizado com sucesso".</div>
+
+<hr>
+
+<p align="right"><a href="docs/08-Plano de Testes de Software" rel="docs">Plano de Testes de Software</a> | <a href="docs/10-Plano de Testes de Usabilidade" rel="docs">Plano de Testes de Usabilidade</a></p>

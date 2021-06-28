@@ -36,3 +36,7 @@ O método describe serve para iniciar uma lista detalhada do que será executado
 ```
 
 O método `it` inicializa o processo de teste e aguarda o método chamado pela arrow function ser retornado, podendo, assim, analisar se foi executada com sucesso ou se conteve algum erro. Todavia, como grande parte dos métodos desenvolvidos são chamadas void (sem retorno), foi necessária a utilização da biblioteca Sinon para fazer o processo de "espionagem" do método quando ele é chamado - que retorna o valor true caso seja feito com sucesso.</div>
+
+<hr>
+
+<p align="right"><a href="docs/07-Programação de Funcionalidades" rel="docs">Programação de Funcionalidades</a> | <a href="docs/09-Registro de Testes de Software" rel="docs">Registro de Testes de Software</a></p>

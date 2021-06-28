@@ -64,3 +64,7 @@ As ferramentas de comunicação Microsoft Teams e WhatsApp são utilizadas por p
 Para diagramação, Wireframe e User Flow será utilizada a versão gratuíta do Whimsical.
 
 Para gerenciamento do projeto será utilizado o GitHub. É uma excelente plataforma que fornece todas as funcionalidades necessárias para o gerenciamento e controle do projeto, permitindo designação de atividades para cada membro da equipe, além do acompanhamento e monitoramento da execução delas através do [quadro de tarefas](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2021-1-e1-proj-web-t1-conteudo-de-interesse/projects/1).</div>
+
+<hr>
+
+<p align="right"><a href="docs/02-Especificação do Projeto" rel="docs">Especificação do Projeto</a> | <a href="docs/04-Projeto de Interface" rel="docs">Projeto de Interface</a></p>

@@ -54,4 +54,8 @@ O Heroku não é capaz de nativamente referenciar a página principal da aplica�
 
 Após a adição desse arquivo, basta fazer o upload da pasta raíz do projeto e fazer o deploy do site.</div>
 
+<hr>
+
+<p align="right"><a href="docs/04-Projeto de Interface" rel="docs">Projeto de Interface</a> | <a href="docs/06-Template padrão do Site" rel="docs">Template padrão do Site</a></p>
+
 

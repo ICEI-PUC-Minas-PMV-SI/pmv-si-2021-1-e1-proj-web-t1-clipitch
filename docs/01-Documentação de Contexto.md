@@ -44,3 +44,7 @@ A motivação para a criação deste projeto é desenvolver uma solução web qu
 ## Público-Alvo
 
 Homens e mulheres, de 16 a 34 anos, casados ou solteiros, com ou sem filhos, ensino médio a superior completo, pertencentes à classe média ou acima, brasileiros, moradores de cidades pequenas a grandes, atentos às novidades relativas ao mundo da tecnologia, sem muito tempo livre disponível, interessados em entretenimento sobre jogos e outros assuntos em formato de clipes de curta duração.</div>
+
+<hr>
+
+<p align="right"><a href="docs/02-Especificação do Projeto" rel="docs">Especificação do Projeto</a></p>

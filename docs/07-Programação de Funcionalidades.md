@@ -134,3 +134,7 @@ Para utilizar essa funcionalidade, basta acessar a página inicial e clicar em u
 **Acesso:** https://clipitch.herokuapp.com
 </div>
 
+<hr>
+
+<p align="right"><a href="docs/06-Template padrão do Site" rel="docs">Template padrão do Site</a> | <a href="docs/08-Plano de Testes de Software" rel="docs">Plano de Testes de Software</a></p>
+

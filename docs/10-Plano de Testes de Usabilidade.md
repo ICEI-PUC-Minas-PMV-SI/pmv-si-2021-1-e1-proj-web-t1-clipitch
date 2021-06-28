@@ -92,17 +92,17 @@ Realizou-se um teste no qual os usuários utilizaram as funcionalidades da aplic
           <tr>
             <th style="text-align:center">#</th>
               <th style="text-align:center">Tarefa/Cenário</th>
-              <th style="text-align:center">Melhor tempo</th>
-              <th style="text-align:center">Pior tempo</th>
-              <th style="text-align:center">Tempo alvo</th>
-              <th style="text-align:center">Tempo atual</th>
+              <th style="text-align:center">Melhor tempo (segs)</th>
+              <th style="text-align:center">Pior tempo (segs)</th>
+              <th style="text-align:center">Tempo alvo (segs)</th>
+              <th style="text-align:center">Tempo atual (segs)</th>
             </tr>
           </thead>
             <tbody>
               <tr>
                 <td align="center">1</td>
                 <td align="center">
-                  Encontrar um clip relacionado a um jogo específico (segs)
+                  Encontrar um clip relacionado a um jogo específico
                 </td>
                 <td align="center">0.63</td>
                 <td align="center">0.8</td>
@@ -112,7 +112,7 @@ Realizou-se um teste no qual os usuários utilizaram as funcionalidades da aplic
               <tr>
                 <td align="center">2</td>
                 <td align="center">
-                  Encontrar os clips mais acessados do dia e da semana (segs)
+                  Encontrar os clips mais acessados do dia e da semana
                 </td>
                 <td align="center">2.77</td>
                 <td align="center">3.01</td>
@@ -122,7 +122,7 @@ Realizou-se um teste no qual os usuários utilizaram as funcionalidades da aplic
               <tr>
                 <td align="center">3</td>
                 <td align="center">
-                  Encontrar o nome do usuário que criou o clip (segs)
+                  Encontrar o nome do usuário que criou o clip
                 </td>
                 <td align="center">1.35</td>
                 <td align="center">2.16</td>
@@ -131,7 +131,7 @@ Realizou-se um teste no qual os usuários utilizaram as funcionalidades da aplic
               </tr>
               <tr>
                 <td align="center">4</td>
-                <td align="center">Retornar ao menu principal (segs)</td>
+                <td align="center">Retornar ao menu principal</td>
                 <td align="center">1,03</td>
                 <td align="center">1.40</td>
                 <td align="center">3</td>

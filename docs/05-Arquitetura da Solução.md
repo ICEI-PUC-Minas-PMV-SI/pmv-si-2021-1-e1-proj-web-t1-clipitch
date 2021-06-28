@@ -56,6 +56,6 @@ Após a adição desse arquivo, basta fazer o upload da pasta raíz do projeto e
 
 <hr>
 
-<p align="right"><a href="docs/04-Projeto de Interface" rel="docs">Projeto de Interface</a> | <a href="docs/06-Template padrão do Site" rel="docs">Template padrão do Site</a></p>
+<p align="right"><a href="docs/04-Projeto de Interface.md" rel="docs">Projeto de Interface</a> | <a href="docs/06-Template padrão do Site.md" rel="docs">Template padrão do Site</a></p>
 
 

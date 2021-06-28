@@ -39,4 +39,4 @@ O método `it` inicializa o processo de teste e aguarda o método chamado pela a
 
 <hr>
 
-<p align="right"><a href="docs/07-Programação de Funcionalidades" rel="docs">Programação de Funcionalidades</a> | <a href="docs/09-Registro de Testes de Software" rel="docs">Registro de Testes de Software</a></p>
+<p align="right"><a href="docs/07-Programação de Funcionalidades.md" rel="docs">Programação de Funcionalidades</a> | <a href="docs/09-Registro de Testes de Software.md" rel="docs">Registro de Testes de Software</a></p>

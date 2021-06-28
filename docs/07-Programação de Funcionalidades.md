@@ -136,5 +136,5 @@ Para utilizar essa funcionalidade, basta acessar a página inicial e clicar em u
 
 <hr>
 
-<p align="right"><a href="docs/06-Template padrão do Site" rel="docs">Template padrão do Site</a> | <a href="docs/08-Plano de Testes de Software" rel="docs">Plano de Testes de Software</a></p>
+<p align="right"><a href="docs/06-Template padrão do Site.md" rel="docs">Template padrão do Site</a> | <a href="docs/08-Plano de Testes de Software.md" rel="docs">Plano de Testes de Software</a></p>
 

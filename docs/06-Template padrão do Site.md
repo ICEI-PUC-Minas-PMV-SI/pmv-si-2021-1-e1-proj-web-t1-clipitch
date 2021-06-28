@@ -9,4 +9,4 @@
 
 <hr>
 
-<p align="right"><a href="docs/05-Arquitetura da Solução" rel="docs">Arquitetura da Solução</a> | <a href="docs/07-Programação de Funcionalidades" rel="docs">Programação de Funcionalidades</a></p>
+<p align="right"><a href="docs/05-Arquitetura da Solução.md" rel="docs">Arquitetura da Solução</a> | <a href="docs/07-Programação de Funcionalidades.md" rel="docs">Programação de Funcionalidades</a></p>

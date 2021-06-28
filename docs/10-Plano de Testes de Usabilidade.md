@@ -282,7 +282,7 @@ Realizou-se um teste no qual os usuários utilizaram as funcionalidades da aplic
 
 <hr>
 
-<p align="right"><a href="docs/09-Registro de Testes de Software" rel="docs">Registro de Testes de Software</a> | <a href="docs/11-Registro de Testes de Usabilidade" rel="docs">Registro de Testes de Usabilidade</a></p>
+<p align="right"><a href="docs/09-Registro de Testes de Software.md" rel="docs">Registro de Testes de Software</a> | <a href="docs/11-Registro de Testes de Usabilidade.md" rel="docs">Registro de Testes de Usabilidade</a></p>
 
 
 

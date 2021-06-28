@@ -13,4 +13,4 @@ Todos os métodos desenvolvidos no projeto passaram nos testes, como pode ser ob
 
 <hr>
 
-<p align="right"><a href="docs/08-Plano de Testes de Software" rel="docs">Plano de Testes de Software</a> | <a href="docs/10-Plano de Testes de Usabilidade" rel="docs">Plano de Testes de Usabilidade</a></p>
+<p align="right"><a href="docs/08-Plano de Testes de Software.md" rel="docs">Plano de Testes de Software</a> | <a href="docs/10-Plano de Testes de Usabilidade.md" rel="docs">Plano de Testes de Usabilidade</a></p>
